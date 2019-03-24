@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-  <div align="center">
-    <h1>Login</h1>
-    <form method="post">
+  <div align="center" style="font-family: Helvetica, Arial, sans-serif;">
+    <h1>LOGIN</h1>
+    <form method="post" name="login_form">
       <table border="0">
         <tr>
           <td>
             <label for="identifier">ID</label>
           </td>
           <td>
-            <input type="text" name="identifier" id="identifier" placeholder="E-mail or User Name" maxlength="32" />
+            <input type="text" name="identifier" id="identifier" placeholder="E-mail or User ID" maxlength="32" />
           </td>
         </tr>
         <tr>
@@ -18,7 +18,14 @@
             <label for="password">PW</label>
           </td>
           <td>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" placeholder="Password" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="document.login_form.submit();">
+              Login
+            </button>
           </td>
         </tr>
       </table>
