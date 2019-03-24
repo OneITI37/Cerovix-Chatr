@@ -13,7 +13,7 @@
 
 <body>
   <div align="center" style="font-family: Helvetica, Arial, sans-serif;">
-    <h1>LOGIN</h1>
+    <h1 style="text-align: center; font-family: Helvetica, Arial, sans-serif;">Sign in</h1>
     <form method="post" name="login_form">
       <table border="0">
         <tr>
@@ -21,7 +21,7 @@
             <label for="identifier">ID</label>
           </td>
           <td>
-            <input type="text" name="identifier" id="identifier" placeholder="E-mail or User ID" maxlength="32" />
+            <input type="text" name="identifier" id="identifier" placeholder="E-mail or User ID" maxlength="64" />
           </td>
         </tr>
         <tr>
@@ -29,14 +29,27 @@
             <label for="password">PW</label>
           </td>
           <td>
-            <input type="password" name="password" id="password" placeholder="Password" />
+            <input type="password" name="password" id="password" placeholder="Password" maxlength="64" />
           </td>
         </tr>
+      </table>
+      <button onclick="document.login_form.submit();">
+        Login
+      </button>
+      <table border="0">
         <tr>
           <td>
-            <button onclick="document.login_form.submit();">
-              Login
-            </button>
+            <a href="recover-account.html" target="_self">
+              Find ID / PW
+            </a>
+          </td>
+          <td>
+             | 
+          </td>
+          <td>
+            <a href="registration-helper.html" target="_self">
+              Sign up
+            </a>
           </td>
         </tr>
       </table>

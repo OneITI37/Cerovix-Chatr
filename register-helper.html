@@ -10,39 +10,58 @@
 
   <title>Sign up - Chatr</title>
 
+  <style>
+    label {
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body leftmargin="0" topmargin="0">
-  <form method="post" name="registration_form">
-    <table border="0">
-      <tr>
-        <td>
-          <label>E-mail Address</label>
-        </td>
-        <td>
-          <input type="text" name="user_e-mail_local-part" value="" maxlength="64" />
-          @
-          <input type="text" name="user_e-mail_domain-name" value="" maxlength="255" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="username">User Name</label>
-        </td>
-        <td>
-          <input type="text" name="username" value="" maxlength="64" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="password">Password</label>
-        </td>
-        <td>
-          <input type="password" name="password" value="" maxlength="64" />
-        </td>
-      </tr>
-    </table>
-  </form>
+  <h1 style="text-align: center; font-family: Helvetica, Arial, sans-serif;">
+    Sign up
+  </h1>
+  <div style="text-align: center;">
+    Already have an account? <a href="login-helper.html" target="_self">Sign in</a> instead.
+  </div>
+  <p></p>
+  <div align="center">
+    <form method="post" name="registration_form">
+      <table border="0">
+        <tr>
+          <td>
+            <label>E-mail Address</label>
+          </td>
+          <td>
+            <input type="text" name="user_e-mail_local-part" value="" maxlength="64" />
+            @
+            <input type="text" name="user_e-mail_domain-name" value="" maxlength="255" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="username">User Name</label>
+          </td>
+          <td>
+            <input type="text" name="username" value="" maxlength="64" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password</label>
+          </td>
+          <td>
+            <input type="password" name="password" value="" maxlength="64" />
+          </td>
+        </tr>
+      </table>
+      <div align="center">
+        <button onclick="document.registration_form.submit();">
+          Sign up
+        </button>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
