@@ -1,6 +1,8 @@
 // login-helper.js
 
     var isIdentifierActive = false, isPasswordActive = false, isLoginButtonActive = false;
+    backgroundColorConfigure();
+    setInterval(backgroundColorConfigure, 10000);
     initialSequences();
 
 function initialSequences() {
@@ -12,16 +14,22 @@ function initialSequences() {
     document.getElementById("identifier").readOnly = false;
     isIdentifierActive = true;
     document.getElementById("identifier").addEventListener("focus", function(){
-        backgroundColorTransitionAnimation(document.getElementById("identifier"), 255, 255, 255, 0, 120, 215, 0.3);
+        backgroundColorTransitionAnimation(document.getElementById("identifier"), 255, 255, 255, 0, 162, 254, 0.3);
     });
-    document.getElementById("identifier").addEventListener("blur", function(){
-        backgroundColorTransitionAnimation(document.getElementById("identifier"), 0, 120, 215, 255, 255, 255, 0.3);
+    document.getElementById("identifier").addEventListener("focusout", function(){
+        backgroundColorTransitionAnimation(document.getElementById("identifier"), 0, 162, 254, 255, 255, 255, 0.3);
     });
     document.getElementById("password").addEventListener("focus", function(){
-        backgroundColorTransitionAnimation(document.getElementById("password"), 255, 255, 255, 0, 120, 215, 0.3);
+        backgroundColorTransitionAnimation(document.getElementById("password"), 255, 255, 255, 0, 162, 254, 0.3);
     });
-    document.getElementById("password").addEventListener("blur", function(){
-        backgroundColorTransitionAnimation(document.getElementById("password"), 0, 120, 215, 255, 255, 255, 0.3);
+    document.getElementById("password").addEventListener("focusout", function(){
+        backgroundColorTransitionAnimation(document.getElementById("password"), 0, 162, 254, 255, 255, 255, 0.3);
+    });
+    document.getElementById("login-button").addEventListener("mouseover", function(){
+        backgroundColorTransitionAnimation(document.getElementById("login-button"), 0, 132, 224, 0, 162, 254, 0.3);
+    });
+    document.getElementById("login-button").addEventListener("mouseout", function(){
+        backgroundColorTransitionAnimation(document.getElementById("login-button"), 0, 162, 254, 0, 132, 224, 0.3);
     });
     fadeAnimation(document.getElementById("password-section"), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("login-button"), 0.00, 0.10, 1);
@@ -83,6 +91,13 @@ function initialSequences() {
             }
         }
     });
+    return;
+}
+function backgroundColorConfigure() {
+    backgroundColorTransitionAnimation(document.getElementsByTagName("body")[0], 209, 238, 255, 150, 217, 255, 5);
+    setTimeout(function(){
+        backgroundColorTransitionAnimation(document.getElementsByTagName("body")[0], 150, 217, 255, 209, 238, 255, 5);
+    }, 5000);
     return;
 }
 function fadeAnimation(target_element, start_opacity, end_opacity, animation_duration) {
