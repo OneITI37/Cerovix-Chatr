@@ -2,6 +2,7 @@ body {
     background-color: rgb(209, 238, 255);
     color: rgb(0, 51, 81);
     font-family: 'Renner';
+    font-size: 1vw;
 }
 #main-title {
     text-align: center;

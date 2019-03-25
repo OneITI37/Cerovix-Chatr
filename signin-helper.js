@@ -138,3 +138,42 @@ function textColorTransitionAnimation(target_element, start_color_red, start_col
     }, 10);
     return;
 }
+function getParameterValue(url) {
+    var query_string = url ? url.split('?')[1] : window.location.search.slice(1);
+    var object = {};
+    if (query_string) {
+        query_string = query_string.split('#')[0];
+        var arr = query_string.split('&');
+        for (var i = 0; i < arr.length; i++) {
+            var a = arr[i].split('=');
+            var param_name = a[0];
+            var param_value = typeof (a[1]) === 'undefined' ? true : a[1];
+            param_name = param_name.toLowerCase();
+            if (typeof param_value === 'string')
+                param_value = param_value.toLowerCase();
+            if (param_name.match(/\[(\d+)?\]$/)) {
+                var key = param_name.replace(/\[(\d+)?\]/, '');
+                if (!object[key])
+                    object[key] = [];
+                if (param_name.match(/\[\d+\]$/)) {
+                    var index = /\[(\d+)\]/.exec(param_name)[1];
+                    object[key][index] = param_value;
+                }
+                else
+                    object[key].push(param_value);
+            }
+            else {
+                if (!object[param_name])
+                    object[param_name] = param_value;
+                else if (object[param_name] && typeof object[param_name] === 'string'){
+                    object[param_name] = [object[param_name]];
+                    object[param_name].push(param_value);
+                }
+                else
+                    object[param_name].push(param_value);
+            }
+        }
+    }
+  
+    return object;
+  }
