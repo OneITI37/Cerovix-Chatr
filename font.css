@@ -1,0 +1,26 @@
+/* font.css */
+
+@font-face {
+    font-family: 'Renner';
+    src: url(fonts/renner-medium.eot);
+    src: url(fonts/renner-medium.eot) format('embedded-opentype'),
+         url(fonts/renner-medium.woff2) format('woff2'),
+         url(fonts/renner-medium.woff) format('woff'),
+         url(fonts/renner-medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Renner Light';
+    src: url(fonts/renner-light.eot);
+    src: url(fonts/renner-light.eot) format('embedded-opentype'),
+         url(fonts/renner-light.woff2) format('woff2'),
+         url(fonts/renner-light.woff) format('woff'),
+         url(fonts/renner-light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Renner Bold';
+    src: url(fonts/renner-bold.eot);
+    src: url(fonts/renner-bold.eot) format('embedded-opentype'),
+         url(fonts/renner-bold.woff2) format('woff2'),
+         url(fonts/renner-bold.woff) format('woff'),
+         url(fonts/renner-bold.ttf) format('truetype');
+}

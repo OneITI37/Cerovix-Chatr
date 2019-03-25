@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(209, 238, 255);
+    color: rgb(0, 51, 81);
+    font-family: 'Renner';
+}
+#main-title {
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Renner Light';
+}
+[name="login_form"] {
+    font-family: 'Renner';
+}
+#identifier-label, #password-label {
+    font-family: 'Renner Bold';
+}
+#identifier, #password {
+    font-family: 'Renner Light';
+    color: rgb(0, 51, 81);
+}
+#identifier::placeholder, #password::placeholder {
+    color: rgb(73, 122, 150);
+}
+#login-button {
+    font-family: 'Renner';
+}
+#copyright-statement {
+    width: 100%;
+    text-align: center;
+}
