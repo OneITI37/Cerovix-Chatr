@@ -15,41 +15,88 @@
 
 <body style="color: rgb(0, 51, 81);">
   <div align="center">
-    <h1 id="main-title">Sign in</h1>
-    <form method="post" name="login_form">
-      <table border="0" style="width: 100%; font-size: 2vw;">
-        <tr id="identifier-section" style="opacity: 0.00;">
+    <table border="1" id="lang-options">
+    </table>
+  </div>
+  <div align="center" id="form-ko">
+    <h1 id="main-title-ko">로그인</h1>
+    <form method="post" name="login_form_ko">
+      <table border="0" style="width: 50%; font-size: 2vw;">
+        <tr id="identifier-section-ko" style="opacity: 0.00;">
           <td style="text-align: center; width: 4vw;">
-            <label for="identifier" id="identifier-label">ID</label>
+            <label for="identifier-ko" id="identifier-label-ko">ID</label>
           </td>
           <td>
-            <input type="text" name="identifier" id="identifier" readonly="true" style="width: 100%; height: 2vw; font-size: 2vw; border-radius: 0.5vw; border-width: 1px; border-color: #000000;" placeholder="E-mail" maxlength="64" />
+            <input type="text" name="identifier-ko" id="identifier-ko" readonly="true" placeholder="이메일 주소" maxlength="64" />
           </td>
         </tr>
-        <tr id="password-section" style="opacity: 0.00;">
+        <tr id="password-section-ko" style="opacity: 0.00;">
           <td style="text-align: center; width: 4vw;">
-            <label for="password" id="password-label">PW</label>
+            <label for="password-ko" id="password-label-ko">PW</label>
           </td>
           <td>
-            <input type="password" name="password" id="password" readonly="true" style="width: 100%; height: 2vw; font-size: 2vw; border-radius: 0.5vw; border-width: 1px; border-color: #000000;" placeholder="Password" maxlength="64" />
+            <input type="password" name="password-ko" id="password-ko" readonly="true" placeholder="비밀번호" maxlength="64" />
           </td>
         </tr>
       </table>
-      <button id="login-button" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true" style="width: 100%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 4vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 0.00;">
-        Sign in
+      <button id="login-button-ko" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true" style="width: 50%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 4vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 0.00;">
+        로그인
       </button>
       <table border="0">
         <tr>
-          <td>
-            <a href="recover-account.html" target="_self">
-              Find ID / PW
+          <td id="recover-account-section-ko">
+            <a href="recover-account.html#ko" target="_self" id="recover-account-ko">
+              ID / PW 찾기
             </a>
           </td>
           <td>
              | 
           </td>
+          <td id="signup-link-section-ko">
+            <a href="signup.html#en" target="_self" id="signup-link-ko">
+              가입하기
+            </a>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div align="center" id="form-en">
+    <h1 id="main-title-en">Sign in</h1>
+    <form method="post" name="login_form_en">
+      <table border="0" style="width: 50%; font-size: 2vw;">
+        <tr id="identifier-section-en" style="opacity: 0.00;">
+          <td style="text-align: center; width: 4vw;">
+            <label for="identifier-en" id="identifier-label-en">ID</label>
+          </td>
           <td>
-            <a href="registration-helper.html" target="_self">
+            <input type="text" name="identifier-en" id="identifier-en" readonly="true" placeholder="E-mail" maxlength="64" />
+          </td>
+        </tr>
+        <tr id="password-section-en" style="opacity: 0.00;">
+          <td style="text-align: center; width: 4vw;">
+            <label for="password-en" id="password-label-en">PW</label>
+          </td>
+          <td>
+            <input type="password" name="password-en" id="password-en" readonly="true" placeholder="Password" maxlength="64" />
+          </td>
+        </tr>
+      </table>
+      <button id="login-button-en" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true" style="width: 50%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 4vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 0.00;">
+        Sign in
+      </button>
+      <table border="0">
+        <tr>
+          <td id="recover-account-section-en">
+            <a href="recover-account.html#en" target="_self" id="recover-account-en">
+              Find ID / PW
+            </a>
+          </td>
+          <td>
+            &nbsp;|&nbsp;
+          </td>
+          <td id="signup-link-section-en">
+            <a href="signup.html#en" target="_self" id="signup-link-en">
               Sign up
             </a>
           </td>
@@ -57,11 +104,13 @@
       </table>
     </form>
   </div>
-  <p id="copyright-statement">
+
+  <p id="copyright-statement-common">
     &copy; 2019 Cerovix
   </p>
 
   <script type="text/javascript" src="signin-helper.js"></script>
+
 </body>
 
 </html>

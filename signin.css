@@ -1,10 +1,24 @@
+#form-ko, #form-en {
+    display: none;
+    width: 100%;
+}
 body {
-    background-color: rgb(209, 238, 255);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 51, 81);
     font-family: 'Renner';
     font-size: 1vw;
 }
-#main-title {
+table, tr, td {
+    border-collapse: collapse;
+}
+.language-select-menu {
+    width: 100%;
+    text-align: center;
+}
+#language-select-ko, #language-select-en {
+    cursor: pointer;
+}
+#main-title-ko, #main-title-en {
     text-align: center;
     font-size: 5vw;
     font-family: 'Renner Light';
@@ -12,20 +26,34 @@ body {
 [name="login_form"] {
     font-family: 'Renner';
 }
-#identifier-label, #password-label {
+#identifier-label-ko, #password-label-ko, #identifier-label-en, #password-label-en {
     font-family: 'Renner Bold';
 }
-#identifier, #password {
+#identifier-ko, #password-ko, #identifier-en, #password-en {
     font-family: 'Renner Light';
+    font-size: 1.5vw;
     color: rgb(0, 51, 81);
+    width: 100%;
+    height: 2vw;
+    border-radius: 0.5vw;
+    border-width: 1px;
+    border-color: #000000;
 }
-#identifier::placeholder, #password::placeholder {
+#identifier-ko::placeholder, #password-ko::placeholder, #identifier-en::placeholder, #password-en::placeholder {
     color: rgb(73, 122, 150);
 }
-#login-button {
+#login-button-ko, #login-button-en {
     font-family: 'Renner';
 }
-#copyright-statement {
-    width: 100%;
+#recover-account-ko, #signup-link-ko, #recover-account-en, #signup-link-en {
+    text-decoration: none;
+    color: rgb(0, 51, 81);
+    cursor: pointer;
+}
+#recover-account-section-ko, #signup-link-section-ko, #recover-account-section-en, #signup-link-section-en {
+    text-align: center;
+}
+#copyright-statement-common {
+    width: 100vw;
     text-align: center;
 }

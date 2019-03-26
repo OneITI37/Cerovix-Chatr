@@ -1,96 +1,186 @@
 // login-helper.js
 
     var isIdentifierActive = false, isPasswordActive = false, isLoginButtonActive = false;
-    backgroundColorConfigure();
-    setInterval(backgroundColorConfigure, 10000);
+    var supported_languages_name = new Array("한국어", "English");
+    var supported_languages_eng_name = new Array("Korean", "English");
+    var supported_languages_code = new Array("ko", "en");
     initialSequences();
 
 function initialSequences() {
-    document.getElementById("identifier-section").style.opacity = "0.00";
-    document.getElementById("password-section").style.opacity = "0.00";
-    document.getElementById("login-button").style.opacity = "0.00";
-    document.getElementById("login-button").style.cursor = "not-allowed";
-    fadeAnimation(document.getElementById("identifier-section"), 0.00, 1, 1);
-    document.getElementById("identifier").readOnly = false;
+    if (location.hash == "")
+        var lang = "en";
+    else
+        var lang = location.hash.substring(1, 3);
+    document.getElementById("lang-options").opacity = "0.00";
+    document.getElementById("lang-options").innerHTML = "";
+    document.getElementById("lang-options").innerHTML += "<tr>";
+    document.getElementById("lang-options").innerHTML += "</tr>";
+    for (i = 0; i < supported_languages_name.length; i++) {
+        if (supported_languages_code[i] == lang) {
+            document.getElementById("lang-options").innerHTML += "<td id=\"language-select-"+supported_languages_code[i]+"\" class=\"language-select\">"+supported_languages_name[i]+"</td>";
+            document.getElementById("language-select"+"-"+supported_languages_code[i]).languagecode = i;
+            document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("mouseover", function(){
+                textColorTransitionAnimation(document.getElementById("language-select"+"-"+supported_languages_code[i]), 0, 51, 81, 70, 121, 151, 0.3);
+            });
+            document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("mouseout", function(){
+                textColorTransitionAnimation(document.getElementById("language-select"+"-"+supported_languages_code[i]), 70, 121, 151, 0, 51, 81, 0.3);
+            });
+            document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("click", function(){
+                showAllLanguageOptions();
+            });
+            document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("mouseover", function(){
+                this.innerHTML = supported_languages_eng_name[Number(this.languagecode)];
+            });
+            document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("mouseout", function(){
+                this.innerHTML = supported_languages_name[Number(this.languagecode)];
+            });
+            break;
+        }
+    }
+    fadeAnimation(document.getElementById("lang-options"), 0.00, 1.00, 1);
+    document.getElementById("language-select"+"-"+lang).addEventListener("click", function(){
+        showAllLanguageOptions();
+    });
+    document.getElementById("recover-account"+"-"+"ko").addEventListener("mouseover", function(){
+        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"ko"), 0, 51, 81, 70, 121, 151, 0.3);
+    });
+    document.getElementById("recover-account"+"-"+"ko").addEventListener("mouseout", function(){
+        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"ko"), 70, 121, 151, 0, 51, 81, 0.3);
+    });
+    document.getElementById("signup-link"+"-"+"ko").addEventListener("mouseover", function(){
+        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"ko"), 0, 51, 81, 70, 121, 151, 0.3);
+    });
+    document.getElementById("signup-link"+"-"+"ko").addEventListener("mouseout", function(){
+        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"ko"), 70, 121, 151, 0, 51, 81, 0.3);
+    });
+    document.getElementById("recover-account"+"-"+"en").addEventListener("mouseover", function(){
+        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"en"), 0, 51, 81, 70, 121, 151, 0.3);
+    });
+    document.getElementById("recover-account"+"-"+"en").addEventListener("mouseout", function(){
+        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"en"), 70, 121, 151, 0, 51, 81, 0.3);
+    });
+    document.getElementById("signup-link"+"-"+"en").addEventListener("mouseover", function(){
+        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"en"), 0, 51, 81, 70, 121, 151, 0.3);
+    });
+    document.getElementById("signup-link"+"-"+"en").addEventListener("mouseout", function(){
+        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"en"), 70, 121, 151, 0, 51, 81, 0.3);
+    });
+    document.getElementById("form"+"-"+lang).style.display = "block";
+    document.getElementById("identifier-section"+"-"+lang).style.opacity = "0.00";
+    document.getElementById("password-section"+"-"+lang).style.opacity = "0.00";
+    document.getElementById("login-button"+"-"+lang).style.opacity = "0.00";
+    document.getElementById("login-button"+"-"+lang).style.cursor = "not-allowed";
+    fadeAnimation(document.getElementById("identifier-section"+"-"+lang), 0.00, 1, 1);
+    document.getElementById("identifier"+"-"+lang).readOnly = false;
     isIdentifierActive = true;
-    document.getElementById("identifier").addEventListener("focus", function(){
-        backgroundColorTransitionAnimation(document.getElementById("identifier"), 255, 255, 255, 0, 162, 254, 0.3);
+    document.getElementById("identifier"+"-"+lang).addEventListener("focus", function(){
+        backgroundColorTransitionAnimation(document.getElementById("identifier"+"-"+lang), 255, 255, 255, 0, 162, 254, 0.3);
     });
-    document.getElementById("identifier").addEventListener("focusout", function(){
-        backgroundColorTransitionAnimation(document.getElementById("identifier"), 0, 162, 254, 255, 255, 255, 0.3);
+    document.getElementById("identifier"+"-"+lang).addEventListener("blur", function(){
+        backgroundColorTransitionAnimation(document.getElementById("identifier"+"-"+lang), 0, 162, 254, 255, 255, 255, 0.3);
     });
-    document.getElementById("password").addEventListener("focus", function(){
-        backgroundColorTransitionAnimation(document.getElementById("password"), 255, 255, 255, 0, 162, 254, 0.3);
+    document.getElementById("password"+"-"+lang).addEventListener("focus", function(){
+        backgroundColorTransitionAnimation(document.getElementById("password"+"-"+lang), 255, 255, 255, 0, 162, 254, 0.3);
     });
-    document.getElementById("password").addEventListener("focusout", function(){
-        backgroundColorTransitionAnimation(document.getElementById("password"), 0, 162, 254, 255, 255, 255, 0.3);
+    document.getElementById("password"+"-"+lang).addEventListener("blur", function(){
+        backgroundColorTransitionAnimation(document.getElementById("password"+"-"+lang), 0, 162, 254, 255, 255, 255, 0.3);
     });
-    document.getElementById("login-button").addEventListener("mouseover", function(){
-        backgroundColorTransitionAnimation(document.getElementById("login-button"), 0, 132, 224, 0, 162, 254, 0.3);
+    document.getElementById("login-button"+"-"+lang).addEventListener("mouseover", function(){
+        backgroundColorTransitionAnimation(document.getElementById("login-button"+"-"+lang), 0, 132, 224, 0, 162, 254, 0.3);
     });
-    document.getElementById("login-button").addEventListener("mouseout", function(){
-        backgroundColorTransitionAnimation(document.getElementById("login-button"), 0, 162, 254, 0, 132, 224, 0.3);
+    document.getElementById("login-button"+"-"+lang).addEventListener("mouseout", function(){
+        backgroundColorTransitionAnimation(document.getElementById("login-button"+"-"+lang), 0, 162, 254, 0, 132, 224, 0.3);
     });
-    fadeAnimation(document.getElementById("password-section"), 0.00, 0.10, 1);
-    fadeAnimation(document.getElementById("login-button"), 0.00, 0.10, 1);
-    document.getElementById("identifier").addEventListener("keyup", function(){
-        if (document.getElementById("identifier").value.length >= 6) {
+    fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.00, 0.10, 1);
+    fadeAnimation(document.getElementById("login-button"+"-"+lang), 0.00, 0.10, 1);
+    document.getElementById("identifier"+"-"+lang).addEventListener("keyup", function(){
+        if (document.getElementById("identifier"+"-"+lang).value.length >= 6) {
             if (!isPasswordActive) {
-                fadeAnimation(document.getElementById("password-section"), 0.10, 1.00, 1);
-                document.getElementById("password").readOnly = false;
-                document.getElementById("password").style.cursor = "text";
+                fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.10, 1.00, 1);
+                document.getElementById("password"+"-"+lang).readOnly = false;
+                document.getElementById("password"+"-"+lang).style.cursor = "text";
                 isPasswordActive = true;
-                document.getElementById("password").addEventListener("keyup", function(){
-                    if (document.getElementById("password").value.length >= 8) {
-                        if (!isLoginButtonActive && document.getElementById("identifier").value.length >= 6) {
-                            document.getElementById("login-button").addEventListener("click", function(){
+                document.getElementById("password"+"-"+lang).addEventListener("keyup", function(){
+                    if (document.getElementById("password"+"-"+lang).value.length >= 8) {
+                        if (!isLoginButtonActive && document.getElementById("identifier"+"-"+lang).value.length >= 6) {
+                            document.getElementById("login-button"+"-"+lang).addEventListener("click", function(){
                                 document.login_form.submit();
                             })
-                            fadeAnimation(document.getElementById("login-button"), 0.10, 1.00, 1);
-                            document.getElementById("login-button").disabled = false;
-                            document.getElementById("login-button").style.cursor = "pointer";
+                            fadeAnimation(document.getElementById("login-button"+"-"+lang), 0.10, 1.00, 1);
+                            document.getElementById("login-button"+"-"+lang).disabled = false;
+                            document.getElementById("login-button"+"-"+lang).style.cursor = "pointer";
                             isLoginButtonActive = true;
                         }
                     }
                     else {
                         if (isLoginButtonActive) {
-                            document.getElementById("login-button").disabled = true;
-                            document.getElementById("login-button").addEventListener("click", function(){
+                            document.getElementById("login-button"+"-"+lang).disabled = true;
+                            document.getElementById("login-button"+"-"+lang).addEventListener("click", function(){
                                 return;
                             });
-                            document.getElementById("login-button").style.cursor = "not-allowed";
+                            document.getElementById("login-button"+"-"+lang).style.cursor = "not-allowed";
                             isLoginButtonActive = false;
-                            fadeAnimation(document.getElementById("login-button"), 1.00, 0.10, 1);
+                            fadeAnimation(document.getElementById("login-button"+"-"+lang), 1.00, 0.10, 1);
                         }
                     }
                 });
             }
             else {
-                if (document.getElementById("identifier").value.length >= 6 && document.getElementById("password").value.length >= 8) {
+                if (document.getElementById("identifier"+"-"+lang).value.length >= 6 && document.getElementById("password"+"-"+lang).value.length >= 8) {
                     if (!isLoginButtonActive) {
-                        document.getElementById("login-button").addEventListener("click", function(){
+                        document.getElementById("login-button"+"-"+lang).addEventListener("click", function(){
                             document.login_form.submit();
                         })
-                        fadeAnimation(document.getElementById("login-button"), 0.10, 1.00, 1);
-                        document.getElementById("login-button").disabled = false;
+                        fadeAnimation(document.getElementById("login-button"+"-"+lang), 0.10, 1.00, 1);
+                        document.getElementById("login-button"+"-"+lang).disabled = false;
                         isLoginButtonActive = true;
-                        document.getElementById("login-button").style.cursor = "pointer";
+                        document.getElementById("login-button"+"-"+lang).style.cursor = "pointer";
                     }
                 }
             }
         }
         else {
             if (isLoginButtonActive) {
-                document.getElementById("login-button").disabled = true;
+                document.getElementById("login-button"+"-"+lang).disabled = true;
                 isLoginButtonActive = false;
-                document.getElementById("login-button").addEventListener("click", function(){
+                document.getElementById("login-button"+"-"+lang).addEventListener("click", function(){
                     return;
                 });
-                fadeAnimation(document.getElementById("login-button"), 1.00, 0.10, 1);
-                document.getElementById("login-button").style.cursor = "not-allowed";
+                fadeAnimation(document.getElementById("login-button"+"-"+lang), 1.00, 0.10, 1);
+                document.getElementById("login-button"+"-"+lang).style.cursor = "not-allowed";
             }
         }
     });
+    return;
+}
+function showAllLanguageOptions() {
+    var i;
+    document.getElementById("lang-options").opacity = "0.00";
+    document.getElementById("lang-options").innerHTML = "";
+    document.getElementById("lang-options").innerHTML += "<tr>";
+    for (i = 0; i < supported_languages_name.length; i++)
+        document.getElementById("lang-options").innerHTML += "<td id=\"language-select-"+supported_languages_code[i]+"\" class=\"language-select\">"+supported_languages_name[i]+"</td>";
+    document.getElementById("lang-options").innerHTML += "</tr>";
+    for (i = 0; i < document.getElementsByClassName("language-select").length; i++) {
+        document.getElementById("language-select"+"-"+supported_languages_code[i]).languagecode = i;
+        document.getElementsByClassName("language-select")[i].addEventListener("mouseover", function(){
+            textColorTransitionAnimation(this, 0, 51, 81, 70, 121, 151, 0.3);
+        });
+        document.getElementsByClassName("language-select")[i].addEventListener("mouseout", function(){
+            textColorTransitionAnimation(this, 70, 121, 151, 0, 51, 81, 0.3);
+        });
+        document.getElementsByClassName("language-select")[i].addEventListener("click", function(){
+            location.hash = this.id.substring(16, 18);
+            location.reload();
+        });
+        document.getElementsByClassName("language-select")[i].addEventListener("mouseover", function(){
+            this.innerHTML = supported_languages_eng_name[Number(this.languagecode)];
+        });
+        document.getElementsByClassName("language-select")[i].addEventListener("mouseout", function(){
+            this.innerHTML = supported_languages_name[Number(this.languagecode)];
+        });
+    }
+    fadeAnimation(document.getElementById("lang-options"), 0.00, 1.00, 1);
     return;
 }
 function backgroundColorConfigure() {
@@ -138,42 +228,3 @@ function textColorTransitionAnimation(target_element, start_color_red, start_col
     }, 10);
     return;
 }
-function getParameterValue(url) {
-    var query_string = url ? url.split('?')[1] : window.location.search.slice(1);
-    var object = {};
-    if (query_string) {
-        query_string = query_string.split('#')[0];
-        var arr = query_string.split('&');
-        for (var i = 0; i < arr.length; i++) {
-            var a = arr[i].split('=');
-            var param_name = a[0];
-            var param_value = typeof (a[1]) === 'undefined' ? true : a[1];
-            param_name = param_name.toLowerCase();
-            if (typeof param_value === 'string')
-                param_value = param_value.toLowerCase();
-            if (param_name.match(/\[(\d+)?\]$/)) {
-                var key = param_name.replace(/\[(\d+)?\]/, '');
-                if (!object[key])
-                    object[key] = [];
-                if (param_name.match(/\[\d+\]$/)) {
-                    var index = /\[(\d+)\]/.exec(param_name)[1];
-                    object[key][index] = param_value;
-                }
-                else
-                    object[key].push(param_value);
-            }
-            else {
-                if (!object[param_name])
-                    object[param_name] = param_value;
-                else if (object[param_name] && typeof object[param_name] === 'string'){
-                    object[param_name] = [object[param_name]];
-                    object[param_name].push(param_value);
-                }
-                else
-                    object[param_name].push(param_value);
-            }
-        }
-    }
-  
-    return object;
-  }
