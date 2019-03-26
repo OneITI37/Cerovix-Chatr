@@ -24,3 +24,11 @@
          url(fonts/renner-bold.woff) format('woff'),
          url(fonts/renner-bold.ttf) format('truetype');
 }
+@font-face {
+    font-family: 'Renner Book';
+    src: url(fonts/renner-book.eot);
+    src: url(fonts/renner-book.eot) format('embedded-opentype'),
+         url(fonts/renner-book.woff2) format('woff2'),
+         url(fonts/renner-book.woff) format('woff'),
+         url(fonts/renner-book.ttf) format('truetype');
+}
