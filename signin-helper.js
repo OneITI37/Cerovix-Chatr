@@ -1,5 +1,6 @@
 // login-helper.js
 
+    var lang;
     var isIdentifierActive = false, isPasswordActive = false, isLoginButtonActive = false;
     var supported_languages_name = new Array("한국어", "English");
     var supported_languages_eng_name = new Array("Korean", "English");
@@ -8,9 +9,9 @@
 
 function initialSequences() {
     if (location.hash == "")
-        var lang = "en";
+        lang = "en";
     else
-        var lang = location.hash.substring(1, 3);
+        lang = location.hash.substring(1, 3);
     document.getElementById("lang-options").opacity = "0.00";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";
