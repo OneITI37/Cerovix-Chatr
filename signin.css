@@ -55,7 +55,6 @@ table, tr, td {
     border-radius: 4vw;
     border-width: 0.05vw;
     border-color: rgb(0, 100, 195);
-    opacity: 0.00;
 }
 #recover-account-ko, #signup-link-ko, #recover-account-en, #signup-link-en {
     text-decoration: none;
@@ -75,7 +74,6 @@ table, tr, td {
     border-radius: 1vw;
     border-width: 0.05vw;
     border-color: rgb(0, 100, 195);
-    opacity: 1.00;
     font-family: 'Renner Light';
 }
 #copyright-statement-common {

@@ -70,6 +70,7 @@ function initialSequences() {
     document.getElementById("password-section"+"-"+lang).style.opacity = "0.00";
     document.getElementById("login-button"+"-"+lang).style.opacity = "0.00";
     document.getElementById("login-button"+"-"+lang).style.cursor = "not-allowed";
+    fadeAnimation(document.getElementById("main-title"+"-"+lang), 0.00, 1, 1);
     fadeAnimation(document.getElementById("identifier-section"+"-"+lang), 0.00, 1, 1);
     document.getElementById("identifier"+"-"+lang).readOnly = false;
     isIdentifierActive = true;
@@ -87,6 +88,9 @@ function initialSequences() {
     });
     fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("login-button"+"-"+lang), 0.00, 0.10, 1);
+    fadeAnimation(document.getElementById("other-account-actions-section"+"-"+lang), 0.00, 1, 1);
+    fadeAnimation(document.getElementById("ad-button"+"-"+lang), 0.00, 1, 1);
+    fadeAnimation(document.getElementById("copyright-statement-common"), 0.00, 1, 1);
     document.getElementById("identifier"+"-"+lang).addEventListener("keyup", function(){
         if (document.getElementById("identifier"+"-"+lang).value.length >= 6) {
             if (!isPasswordActive) {
