@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3748909224A08C2000A05D7 /* LibraryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3748908224A08C2000A05D7 /* LibraryBuilder.swift */; };
 		C3AD4BF82247A7D800D05678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD4BF72247A7D800D05678 /* AppDelegate.swift */; };
 		C3AD4BFA2247A7D800D05678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD4BF92247A7D800D05678 /* ViewController.swift */; };
 		C3AD4BFC2247A7D900D05678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3AD4BFB2247A7D900D05678 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3748908224A08C2000A05D7 /* LibraryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBuilder.swift; sourceTree = "<group>"; };
 		C3AD4BF42247A7D800D05678 /* Chatr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AD4BF72247A7D800D05678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AD4BF92247A7D800D05678 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				C3AD4BFD2247A7D900D05678 /* Main.storyboard */,
 				C3AD4C002247A7D900D05678 /* Info.plist */,
 				C3AD4C012247A7D900D05678 /* Chatr.entitlements */,
+				C3748908224A08C2000A05D7 /* LibraryBuilder.swift */,
 			);
 			path = Chatr;
 			sourceTree = "<group>";
@@ -192,6 +195,14 @@
 				TargetAttributes = {
 					C3AD4BF32247A7D800D05678 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
 					};
 					C3AD4C052247A7DA00D05678 = {
 						CreatedOnToolsVersion = 10.1;
@@ -256,6 +267,7 @@
 			files = (
 				C3AD4BFA2247A7D800D05678 /* ViewController.swift in Sources */,
 				C3AD4BF82247A7D800D05678 /* AppDelegate.swift in Sources */,
+				C3748909224A08C2000A05D7 /* LibraryBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +433,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Chatr/Chatr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Chatr/Info.plist;
@@ -439,7 +450,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Chatr/Chatr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Chatr/Info.plist;
