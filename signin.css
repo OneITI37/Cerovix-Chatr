@@ -11,9 +11,9 @@ body {
 table, tr, td {
     border-collapse: collapse;
 }
-.language-select-menu {
-    width: 100%;
+#lang-options {
     text-align: center;
+    border-radius: 1pt;
 }
 #language-select-ko, #language-select-en {
     cursor: pointer;
@@ -52,6 +52,17 @@ table, tr, td {
 }
 #recover-account-section-ko, #signup-link-section-ko, #recover-account-section-en, #signup-link-section-en {
     text-align: center;
+}
+#ad-button-ko, #ad-button-en {
+    width: 50%;
+    height: 4vw;
+    font-size: 2vw;
+    background-color: rgb(0, 120, 215);
+    color: #FFFFFF;
+    border-radius: 1vw;
+    border-width: 0.05vw;
+    border-color: rgb(0, 100, 195);
+    opacity: 1.00;
 }
 #copyright-statement-common {
     width: 100vw;

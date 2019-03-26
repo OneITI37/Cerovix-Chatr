@@ -73,23 +73,17 @@ function initialSequences() {
     fadeAnimation(document.getElementById("identifier-section"+"-"+lang), 0.00, 1, 1);
     document.getElementById("identifier"+"-"+lang).readOnly = false;
     isIdentifierActive = true;
-    document.getElementById("identifier"+"-"+lang).addEventListener("focus", function(){
-        backgroundColorTransitionAnimation(document.getElementById("identifier"+"-"+lang), 255, 255, 255, 0, 162, 254, 0.3);
-    });
-    document.getElementById("identifier"+"-"+lang).addEventListener("blur", function(){
-        backgroundColorTransitionAnimation(document.getElementById("identifier"+"-"+lang), 0, 162, 254, 255, 255, 255, 0.3);
-    });
-    document.getElementById("password"+"-"+lang).addEventListener("focus", function(){
-        backgroundColorTransitionAnimation(document.getElementById("password"+"-"+lang), 255, 255, 255, 0, 162, 254, 0.3);
-    });
-    document.getElementById("password"+"-"+lang).addEventListener("blur", function(){
-        backgroundColorTransitionAnimation(document.getElementById("password"+"-"+lang), 0, 162, 254, 255, 255, 255, 0.3);
-    });
     document.getElementById("login-button"+"-"+lang).addEventListener("mouseover", function(){
         backgroundColorTransitionAnimation(document.getElementById("login-button"+"-"+lang), 0, 132, 224, 0, 162, 254, 0.3);
     });
     document.getElementById("login-button"+"-"+lang).addEventListener("mouseout", function(){
         backgroundColorTransitionAnimation(document.getElementById("login-button"+"-"+lang), 0, 162, 254, 0, 132, 224, 0.3);
+    });
+    document.getElementById("ad-button"+"-"+lang).addEventListener("mouseover", function(){
+        backgroundColorTransitionAnimation(document.getElementById("ad-button"+"-"+lang), 0, 132, 224, 0, 162, 254, 0.3);
+    });
+    document.getElementById("ad-button"+"-"+lang).addEventListener("mouseout", function(){
+        backgroundColorTransitionAnimation(document.getElementById("ad-button"+"-"+lang), 0, 162, 254, 0, 132, 224, 0.3);
     });
     fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("login-button"+"-"+lang), 0.00, 0.10, 1);
