@@ -18,6 +18,9 @@ table, tr, td {
 #language-select-ko, #language-select-en {
     cursor: pointer;
 }
+.language-select {
+    border-radius: 1vw;
+}
 #main-title-ko, #main-title-en {
     text-align: center;
     font-size: 5vw;
@@ -37,13 +40,22 @@ table, tr, td {
     height: 2vw;
     border-radius: 0.5vw;
     border-width: 1px;
-    border-color: #000000;
+    border-color: rgb(0, 0, 0);
 }
 #identifier-ko::placeholder, #password-ko::placeholder, #identifier-en::placeholder, #password-en::placeholder {
     color: rgb(73, 122, 150);
 }
 #login-button-ko, #login-button-en {
     font-family: 'Renner';
+    width: 50%;
+    height: 4vw;
+    font-size: 2vw;
+    background-color: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+    border-radius: 4vw;
+    border-width: 0.05vw;
+    border-color: rgb(0, 100, 195);
+    opacity: 0.00;
 }
 #recover-account-ko, #signup-link-ko, #recover-account-en, #signup-link-en {
     text-decoration: none;
@@ -58,11 +70,14 @@ table, tr, td {
     height: 4vw;
     font-size: 2vw;
     background-color: rgb(0, 120, 215);
-    color: #FFFFFF;
+    background-image: url(ads/01.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
     border-radius: 1vw;
     border-width: 0.05vw;
     border-color: rgb(0, 100, 195);
     opacity: 1.00;
+    font-family: 'Renner Light';
 }
 #copyright-statement-common {
     width: 100vw;
