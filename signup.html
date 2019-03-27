@@ -34,28 +34,28 @@
         <td class="signup-field-label-ko">
           한글 성함(예: 홍길동)
         </td>
-        <td contenteditable="true" id="korean-name-field" koreanname="">
+        <td contenteditable="true" id="korean-name-field-ko" koreanname="">
         </td>
       </tr>
       <tr>
         <td class="signup-field-label-ko">
           영어 성함(예: John Doe)
         </td>
-        <td contenteditable="true" id="english-name-field" englishname="">
+        <td contenteditable="true" id="english-name-field-ko" englishname="">
         </td>
       </tr>
       <tr>
         <td class="signup-field-label-ko">
           이메일
         </td>
-        <td contenteditable="true" id="email-field" emaillocalpart="" emaildomain="">
+        <td contenteditable="false" id="email-field-ko" emaillocalpart="" emaildomain="">
         </td>
       </tr>
       <tr>
         <td class="signup-field-label-ko">
           비밀번호
         </td>
-        <td contenteditable="true" id="password-field">
+        <td contenteditable="true" id="password-field-ko">
 
         </td>
       </tr>
@@ -63,23 +63,23 @@
         <td class="signup-field-label-ko">
           비밀번호 확인
         </td>
-        <td contenteditable="true" id="password-recheck-field">
+        <td contenteditable="true" id="password-recheck-field-ko">
 
         </td>
       </tr>
     </table>
     선택 정보
     <table border="1" id="signup-field-ko">
-      <tr id="signup-field-item-color">
+      <tr id="signup-field-item-color-ko">
         <td class="signup-field-label-ko">
           선호 색상
         </td>
-        <td contenteditable="false" class="additional-info" id="color-picker" colorred="-1" colorgreen="-1" colorblue="-1">
-          <table border="0" id="color-picker-table">
+        <td contenteditable="false" class="additional-info-ko" id="color-picker-ko" colorred="-1" colorgreen="-1" colorblue="-1">
+          <table border="0" id="color-picker-table-ko">
             <tr>
-              <td style="width: 30%;"><input type="number" id="color-picker-red" " class="small-textbox" placeholder="Red" min="0" max="255" value="0" /></td>
-              <td style="width: 30%;"><input type="number" id="color-picker-green" " class="small-textbox" placeholder="Green" min="0" max="255" value="162" /></td>
-              <td style="width: 30%;"><input type="number" id="color-picker-blue" " class="small-textbox" placeholder="Blue" min="0" max="255" value="254" /></td>
+              <td style="width: 30%;"><input type="number" id="color-picker-red-ko" " class="small-textbox-ko" placeholder="Red" min="0" max="255" value="0" /></td>
+              <td style="width: 30%;"><input type="number" id="color-picker-green-ko" " class="small-textbox-ko" placeholder="Green" min="0" max="255" value="162" /></td>
+              <td style="width: 30%;"><input type="number" id="color-picker-blue-ko" " class="small-textbox-ko" placeholder="Blue" min="0" max="255" value="254" /></td>
             </tr>
           </table>
         </td>
@@ -88,29 +88,48 @@
         <td class="signup-field-label-ko">
           졸업년도
         </td>
-        <td contenteditable="false" class="additional-info" id="year-picker" year="">
-          <input type="number" value="2019" min="2016" max="2040" id="year-number-picker" />
+        <td contenteditable="false" class="additional-info-ko" id="year-number-picker-container-ko" />
+          <input type="number" value="2019" min="2016" max="2040" id="year-number-picker-ko" />
         </td>
       </tr>
       <tr>
         <td class="signup-field-label-ko">
           생년월일
         </td>
-        <td contenteditable="true" class="additional-info" id="birthday-picker" birthyear="" birthmonth="" birthday="">
-            <input type="number" value="2000" min="1900" max="2019" id="year-number-picker" />
-            <input type="number" value="1" min="1" max="12" id="year-number-picker" />
-            <input type="number" value="1" min="1" max="31" id="year-number-picker" />
+        <td contenteditable="false" class="additional-info-ko" id="birthday-picker-ko" birthyear="" birthmonth="" birthday="">
+            <table border="0" style="width: 100%;">
+              <tr>
+                <td>
+                  <input type="number" id="birth-year-field-ko" value="2019" min="1900" max="2019" />
+                </td>
+                <td>
+                  년
+                </td>
+                <td>
+                  <input type="number" id="birth-month-field-ko" value="1" min="1" max="12" />
+                </td>
+                <td>
+                  월
+                </td>
+                <td>
+                    <input type="number" id="birth-day-field-ko" value="1" min="1" max="31" />
+                </td>
+                <td>
+                  일
+                </td>
+              </tr>
+            </table>
         </td>
       </tr>
       <tr>
         <td class="signup-field-label-ko">
           주거 정보
         </td>
-        <td contenteditable="false" class="additional-info" id="residence-picker" residency="">
+        <td contenteditable="false" class="additional-info-ko" id="residence-picker-ko" residency="">
           <table border="0" style="width: 100%;">
             <tr>
-              <td class="residency-option">통학</td>
-              <td class="residency-option">기숙사</td>
+              <td class="residency-option-ko" id="residency-option-day-ko" selected="false">통학</td>
+              <td class="residency-option-ko" id="residency-option-dorm-ko" selected="false">기숙사</td>
             </tr>
           </table>
         </td>
@@ -119,7 +138,7 @@
         <td class="signup-field-label-ko">
           상세 주소
         </td>
-        <td contenteditable="true" class="additional-info" id="address-field" address="">
+        <td contenteditable="true" class="additional-info-ko" id="address-field-ko" address="">
 
         </td>
       </tr>
@@ -127,7 +146,7 @@
         <td class="signup-field-label-ko">
           연락처
         </td>
-        <td contenteditable="true" class="additional-info" id="contact-number-picker" contactnumber="">
+        <td contenteditable="true" class="additional-info-ko" id="contact-number-picker-ko" contactnumber="">
 
         </td>
       </tr>
@@ -135,7 +154,7 @@
         <td class="signup-field-label-ko">
           소속 동아리
         </td>
-        <td contenteditable="true" class="additional-info" id="club-picker" club1="" club2="">
+        <td contenteditable="true" class="additional-info-ko" id="club-picker-ko" club1="" club2="">
 
         </td>
       </tr>
@@ -143,7 +162,7 @@
         <td class="signup-field-label-ko">
           자기소개
         </td>
-        <td contenteditable="true" class="additional-info" id="biography-field">
+        <td contenteditable="true" class="additional-info-ko" id="biography-field-ko">
 
         </td>
       </tr>
