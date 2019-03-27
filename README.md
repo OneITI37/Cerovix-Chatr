@@ -1,2 +1,2 @@
 # Cerovix-Chatr
-A Private Chatting Service For KISJ Students
+A Private Chatting Service For Everyone
