@@ -1,0 +1,25 @@
+/* cerovix-introduction.css */
+
+body {
+    font-family: 'Renner';
+}
+#main-title {
+    font-size: 10vw;
+    font-family: 'Renner Light';
+    text-align: center;
+    opacity: 0.00;
+}
+#establishment-date-mention {
+    font-family: 'Renner Book';
+    width: 100%;
+    text-align: center;
+    opacity: 0.00;
+}
+#company-logo {
+    width: 30%;
+    opacity: 0.00;
+}
+#copyright-statement-common {
+    width: 100%;
+    text-align: center;
+}
