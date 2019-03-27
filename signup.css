@@ -1,0 +1,63 @@
+/* signup.css */
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 51, 81);
+    font-family: 'Renner';
+    font-size: 1vw;
+}
+table, tr, td {
+    border-collapse: collapse;
+}
+#lang-options {
+    text-align: center;
+}
+#language-select-ko, #language-select-en {
+    cursor: pointer;
+}
+#main-title-ko, #main-title-en {
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Renner Light';
+}
+#signup-field-ko {
+    width: 50%;
+    font-family: 'Renner';
+}
+.signup-field-label-ko {
+    width: 30%;
+    font-family: 'Renner Bold';
+}
+#color-picker-table-ko {
+    width: 100%;
+}
+#color-picker-red-ko {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255,  0, 0);
+    border: 0;
+    width: 100%;
+    text-align: center;
+}
+#color-picker-green-ko {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 255, 0);
+    border: 0;
+    width: 100%;
+    text-align: center;
+}
+#color-picker-blue-ko {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 255);
+    border: 0;
+    width: 100%;
+    text-align: center;
+}
+#year-number-picker-ko {
+    border: 0;
+    width: 100%;
+}
+.residency-option-ko {
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+}
