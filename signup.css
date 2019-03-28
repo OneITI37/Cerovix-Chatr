@@ -1,13 +1,27 @@
 /* signup.css */
 
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); 
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 120, 215); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 160, 255); 
+}
 body {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 51, 81);
-    font-family: 'Renner';
+    font-family: 'NanumSquare', 'Renner';
     font-size: 1vw;
 }
 table, tr, td {
     border-collapse: collapse;
+    font-family: 'NanumSquare', 'Renner';
 }
 #lang-options {
     text-align: center;
@@ -15,49 +29,104 @@ table, tr, td {
 #language-select-ko, #language-select-en {
     cursor: pointer;
 }
+#signup-form-ko, #signup-form-en {
+    display: none;
+}
+#required-info-label, #optional-info-label {
+    font-family: 'NanumSquare Bold', 'Renner Bold';
+    font-size: 2vw;
+}
 #main-title-ko, #main-title-en {
     text-align: center;
     font-size: 5vw;
-    font-family: 'Renner Light';
+    font-family: 'NanumSquare Light', 'Renner Light';
 }
-#signup-field-ko {
+#signup-field-ko, #signup-field-en {
     width: 50%;
-    font-family: 'Renner';
+    font-family: 'NanumSquare', 'Renner';
 }
-.signup-field-label-ko {
+#email-local-part-ko, #email-domain-ko, #email-local-part-en, #email-domain-en {
+    width: 100%;
+    border: 0;
+    font-family: 'NanumSquare', 'Renner';
+    font-size: 1vw;
+}
+#password-textbox1-ko, #password-textbox2-ko, #password-textbox1-en, #password-textbox2-en {
+    width: 40vw;
+    border: 0;
+    font-size: 1vw;
+}
+.signup-field-label-ko, .signup-field-label-en {
     width: 30%;
-    font-family: 'Renner Bold';
+    font-family: 'NanumSquare Bold', 'Renner Bold';
 }
-#color-picker-table-ko {
+#license-ko {
+    width: 50%;
+    height: 30vh;
+    overflow: auto;
+    text-align: left;
+    font-family: 'NanumSquare', 'Renner';
+}
+#license-en {
+    width: 50%;
+    height: 30vh;
+    overflow: auto;
+    text-align: left;
+    font-family: 'NanumSquare', 'Renner';
+}
+/*
+#color-picker-table-ko, #color-picker-table-en {
     width: 100%;
 }
-#color-picker-red-ko {
+#color-picker-red-ko, #color-picker-red-en {
     background-color: rgb(255, 255, 255);
     color: rgb(255,  0, 0);
     border: 0;
-    width: 100%;
     text-align: center;
 }
-#color-picker-green-ko {
+#color-picker-green-ko, #color-picker-green-en {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 255, 0);
     border: 0;
-    width: 100%;
     text-align: center;
 }
-#color-picker-blue-ko {
+#color-picker-blue-ko, #color-picker-blue-en {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 255);
     border: 0;
-    width: 100%;
     text-align: center;
 }
-#year-number-picker-ko {
+#profile-color-preview-ko, #profile-color-preview-en {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    display: inline-block;
+}
+#profile-color-area-divider {
+    width: 80%;
+    border-color: rgb(0, 0, 0);
+}
+#birth-year-field-ko, #birth-month-field-ko, #birth-day-field-ko {
     border: 0;
     width: 100%;
+    text-align: right;
+    font-family: 'NanumSquare', 'Renner';
+    font-size: 1vw;
 }
 .residency-option-ko {
     text-align: center;
     width: 50%;
     cursor: pointer;
+}
+*/
+#register-button-ko, #register-button-en {
+    font-family: 'NanumSquare Light', 'Renner';
+    width: 50%;
+    height: 4vw;
+    font-size: 2vw;
+    background-color: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+    border-radius: 4vw;
+    border-width: 0.05vw;
+    border-color: rgb(0, 100, 195);
 }

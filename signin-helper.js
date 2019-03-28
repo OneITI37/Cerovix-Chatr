@@ -12,7 +12,10 @@ function initialSequences() {
         lang = "en";
     else
         lang = location.hash.substring(1, 3);
-    document.getElementById("lang-options").opacity = "0.00";
+    if (lang == "en")
+        document.title = "Sign in - Chatr";
+    if (lang == "ko")
+        document.title = "로그인 - Chatr";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";
     document.getElementById("lang-options").innerHTML += "</tr>";
@@ -21,10 +24,10 @@ function initialSequences() {
             document.getElementById("lang-options").innerHTML += "<td id=\"language-select-"+supported_languages_code[i]+"\" class=\"language-select\">"+supported_languages_name[i]+"</td>";
             document.getElementById("language-select"+"-"+supported_languages_code[i]).languagecode = i;
             document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("mouseover", function(){
-                textColorTransitionAnimation(document.getElementById("language-select"+"-"+supported_languages_code[i]), 0, 51, 81, 70, 121, 151, 0.3);
+                textColorTransitionAnimation(this, 0, 51, 81, 70, 121, 151, 0.3);
             });
             document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("mouseout", function(){
-                textColorTransitionAnimation(document.getElementById("language-select"+"-"+supported_languages_code[i]), 70, 121, 151, 0, 51, 81, 0.3);
+                textColorTransitionAnimation(this, 70, 121, 151, 0, 51, 81, 0.3);
             });
             document.getElementById("language-select"+"-"+supported_languages_code[i]).addEventListener("click", function(){
                 showAllLanguageOptions();
@@ -66,7 +69,7 @@ function initialSequences() {
     document.getElementById("signup-link"+"-"+"en").addEventListener("mouseout", function(){
         textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"en"), 70, 121, 151, 0, 51, 81, 0.3);
     });
-    document.getElementById("form"+"-"+lang).style.display = "block";
+    document.getElementById("signin-form"+"-"+lang).style.display = "block";
     document.getElementById("identifier-section"+"-"+lang).style.opacity = "0.00";
     document.getElementById("password-section"+"-"+lang).style.opacity = "0.00";
     document.getElementById("login-button"+"-"+lang).style.opacity = "0.00";
@@ -76,16 +79,16 @@ function initialSequences() {
     document.getElementById("identifier"+"-"+lang).readOnly = false;
     isIdentifierActive = true;
     document.getElementById("login-button"+"-"+lang).addEventListener("mouseover", function(){
-        backgroundColorTransitionAnimation(document.getElementById("login-button"+"-"+lang), 0, 132, 224, 0, 162, 254, 0.3);
+        backgroundColorTransitionAnimation(this, 0, 132, 224, 0, 162, 254, 0.3);
     });
     document.getElementById("login-button"+"-"+lang).addEventListener("mouseout", function(){
-        backgroundColorTransitionAnimation(document.getElementById("login-button"+"-"+lang), 0, 162, 254, 0, 132, 224, 0.3);
+        backgroundColorTransitionAnimation(this, 0, 162, 254, 0, 132, 224, 0.3);
     });
     document.getElementById("ad-button"+"-"+lang).addEventListener("mouseover", function(){
-        backgroundColorTransitionAnimation(document.getElementById("ad-button"+"-"+lang), 0, 132, 224, 0, 162, 254, 0.3);
+        backgroundColorTransitionAnimation(this, 0, 132, 224, 0, 162, 254, 0.3);
     });
     document.getElementById("ad-button"+"-"+lang).addEventListener("mouseout", function(){
-        backgroundColorTransitionAnimation(document.getElementById("ad-button"+"-"+lang), 0, 162, 254, 0, 132, 224, 0.3);
+        backgroundColorTransitionAnimation(this, 0, 162, 254, 0, 132, 224, 0.3);
     });
     fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("login-button"+"-"+lang), 0.00, 0.10, 1);

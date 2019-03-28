@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="font.css" />
     <link rel="stylesheet" href="signin.css" />
+    <link rel="icon" type="image/png" href="icon2048x2048.png" />
 </head>
 
 <body leftmargin="0" topmargin="0">
@@ -18,7 +19,7 @@
     <table border="1" id="lang-options">
     </table>
   </div>
-  <div align="center" id="form-ko">
+  <div align="center" id="signin-form-ko">
     <h1 id="main-title-ko">로그인</h1>
     <form method="post" name="login_form_ko">
       <table border="0" style="width: 50%; font-size: 2vw;">
@@ -39,9 +40,11 @@
           </td>
         </tr>
       </table>
-      <button id="login-button-ko" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true">
-        로그인
-      </button>
+      <p>
+        <button id="login-button-ko" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true">
+          로그인
+        </button>
+      </p>
       <table border="0" id="other-account-actions-section-ko">
         <tr>
           <td id="recover-account-section-ko">
@@ -53,7 +56,7 @@
              | 
           </td>
           <td id="signup-link-section-ko">
-            <a href="signup.html#en" target="_self" id="signup-link-ko">
+            <a href="signup.html#ko" target="_self" id="signup-link-ko">
               가입하기
             </a>
           </td>
@@ -64,7 +67,7 @@
       </button>
     </form>
   </div>
-  <div align="center" id="form-en">
+  <div align="center" id="signin-form-en">
     <h1 id="main-title-en">Sign in</h1>
     <form method="post" name="login_form_en">
       <table border="0" style="width: 50%; font-size: 2vw;">
@@ -85,9 +88,11 @@
           </td>
         </tr>
       </table>
-      <button id="login-button-en" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true">
-        Sign in
-      </button>
+      <p>
+        <button id="login-button-en" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true">
+          Sign in
+        </button>
+      </p>
       <table border="0" id="other-account-actions-section-en">
         <tr>
           <td id="recover-account-section-en">

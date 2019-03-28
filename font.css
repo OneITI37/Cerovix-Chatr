@@ -2,33 +2,77 @@
 
 @font-face {
     font-family: 'Renner';
-    src: url(fonts/renner-medium.eot);
-    src: url(fonts/renner-medium.eot) format('embedded-opentype'),
-         url(fonts/renner-medium.woff2) format('woff2'),
-         url(fonts/renner-medium.woff) format('woff'),
-         url(fonts/renner-medium.ttf) format('truetype');
+    src: url(fonts/Renner/renner-medium.eot);
+    src: url(fonts/Renner/renner-medium.eot) format('embedded-opentype'),
+         url(fonts/Renner/renner-medium.woff2) format('woff2'),
+         url(fonts/Renner/renner-medium.woff) format('woff'),
+         url(fonts/Renner/renner-medium.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Renner Light';
-    src: url(fonts/renner-light.eot);
-    src: url(fonts/renner-light.eot) format('embedded-opentype'),
-         url(fonts/renner-light.woff2) format('woff2'),
-         url(fonts/renner-light.woff) format('woff'),
-         url(fonts/renner-light.ttf) format('truetype');
+    src: url(fonts/Renner/renner-light.eot);
+    src: url(fonts/Renner/renner-light.eot) format('embedded-opentype'),
+         url(fonts/Renner/renner-light.woff2) format('woff2'),
+         url(fonts/Renner/renner-light.woff) format('woff'),
+         url(fonts/Renner/renner-light.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Renner Bold';
-    src: url(fonts/renner-bold.eot);
-    src: url(fonts/renner-bold.eot) format('embedded-opentype'),
-         url(fonts/renner-bold.woff2) format('woff2'),
-         url(fonts/renner-bold.woff) format('woff'),
-         url(fonts/renner-bold.ttf) format('truetype');
+    src: url(fonts/Renner/renner-bold.eot);
+    src: url(fonts/Renner/renner-bold.eot) format('embedded-opentype'),
+         url(fonts/Renner/renner-bold.woff2) format('woff2'),
+         url(fonts/Renner/renner-bold.woff) format('woff'),
+         url(fonts/Renner/renner-bold.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Renner Book';
-    src: url(fonts/renner-book.eot);
-    src: url(fonts/renner-book.eot) format('embedded-opentype'),
-         url(fonts/renner-book.woff2) format('woff2'),
-         url(fonts/renner-book.woff) format('woff'),
-         url(fonts/renner-book.ttf) format('truetype');
+    src: url(fonts/Renner/renner-book.eot);
+    src: url(fonts/Renner/renner-book.eot) format('embedded-opentype'),
+         url(fonts/Renner/renner-book.woff2) format('woff2'),
+         url(fonts/Renner/renner-book.woff) format('woff'),
+         url(fonts/Renner/renner-book.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NanumSquare Light';
+    src: url(fonts/NanumSquare/NanumSquareLight.eot);
+    src: url(fonts/NanumSquare/NanumSquareLight.eot) format('embedded-opentype'),
+         url(fonts/NanumSquare/NanumSquareLight.woff2) format('woff2'),
+         url(fonts/NanumSquare/NanumSquareLight.woff) format('woff'),
+         url(fonts/NanumSquare/NanumSquareLight.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'NanumSquare';
+    src: url(fonts/NanumSquare/NanumSquareRegular.eot);
+    src: url(fonts/NanumSquare/NanumSquareRegular.eot) format('embedded-opentype'),
+         url(fonts/NanumSquare/NanumSquareRegular.woff2) format('woff2'),
+         url(fonts/NanumSquare/NanumSquareRegular.woff) format('woff'),
+         url(fonts/NanumSquare/NanumSquareRegular.ttf) format('truetype');
+    unicode-range: U+AC00-D7FF;
+}
+@font-face {
+    font-family: 'NanumSquare Bold';
+    src: url(fonts/NanumSquare/NanumSquareBold.eot);
+    src: url(fonts/NanumSquare/NanumSquareBold.eot) format('embedded-opentype'),
+         url(fonts/NanumSquare/NanumSquareBold.woff2) format('woff2'),
+         url(fonts/NanumSquare/NanumSquareBold.woff) format('woff'),
+         url(fonts/NanumSquare/NanumSquareBold.ttf) format('truetype');
+    unicode-range: U+AC00-D7FF;
+}
+@font-face {
+    font-family: 'NanumSquare Bold';
+    src: url(fonts/NanumSquare/NanumSquareBold.eot);
+    src: url(fonts/NanumSquare/NanumSquareBold.eot) format('embedded-opentype'),
+         url(fonts/NanumSquare/NanumSquareBold.woff2) format('woff2'),
+         url(fonts/NanumSquare/NanumSquareBold.woff) format('woff'),
+         url(fonts/NanumSquare/NanumSquareBold.ttf) format('truetype');
+    unicode-range: U+AC00-D7FF;
+}
+@font-face {
+    font-family: 'NanumSquare Extra Bold';
+    src: url(fonts/NanumSquare/NanumSquareExtraBold.eot);
+    src: url(fonts/NanumSquare/NanumSquareExtraBold.eot) format('embedded-opentype'),
+         url(fonts/NanumSquare/NanumSquareExtraBold.woff2) format('woff2'),
+         url(fonts/NanumSquare/NanumSquareExtraBold.woff) format('woff'),
+         url(fonts/NanumSquare/NanumSquareExtraBold.ttf) format('truetype');
+    unicode-range: U+AC00-D7FF;
 }

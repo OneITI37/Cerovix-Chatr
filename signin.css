@@ -1,13 +1,26 @@
 /* signin.css */
 
-#form-ko, #form-en {
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); 
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 120, 215); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 160, 255); 
+}
+#signin-form-ko, #signin-form-en {
     display: none;
     width: 100%;
 }
 body {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 51, 81);
-    font-family: 'Renner';
+    font-family: 'NanumSquare', 'Renner';
     font-size: 1vw;
 }
 table, tr, td {
@@ -22,13 +35,13 @@ table, tr, td {
 #main-title-ko, #main-title-en {
     text-align: center;
     font-size: 5vw;
-    font-family: 'Renner Light';
+    font-family: 'NanumSquare Light', 'Renner Light';
 }
 [name="login_form"] {
-    font-family: 'Renner';
+    font-family: 'NanumSquare', 'Renner';
 }
 #identifier-label-ko, #password-label-ko, #identifier-label-en, #password-label-en {
-    font-family: 'Renner Bold';
+    font-family: 'NanumSquare Bold', 'Renner Bold';
 }
 #identifier-ko, #password-ko, #identifier-en, #password-en {
     font-family: 'Renner Light';
@@ -42,9 +55,10 @@ table, tr, td {
 }
 #identifier-ko::placeholder, #password-ko::placeholder, #identifier-en::placeholder, #password-en::placeholder {
     color: rgb(73, 122, 150);
+    font-family: 'NanumSquare Light', 'Renner Light';
 }
 #login-button-ko, #login-button-en {
-    font-family: 'Renner';
+    font-family: 'NanumSquare Light', 'Renner';
     width: 50%;
     height: 4vw;
     font-size: 2vw;
@@ -72,7 +86,7 @@ table, tr, td {
     border-radius: 1vw;
     border-width: 0.05vw;
     border-color: rgb(0, 100, 195);
-    font-family: 'Renner Light';
+    font-family: 'NanumSquare Light', 'Renner Light';
 }
 #copyright-statement-common {
     width: 100vw;

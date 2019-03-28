@@ -2,12 +2,18 @@
     var supported_languages_name = new Array("한국어", "English");
     var supported_languages_eng_name = new Array("Korean", "English");
     var supported_languages_code = new Array("ko", "en");
+    var register_button_active = false;
+    var license_agreement = false;
     initialRoutine();
 function initialRoutine() {
     if (location.hash == "")
         lang = "en";
     else
         lang = location.hash.substring(1, 3);
+    if (lang == "en")
+        document.title = "Sign up - Chatr";
+    if (lang == "ko")
+        document.title = "가입 - Chatr";
     document.getElementById("lang-options").opacity = "0.00";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";
@@ -34,19 +40,104 @@ function initialRoutine() {
             break;
         }
     }
+    document.getElementById("signup-form"+"-"+lang).style.display = "block";
     fadeAnimation(document.getElementById("lang-options"), 0.00, 1.00, 1);
     document.getElementById("language-select"+"-"+lang).addEventListener("click", function(){
         showAllLanguageOptions();
     });
+    fadeAnimation(document.getElementById("signup-form"+"-"+lang), 0.00, 1, 1);
+    document.getElementById("register-button"+"-"+lang).addEventListener("click", function(){
+        document.register_form_ko.submit();
+    });
+    document.getElementById("register-button"+"-"+lang).style.opacity = "0.00";
+    document.getElementById("register-button"+"-"+lang).style.cursor = "not-allowed";
+    document.getElementById("register-button"+"-"+lang).addEventListener("mouseover", function(){
+        backgroundColorTransitionAnimation(this, 0, 132, 224, 0, 162, 254, 0.3);
+    });
+    document.getElementById("register-button"+"-"+lang).addEventListener("mouseout", function(){
+        backgroundColorTransitionAnimation(this, 0, 162, 254, 0, 132, 224, 0.3);
+    });
+    fadeAnimation(document.getElementById("register-button"+"-"+lang), 0.00, 0.10, 1);
     formConfigure();
+    //colorPickerAreaConfigure();
     return;
 }
+function formVerify() {
+    var validity = true;
+    if (lang == "ko") {
+        document.getElementById("koreanname"+"-"+lang).value = document.getElementById("korean-name-field-ko").innerHTML;
+        if (document.getElementById("koreanname"+"-"+lang).value.length <= 0) {
+            validity = false;
+            console.log("Korean Name : Insufficient length of characters");
+        }
+    }
+    document.getElementById("englishname"+"-"+lang).value = document.getElementById("english-name-field"+"-"+lang).innerHTML;
+    if (document.getElementById("englishname"+"-"+lang).value.length <= 0) {
+        validity = false;
+        console.log("English Name : Insufficient length of characters");
+    }
+    document.getElementById("nickname"+"-"+lang).value = document.getElementById("nickname-field"+"-"+lang).innerHTML;
+    if (document.getElementById("nickname"+"-"+lang).value.length < 3) {
+        validity = false;
+        console.log("Nickname : Insufficient length of characters");
+    }
+    document.getElementById("email-local-part"+"-"+lang).value = document.getElementById("email-local-part"+"-"+lang).value;
+    if (document.getElementById("englishname"+"-"+lang).value.length <= 0) {
+        validity = false;
+        console.log("Email Local Part : Insufficient length of characters");
+    }
+    document.getElementById("email-domain"+"-"+lang).value = document.getElementById("email-domain"+"-"+lang).value;
+    if (document.getElementById("email-domain"+"-"+lang).value.length < 4) {
+        validity = false;
+        console.log("Email Domain : Insufficient length of characters");
+    }
+    if (document.getElementById("password-textbox1"+"-"+lang).value != document.getElementById("password-textbox2"+"-"+lang).value) {
+        validity = false;
+        console.log("Password : Not matching");
+    }
+    document.getElementById("password"+"-"+lang).value = document.getElementById("password-textbox1"+"-"+lang).value;
+    if (document.getElementById("password"+"-"+lang).value.length < 8) {
+        validity = false;
+        console.log("Password : Insufficient length of characters");
+    }
+    if (!license_agreement)
+        validity = false;
+    
+    if (validity) {
+        if (!register_button_active) {
+            fadeAnimation(document.getElementById("register-button"+"-"+lang), 0.10, 1.00, 1);
+            document.getElementById("register-button"+"-"+lang).style.cursor = "pointer";
+            document.getElementById("register-button"+"-"+lang).disabled = false;
+            register_button_active = true;
+        }
+    }
+    else {
+        if (register_button_active) {
+            document.getElementById("register-button"+"-"+lang).disabled = true;
+            document.getElementById("register-button"+"-"+lang).style.cursor = "not-allowed";
+            fadeAnimation(document.getElementById("register-button"+"-"+lang), 1.00, 0.10, 1);
+            register_button_active = false;
+        }
+    }
+}
 function formConfigure() {
-    document.getElementById("email-field"+"-"+lang).innerHTML = "";
-    document.getElementById("email-field"+"-"+lang).innerHTML += "<input type=\"text\" id=\"email-local-part"+lang+"\" \" class=\"small-textbox"+lang+"\" />";
-    document.getElementById("email-field"+"-"+lang).innerHTML += "&#64;";
-    document.getElementById("email-field"+"-"+lang).innerHTML += "<input type=\"text\" id=\"email-address"+lang+"\" \" class=\"small-textbox"+lang+"\" />";
+    if (lang == "ko")
+        document.getElementById("korean-name-field"+"-"+lang).addEventListener("keyup", formVerify);
+    document.getElementById("english-name-field"+"-"+lang).addEventListener("keyup", formVerify);
+    document.getElementById("nickname-field"+"-"+lang).addEventListener("keyup", formVerify);
+    document.getElementById("email-local-part"+"-"+lang).addEventListener("keyup", formVerify);
+    document.getElementById("email-domain"+"-"+lang).addEventListener("keyup", formVerify);
+    document.getElementById("password-textbox1"+"-"+lang).addEventListener("keyup", formVerify);
+    document.getElementById("password-textbox2"+"-"+lang).addEventListener("keyup", formVerify);
 
+    document.getElementById("license-agreement"+"-"+lang).addEventListener("click", function(){
+        if (this.checked = true)
+            license_agreement = true;
+        else
+            license_agreement = false;
+        formVerify();
+    });
+    /*
     for (i = 0; i < document.getElementsByClassName("residency-option"+"-"+lang).length; i++) {
         document.getElementsByClassName("residency-option"+"-"+lang)[i].addEventListener("mouseover", function(){
             if (this.selected != "true")
@@ -78,6 +169,7 @@ function formConfigure() {
             backgroundColorTransitionAnimation(this, 221, 242, 255, 160, 218, 255, 0.3);
         });
     }
+    */
     return;
 }
 function showDormitoryPicker() {

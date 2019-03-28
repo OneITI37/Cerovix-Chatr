@@ -26,137 +26,400 @@
     </table>
   </div>
   <div align="center" id="signup-form-ko">
+    <input type="hidden" id="koreanname-ko" name="koreanname" value="" />
+    <input type="hidden" id="englishname-ko" name="englishname" value="" />
+    <input type="hidden" id="nickname-ko" name="nickname" value="" />
+    <input type="hidden" id="emaillocalpart-ko" name="emaillocalpart" value="" />
+    <input type="hidden" id="emaildomain-ko" name="emaildomain" value="" />
+    <input type="hidden" id="password-ko" name="password" value="" />
+    <!--
+    <input type="hidden" id="birthyear-ko" name="birthyear" value="" />
+    <input type="hidden" id="birthmonth-ko" name="birthmonth" value="" />
+    <input type="hidden" id="birthday-ko" name="birthday" value="" />
+    -->
     <h1 id="main-title-ko">
       가입
     </h1>
-    필수 정보
-    <table border="1" id="signup-field-ko">
-      <tr>
-        <td class="signup-field-label-ko">
-          한글 성함(예: 홍길동)
-        </td>
-        <td contenteditable="true" id="korean-name-field-ko" koreanname="">
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          영어 성함(예: John Doe)
-        </td>
-        <td contenteditable="true" id="english-name-field-ko" englishname="">
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          닉네임
-        </td>
-        <td contenteditable="true" id="nickname-field-ko" nickname="">
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          이메일
-        </td>
-        <td contenteditable="false" id="email-field-ko" emaillocalpart="" emaildomain="">
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          비밀번호
-        </td>
-        <td contenteditable="true" id="password-field-ko">
-
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          비밀번호 확인
-        </td>
-        <td contenteditable="true" id="password-recheck-field-ko">
-
-        </td>
-      </tr>
-    </table>
-    선택 정보
-    <table border="1" id="signup-field-ko">
+    <form method="post" name="register_form_ko">
       <!--
-      <tr>
-        <td class="signup-field-label-ko">
-          졸업년도
-        </td>
-        <td contenteditable="false" class="additional-info-ko" id="year-number-picker-container-ko" />
-          <input type="number" value="2019" min="2016" max="2040" id="year-number-picker-ko" />
-        </td>
-      </tr>
+      <input type="hidden" id="profile-color-red-ko" value="0" />
+      <input type="hidden" id="profile-color-green-ko" value="120" />
+      <input type="hidden" id="profile-color-blue-ko" value="215" />
       -->
-      <tr>
-        <td class="signup-field-label-ko">
-          생년월일
-        </td>
-        <td contenteditable="false" class="additional-info-ko" id="birthday-picker-ko" birthyear="" birthmonth="" birthday="">
+      <!--<h2 id="required-info-label">필수 정보</h2>-->
+      <table border="1" id="signup-field-ko">
+        <tr>
+          <td class="signup-field-label-ko">
+            한글 성함<br />(예: 홍길동)
+          </td>
+          <td contenteditable="true" id="korean-name-field-ko">
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            영어 성함<br />(예: John Doe)
+          </td>
+          <td contenteditable="true" id="english-name-field-ko">
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            닉네임
+          </td>
+          <td contenteditable="true" id="nickname-field-ko">
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            이메일
+          </td>
+          <td contenteditable="false" id="email-field-ko">
+              <table border="0" style="width: 100%;">
+                <tr>
+                  <td>
+                    <input type="text" id="email-local-part-ko" class="small-textbox-ko" />
+                  </td>
+                  <td style="text-align: center;">&#64;</td>
+                  <td>
+                    <input type="text" id="email-domain-ko" class="small-textbox-ko" />
+                  </td>
+                </tr>
+              </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            비밀번호
+          </td>
+          <td contenteditable="false" id="password-field-ko">
+            <input type="password" id="password-textbox1-ko" maxlength="64" />
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            비밀번호 확인
+          </td>
+          <td contenteditable="false" id="password-recheck-field-ko">
+            <input type="password" id="password-textbox2-ko" maxlength="64" />
+          </td>
+        </tr>
+      </table>
+      <!--
+      <h2 id="optional-info-label">선택 정보</h2>
+      <table border="1" id="signup-field-ko">
+      -->
+        <!--
+        <tr>
+          <td class="signup-field-label-ko">
+            졸업년도
+          </td>
+          <td contenteditable="false" class="additional-info-ko" id="year-number-picker-container-ko" />
+            <input type="number" value="2019" min="2016" max="2040" id="year-number-picker-ko" />
+          </td>
+        </tr>
+        -->
+        <!--
+        <tr>
+          <td class="signup-field-label-ko">
+            프로필 색상
+          </td>
+          <td contenteditable="false" id="color-picker-ko">
+          </td>
+        </tr>
+        -->
+        <!--
+          <td class="signup-field-label-ko">
+            생년월일
+          </td>
+          <td contenteditable="false" class="additional-info-ko" id="birthday-picker-ko" birthyear="" birthmonth="" birthday="">
+              <table border="0" style="width: 100%;">
+                <tr>
+                  <td>
+                    <input type="number" id="birth-year-field-ko" value="2019" min="1900" max="2019" />
+                  </td>
+                  <td>
+                    년
+                  </td>
+                  <td>
+                    <input type="number" id="birth-month-field-ko" value="1" min="1" max="12" />
+                  </td>
+                  <td>
+                    월
+                  </td>
+                  <td>
+                      <input type="number" id="birth-day-field-ko" value="1" min="1" max="31" />
+                  </td>
+                  <td>
+                    일
+                  </td>
+                </tr>
+              </table>
+          </td>
+        </tr>
+        -->
+        <!--
+        <tr>
+          <td class="signup-field-label-ko">
+            주거 정보
+          </td>
+          <td contenteditable="false" class="additional-info-ko" id="residence-picker-ko" residency="">
             <table border="0" style="width: 100%;">
               <tr>
-                <td>
-                  <input type="number" id="birth-year-field-ko" value="2019" min="1900" max="2019" />
-                </td>
-                <td>
-                  년
-                </td>
-                <td>
-                  <input type="number" id="birth-month-field-ko" value="1" min="1" max="12" />
-                </td>
-                <td>
-                  월
-                </td>
-                <td>
-                    <input type="number" id="birth-day-field-ko" value="1" min="1" max="31" />
-                </td>
-                <td>
-                  일
-                </td>
+                <td class="residency-option-ko" id="residency-option-day-ko" selected="false">통학</td>
+                <td class="residency-option-ko" id="residency-option-dorm-ko" selected="false">기숙사</td>
               </tr>
             </table>
-        </td>
-      </tr>
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            상세 주소
+          </td>
+          <td contenteditable="true" class="additional-info-ko" id="address-field-ko" address="">
+
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            연락처
+          </td>
+          <td contenteditable="true" class="additional-info-ko" id="contact-number-picker-ko" contactnumber="">
+
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            자기소개
+          </td>
+          <td contenteditable="true" class="additional-info-ko" id="biography-field-ko">
+
+          </td>
+        </tr>
+        -->
+      </table>
+      <pre id="license-ko" align="left">
+아래에서 '약관에 동의합니다'를 선택하면 Cerovix 서비스 약관 및 위치정보 이용약관에 동의하게 됩니다.
+또한 다음 주요 사항과 개인정보 수집항목·이용목적·보유기간이 포함되어 있는 Cerovix 개인정보 처리방침에도 동의하게 됩니다.
+
+<b>사용자가 Cerovix을 사용할 때 Cerovix에서 수집 및 이용하는 데이터</b>
+<ul type="disc">
+<li>Cerovix 계정을 설정할 때 제공하신 이름, 이메일 주소, 전화번호와 같은 정보가 저장됩니다.</li>
+<li>사용자의 보안 및 안정을 위해 Cerovix에서 사용자의 활동기록을 (기기 ID, IP 주소, 쿠키 데이터, 위치)를 수집 및 이용할 수 있습니다.</li>
+<li>또한 Cerovix에서는 사용자가 Google 서비스(예: 검색, 광고, 애널리틱스, YouTube 동영상 플레이어)의 활동기록을 이용하여 Google Adsence의 광고 목적으로 사용할 수 있습니다.</li>
+</ul>
+
+<b>Cerovix가 정보를 처리하는 이유</b>
+Cerovix은 다음과 같은 목적으로 이 데이터를 처리합니다.
+<ul type="disc">
+<li>Cerovix는 Google 서비스를 이용하여 사용자에게 맞춤설정된 콘텐츠를 제공합니다.</li>
+<li>계정 설정에 따라 Cerovix 서비스 및 Google과 파트너 관계를 맺은 사이트와 앱 또는 Cerovix의 광고사에서 제공하는 개인 맞춤 광고를 게재합니다.</li>
+<li>사기 및 악용을 방지하여 보안을 강화합니다.</li>
+<li>Cerovix 서비스가 사용되는 방식을 파악하기 위한 분석 및 측정을 실행합니다.</li>
+</ul>
+<b>데이터 보유</b>
+Cerovix은 이용자에게 자신의 개인정보를 열람하고, 이용자의 삭제 요청에 따라 해당 개인정보를 삭제하기 위하여 성실하게 노력합니다. 이용자로부터 개인정보 삭제 요청을 받는 경우, 최대 30일 이내에 삭제됩니다.
+      </pre>
+      <input type="checkbox" id="license-agreement-ko" /> 약관에 동의합니다
+      <p>
+        <button id="register-button-ko" onfocus="this.blur();" disabled="true">
+          가입
+        </button>
+      </p>
+    </form>
+  </div>
+  <div align="center" id="signup-form-en">
+    <input type="hidden" id="englishname-en" name="englishname" value="" />
+    <input type="hidden" id="nickname-en" name="nickname" value="" />
+    <input type="hidden" id="emaillocalpart-en" name="emaillocalpart" value="" />
+    <input type="hidden" id="emaildomain-en" name="emaildomain" value="" />
+    <input type="hidden" id="password-en" name="password" value="" />
+    <!--
+    <input type="hidden" id="birthyear-ko" name="birthyear" value="" />
+    <input type="hidden" id="birthmonth-ko" name="birthmonth" value="" />
+    <input type="hidden" id="birthday-ko" name="birthday" value="" />
+    -->
+    <h1 id="main-title-en">
+      Sign up
+    </h1>
+    <form method="post" name="register_form_en">
       <!--
-      <tr>
-        <td class="signup-field-label-ko">
-          주거 정보
-        </td>
-        <td contenteditable="false" class="additional-info-ko" id="residence-picker-ko" residency="">
-          <table border="0" style="width: 100%;">
-            <tr>
-              <td class="residency-option-ko" id="residency-option-day-ko" selected="false">통학</td>
-              <td class="residency-option-ko" id="residency-option-dorm-ko" selected="false">기숙사</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          상세 주소
-        </td>
-        <td contenteditable="true" class="additional-info-ko" id="address-field-ko" address="">
-
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          연락처
-        </td>
-        <td contenteditable="true" class="additional-info-ko" id="contact-number-picker-ko" contactnumber="">
-
-        </td>
-      </tr>
-      <tr>
-        <td class="signup-field-label-ko">
-          자기소개
-        </td>
-        <td contenteditable="true" class="additional-info-ko" id="biography-field-ko">
-
-        </td>
-      </tr>
+      <input type="hidden" id="profile-color-red-ko" value="0" />
+      <input type="hidden" id="profile-color-green-ko" value="120" />
+      <input type="hidden" id="profile-color-blue-ko" value="215" />
       -->
-    </table>
+      <!--<h2 id="required-info-label">필수 정보</h2>-->
+      <table border="1" id="signup-field-en">
+        <tr>
+          <td class="signup-field-label-ko">
+            English Name<br />(e.g. John Doe)
+          </td>
+          <td contenteditable="true" id="english-name-field-en">
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-en">
+            Nickname
+          </td>
+          <td contenteditable="true" id="nickname-field-en">
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-en">
+            E-mail
+          </td>
+          <td contenteditable="false" id="email-field-en">
+              <table border="0" style="width: 100%;">
+                <tr>
+                  <td>
+                    <input type="text" id="email-local-part-en" class="small-textbox-en" />
+                  </td>
+                  <td style="text-align: center;">&#64;</td>
+                  <td>
+                    <input type="text" id="email-domain-en" class="small-textbox-en" />
+                  </td>
+                </tr>
+              </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-en">
+            Password
+          </td>
+          <td contenteditable="false" id="password-field-en">
+            <input type="password" id="password-textbox1-en" maxlength="64" />
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-en">
+            Password Confirmation
+          </td>
+          <td contenteditable="false" id="password-recheck-field-en">
+            <input type="password" id="password-textbox2-en" maxlength="64" />
+          </td>
+        </tr>
+      </table>
+      <!--
+      <h2 id="optional-info-label">선택 정보</h2>
+      <table border="1" id="signup-field-ko">
+      -->
+        <!--
+        <tr>
+          <td class="signup-field-label-ko">
+            졸업년도
+          </td>
+          <td contenteditable="false" class="additional-info-ko" id="year-number-picker-container-ko" />
+            <input type="number" value="2019" min="2016" max="2040" id="year-number-picker-ko" />
+          </td>
+        </tr>
+        -->
+        <!--
+        <tr>
+          <td class="signup-field-label-ko">
+            프로필 색상
+          </td>
+          <td contenteditable="false" id="color-picker-ko">
+          </td>
+        </tr>
+        -->
+        <!--
+          <td class="signup-field-label-ko">
+            생년월일
+          </td>
+          <td contenteditable="false" class="additional-info-ko" id="birthday-picker-ko" birthyear="" birthmonth="" birthday="">
+              <table border="0" style="width: 100%;">
+                <tr>
+                  <td>
+                    <input type="number" id="birth-year-field-ko" value="2019" min="1900" max="2019" />
+                  </td>
+                  <td>
+                    년
+                  </td>
+                  <td>
+                    <input type="number" id="birth-month-field-ko" value="1" min="1" max="12" />
+                  </td>
+                  <td>
+                    월
+                  </td>
+                  <td>
+                      <input type="number" id="birth-day-field-ko" value="1" min="1" max="31" />
+                  </td>
+                  <td>
+                    일
+                  </td>
+                </tr>
+              </table>
+          </td>
+        </tr>
+        -->
+        <!--
+        <tr>
+          <td class="signup-field-label-ko">
+            주거 정보
+          </td>
+          <td contenteditable="false" class="additional-info-ko" id="residence-picker-ko" residency="">
+            <table border="0" style="width: 100%;">
+              <tr>
+                <td class="residency-option-ko" id="residency-option-day-ko" selected="false">통학</td>
+                <td class="residency-option-ko" id="residency-option-dorm-ko" selected="false">기숙사</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            상세 주소
+          </td>
+          <td contenteditable="true" class="additional-info-ko" id="address-field-ko" address="">
+
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            연락처
+          </td>
+          <td contenteditable="true" class="additional-info-ko" id="contact-number-picker-ko" contactnumber="">
+
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-ko">
+            자기소개
+          </td>
+          <td contenteditable="true" class="additional-info-ko" id="biography-field-ko">
+
+          </td>
+        </tr>
+      </table>
+        -->
+<pre id="license-en" align="left">
+By checking the checkmark of "I Agree" below, you agree to the Cerovix Terms of Use and the Geolocation Terms of Use.
+Also you agree with the Cerivox Personal Information Processing Policy, which includes the following major items and items of personal information collection · purpose of use · retention period.
+            
+<b>Data collected and used by Cerovix when users use Cerovix</b>
+<ul type="disc">
+<li>Stores information such as the name, email address and phone number provided when setting up the Cerovix account.</li>
+<li>You can collect and use user activity records (device ID, IP address, cookie data, location) with Cerovix for user security and stability.</li>
+<li>In addition, Cerovix allows users to use the activity records of Google services (eg, search, advertising, analytics, YouTube video players) and use them for advertising purposes on Google Adsence.</li>
+</ul>
+            
+<b>Cerovix Reasons to process this information</b>
+Cerovix processes this data for the following purposes
+<ul type="disc">
+<li>Cerovix uses the Google service to provide users with customized content.</li>
+<li>Depending on your account settings, we will display sites and apps that have partnered with the Cerovix service and Google, as well as personalized advertisements provided by the advertising agencies of Cerovix.</li>
+<li>Improve security by preventing fraud and abuse.</li>
+<li>Perform analysis and measurements to understand how Cerovix services are being used.</li>
+</ul>
+<b>Data retention</b>
+Cerovix will use the User's personal information to view and, in response to the User's request for deletion, will work in good faith to delete personal information. If you receive a request to delete personal information from the user, it will be deleted within a maximum of 30 days.
+</pre>
+      <input type="checkbox" id="license-agreement-en" /> I Agree
+      <p>
+        <button id="register-button-en" onfocus="this.blur();" disabled="true">
+          Sign up
+        </button>
+      </p>
+    </form>
   </div>
 
   <script type="text/javascript" src="signup-helper.js"></script>
