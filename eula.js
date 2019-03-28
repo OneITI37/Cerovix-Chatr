@@ -1,8 +1,8 @@
 // eula.js
     var lang = "en";
-    var supported_languages_name = new Array("한국어", "English");
-    var supported_languages_eng_name = new Array("Korean", "English");
-    var supported_languages_code = new Array("ko", "en");
+    var supported_languages_name = new Array("한국어", "English", "日本語");
+    var supported_languages_eng_name = new Array("Korean", "English", "Japanese");
+    var supported_languages_code = new Array("ko", "en", "jp");
     initialRoutine();
 function initialRoutine() {
     if (location.hash == "")
@@ -11,8 +11,10 @@ function initialRoutine() {
         lang = location.hash.substring(1, 3);
     if (lang == "en")
         document.title = "EULA - Chatr";
-    if (lang == "ko")
+    else if (lang == "ko")
         document.title = "이용 약관 - Chatr";
+    else if (lang == "jp")
+        document.title = "利用規約 - Chatr";
     if (document.referrer != "") {
         document.getElementById("navigation-button").style.backgroundColor = "rgb(0, 120, 215)";
         document.getElementById("navigation-button").innerHTML = "<img src=\"ui/previous-button.svg\" id=\"navigation-button-prev\" />";
