@@ -1,7 +1,7 @@
     var lang = "en";
-    var supported_languages_name = new Array("한국어", "English");
-    var supported_languages_eng_name = new Array("Korean", "English");
-    var supported_languages_code = new Array("ko", "en");
+    var supported_languages_name = new Array("한국어", "English", "日本語");
+    var supported_languages_eng_name = new Array("Korean", "English", "Japanese");
+    var supported_languages_code = new Array("ko", "en", "jp");
     var register_button_active = false;
     var license_agreement = false;
     initialRoutine();
@@ -14,6 +14,8 @@ function initialRoutine() {
         document.title = "Sign up - Chatr";
     if (lang == "ko")
         document.title = "가입 - Chatr";
+    if (lang == "jp")
+        document.title = "会員登録 - Chatr";
     document.getElementById("lang-options").opacity = "0.00";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";

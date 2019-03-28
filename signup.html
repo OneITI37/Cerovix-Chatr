@@ -228,7 +228,7 @@
       <!--<h2 id="required-info-label">필수 정보</h2>-->
       <table border="1" id="signup-field-en">
         <tr>
-          <td class="signup-field-label-ko">
+          <td class="signup-field-label-en">
             English Name
           </td>
           <td contenteditable="true" id="english-name-field-en">
@@ -276,103 +276,97 @@
           </td>
         </tr>
       </table>
+      <input type="checkbox" id="license-agreement-en" /> I Agree to <a href="eula.html#en" id="eula-link-en" target="_blank">Terms and Conditions</a>
+      <p>
+        <button id="register-button-en" onfocus="this.blur();" disabled="true">
+          Sign up
+        </button>
+      </p>
+    </form>
+  </div>
+  <div align="center" id="signup-form-jp">
+    <input type="hidden" id="japanesename-jp" name="japanesename" value="" />
+    <input type="hidden" id="englishname-jp" name="englishname" value="" />
+    <input type="hidden" id="nickname-jp" name="nickname" value="" />
+    <input type="hidden" id="emaillocalpart-jp" name="emaillocalpart" value="" />
+    <input type="hidden" id="emaildomain-jp" name="emaildomain" value="" />
+    <input type="hidden" id="password-jp" name="password" value="" />
+    <!--
+    <input type="hidden" id="birthyear-ko" name="birthyear" value="" />
+    <input type="hidden" id="birthmonth-ko" name="birthmonth" value="" />
+    <input type="hidden" id="birthday-ko" name="birthday" value="" />
+    -->
+    <h1 id="main-title-jp">
+      Sign up
+    </h1>
+    <form method="post" name="register_form_jp">
       <!--
-      <h2 id="optional-info-label">선택 정보</h2>
-      <table border="1" id="signup-field-ko">
+      <input type="hidden" id="profile-color-red-ko" value="0" />
+      <input type="hidden" id="profile-color-green-ko" value="120" />
+      <input type="hidden" id="profile-color-blue-ko" value="215" />
       -->
-        <!--
+      <!--<h2 id="required-info-label">필수 정보</h2>-->
+      <table border="1" id="signup-field-jp">
         <tr>
-          <td class="signup-field-label-ko">
-            졸업년도
+          <td class="signup-field-label-jp">
+            日本のお名前
           </td>
-          <td contenteditable="false" class="additional-info-ko" id="year-number-picker-container-ko" />
-            <input type="number" value="2019" min="2016" max="2040" id="year-number-picker-ko" />
+          <td contenteditable="true" id="japanese-name-field-jp">
           </td>
         </tr>
-        -->
-        <!--
         <tr>
-          <td class="signup-field-label-ko">
-            프로필 색상
+          <td class="signup-field-label-jp">
+            英語のお名前
           </td>
-          <td contenteditable="false" id="color-picker-ko">
+          <td contenteditable="true" id="english-name-field-en">
           </td>
         </tr>
-        -->
-        <!--
-          <td class="signup-field-label-ko">
-            생년월일
+        <tr>
+          <td class="signup-field-label-jp">
+            ニックネーム
           </td>
-          <td contenteditable="false" class="additional-info-ko" id="birthday-picker-ko" birthyear="" birthmonth="" birthday="">
+          <td contenteditable="true" id="nickname-field-jp">
+          </td>
+        </tr>
+        <tr>
+          <td class="signup-field-label-jp">
+            E-MAIL
+          </td>
+          <td contenteditable="false" id="email-field-jp">
               <table border="0" style="width: 100%;">
                 <tr>
                   <td>
-                    <input type="number" id="birth-year-field-ko" value="2019" min="1900" max="2019" />
+                    <input type="text" id="email-local-part-en" class="small-textbox-jp" />
                   </td>
+                  <td style="text-align: center;">&#64;</td>
                   <td>
-                    년
-                  </td>
-                  <td>
-                    <input type="number" id="birth-month-field-ko" value="1" min="1" max="12" />
-                  </td>
-                  <td>
-                    월
-                  </td>
-                  <td>
-                      <input type="number" id="birth-day-field-ko" value="1" min="1" max="31" />
-                  </td>
-                  <td>
-                    일
+                    <input type="text" id="email-domain-jp" class="small-textbox-jp" />
                   </td>
                 </tr>
               </table>
           </td>
         </tr>
-        -->
-        <!--
         <tr>
-          <td class="signup-field-label-ko">
-            주거 정보
+          <td class="signup-field-label-jp">
+            パスワード
           </td>
-          <td contenteditable="false" class="additional-info-ko" id="residence-picker-ko" residency="">
-            <table border="0" style="width: 100%;">
-              <tr>
-                <td class="residency-option-ko" id="residency-option-day-ko" selected="false">통학</td>
-                <td class="residency-option-ko" id="residency-option-dorm-ko" selected="false">기숙사</td>
-              </tr>
-            </table>
+          <td contenteditable="false" id="password-field-jp">
+            <input type="password" id="password-textbox1-jp" maxlength="64" />
           </td>
         </tr>
         <tr>
-          <td class="signup-field-label-ko">
-            상세 주소
+          <td class="signup-field-label-jp">
+            パスワードの再入力
           </td>
-          <td contenteditable="true" class="additional-info-ko" id="address-field-ko" address="">
-
-          </td>
-        </tr>
-        <tr>
-          <td class="signup-field-label-ko">
-            연락처
-          </td>
-          <td contenteditable="true" class="additional-info-ko" id="contact-number-picker-ko" contactnumber="">
-
-          </td>
-        </tr>
-        <tr>
-          <td class="signup-field-label-ko">
-            자기소개
-          </td>
-          <td contenteditable="true" class="additional-info-ko" id="biography-field-ko">
-
+          <td contenteditable="false" id="password-recheck-field-jp">
+            <input type="password" id="password-textbox2-jp" maxlength="64" />
           </td>
         </tr>
       </table>
-        -->
-      <input type="checkbox" id="license-agreement-en" /> I Agree to <a href="eula.html" id="eula-link-en" target="_blank">Terms and Conditions</a>
+      <input type="checkbox" id="license-agreement-jp" /> <a href="eula.html#jp" id="eula-link-jp" target="_blank">規約</a>に同意し。
       <p>
-        <button id="register-button-en" onfocus="this.blur();" disabled="true">
-          Sign up
+        <button id="register-button-jp" onfocus="this.blur();" disabled="true">
+          登録
         </button>
       </p>
     </form>

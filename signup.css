@@ -32,48 +32,41 @@ a:visited {
 #lang-options {
     text-align: center;
 }
-#language-select-ko, #language-select-en {
+#language-select-ko, #language-select-en, #language-select-jp {
     cursor: pointer;
 }
-#signup-form-ko, #signup-form-en {
+#signup-form-ko, #signup-form-en, #signup-form-jp {
     display: none;
 }
 #required-info-label, #optional-info-label {
     font-family: 'NanumSquare Bold', 'Renner Bold';
     font-size: 2vw;
 }
-#main-title-ko, #main-title-en {
+#main-title-ko, #main-title-en, #main-title-jp {
     text-align: center;
     font-size: 5vw;
     font-family: 'NanumSquare Light', 'Renner Light';
 }
-#signup-field-ko, #signup-field-en {
+#signup-field-ko, #signup-field-en, #signup-field-jp {
     width: 50%;
     font-family: 'NanumSquare', 'Renner';
 }
-#email-local-part-ko, #email-domain-ko, #email-local-part-en, #email-domain-en {
+#email-local-part-ko, #email-domain-ko, #email-local-part-en, #email-domain-en, #email-local-part-jp, #email-domain-jp {
     width: 100%;
     border: 0;
     font-family: 'NanumSquare', 'Renner';
     font-size: 1vw;
 }
-#password-textbox1-ko, #password-textbox2-ko, #password-textbox1-en, #password-textbox2-en {
+#password-textbox1-ko, #password-textbox2-ko, #password-textbox1-en, #password-textbox2-en, #password-textbox1-jp, #password-textbox2-jp {
     width: 40vw;
     border: 0;
     font-size: 1vw;
 }
-.signup-field-label-ko, .signup-field-label-en {
+.signup-field-label-ko, .signup-field-label-en, .signup-field-label-jp {
     width: 30%;
     font-family: 'NanumSquare Bold', 'Renner Bold';
 }
-#license-ko {
-    width: 50%;
-    height: 30vh;
-    overflow: auto;
-    text-align: left;
-    font-family: 'NanumSquare', 'Renner';
-}
-#license-en {
+#license-ko, #license-en, #license-jp {
     width: 50%;
     height: 30vh;
     overflow: auto;
@@ -125,7 +118,7 @@ a:visited {
     cursor: pointer;
 }
 */
-#register-button-ko, #register-button-en {
+#register-button-ko, #register-button-en, #register-button-jp {
     font-family: 'NanumSquare Light', 'Renner';
     width: 50%;
     height: 4vw;
