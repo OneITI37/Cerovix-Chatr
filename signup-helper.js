@@ -65,6 +65,7 @@ function initialRoutine() {
     });
     fadeAnimation(document.getElementById("register-button"+"-"+lang), 0.00, 0.10, 1);
     formConfigure();
+    fadeAnimation(document.getElementById("copyright-statement-common"), 0.00, 1, 1);
     //colorPickerAreaConfigure();
     return;
 }

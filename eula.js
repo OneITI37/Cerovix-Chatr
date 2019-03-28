@@ -58,8 +58,10 @@ function initialRoutine() {
     for (i = 0; i < supported_languages_name.length; i++)
         if (supported_languages_code[i] != lang)
             document.getElementById("license-container"+"-"+supported_languages_code[i]).style.display = "none";
+    fadeAnimation(document.getElementById("navigation-button"), 0.00, 1, 1);
     fadeAnimation(document.getElementById("lang-options"), 0.00, 1.00, 1);
     fadeAnimation(document.getElementById("license-container"+"-"+lang), 0.00, 1.00, 1);
+    fadeAnimation(document.getElementById("copyright-statement-common"), 0.00, 1, 1);
     return;
 }
 function showAllLanguageOptions() {
