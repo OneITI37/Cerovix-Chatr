@@ -52,3 +52,7 @@ table, tr, td {
 #navigation-button {
     cursor: pointer;
 }
+#copyright-statement-common {
+    width: 100vw;
+    text-align: center;
+}

@@ -15,7 +15,7 @@ function initialRoutine() {
         document.title = "이용 약관 - Chatr";
     else if (lang == "jp")
         document.title = "利用規約 - Chatr";
-    if (document.referrer != "") {
+    if (document.referrer != "" && document.referrer.search("eula.html") == -1) {
         document.getElementById("navigation-button").style.backgroundColor = "rgb(0, 120, 215)";
         document.getElementById("navigation-button").innerHTML = "<img src=\"ui/previous-button.svg\" id=\"navigation-button-prev\" />";
         document.getElementById("navigation-button").addEventListener("click", function(){
