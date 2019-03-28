@@ -45,6 +45,12 @@ function initialRoutine() {
     document.getElementById("language-select"+"-"+lang).addEventListener("click", function(){
         showAllLanguageOptions();
     });
+    document.getElementById("eula-link"+"-"+lang).addEventListener("mouseover", function(){
+        textColorTransitionAnimation(this, 0, 120, 215, 40, 160, 255, 0.3);
+    });
+    document.getElementById("eula-link"+"-"+lang).addEventListener("mouseout", function(){
+        textColorTransitionAnimation(this, 40, 160, 255, 0, 120, 215, 0.3);
+    });
     fadeAnimation(document.getElementById("signup-form"+"-"+lang), 0.00, 1, 1);
     document.getElementById("register-button"+"-"+lang).addEventListener("click", function(){
         document.register_form_ko.submit();

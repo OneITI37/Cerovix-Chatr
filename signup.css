@@ -23,6 +23,12 @@ table, tr, td {
     border-collapse: collapse;
     font-family: 'NanumSquare', 'Renner';
 }
+a:link {
+    color: rgb(0, 120, 215);
+}
+a:visited {
+    color: rgb(0, 70, 165);
+}
 #lang-options {
     text-align: center;
 }

@@ -13,6 +13,20 @@ function initialRoutine() {
         document.title = "EULA - Chatr";
     if (lang == "ko")
         document.title = "이용 약관 - Chatr";
+    if (document.referrer != "") {
+        document.getElementById("navigation-button").style.backgroundColor = "rgb(0, 120, 215)";
+        document.getElementById("navigation-button").innerHTML = "<img src=\"ui/previous-button.svg\" id=\"navigation-button-prev\" />";
+        document.getElementById("navigation-button").addEventListener("click", function(){
+            history.back();
+        });
+    }
+    else {
+        document.getElementById("navigation-button").style.backgroundColor = "rgb(255, 100, 100)";
+        document.getElementById("navigation-button").innerHTML = "<img src=\"ui/close-button.svg\" id=\"navigation-button-close\" />";
+        document.getElementById("navigation-button").addEventListener("click", function(){
+            window.close();
+        });
+    }
     document.getElementById("lang-options").opacity = "0.00";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";
