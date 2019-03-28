@@ -76,3 +76,12 @@
          url(fonts/NanumSquare/NanumSquareExtraBold.ttf) format('truetype');
     unicode-range: U+AC00-D7FF;
 }
+@font-face {
+    font-family: 'Flop Design Font';
+    src: url(fonts/FlopDesignFont/FlopDesignFont.eot);
+    src: url(fonts/FlopDesignFont/FlopDesignFont.eot) format('embedded-opentype'),
+         url(fonts/FlopDesignFont/FlopDesignFont.woff2) format('woff2'),
+         url(fonts/FlopDesignFont/FlopDesignFont.woff) format('woff'),
+         url(fonts/FlopDesignFont/FlopDesignFont.ttf) format('truetype');
+    unicode-range: U+3041-3096, U+30A0–30FF, U+3400-4DB5, U+4E00-9FCB, U+F900-FA6A, U+2E80-2FD5, U+FF5F-FF9F, U+3000-303F, U+31F0-31FF, U+3220-3243, U+3280-337F, U+FF01-FF5E;
+}
