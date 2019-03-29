@@ -25,20 +25,13 @@
          url(fonts/Renner/renner-bold.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Renner Book';
-    src: url(fonts/Renner/renner-book.eot);
-    src: url(fonts/Renner/renner-book.eot) format('embedded-opentype'),
-         url(fonts/Renner/renner-book.woff2) format('woff2'),
-         url(fonts/Renner/renner-book.woff) format('woff'),
-         url(fonts/Renner/renner-book.ttf) format('truetype');
-}
-@font-face {
     font-family: 'NanumSquare Light';
     src: url(fonts/NanumSquare/NanumSquareLight.eot);
     src: url(fonts/NanumSquare/NanumSquareLight.eot) format('embedded-opentype'),
          url(fonts/NanumSquare/NanumSquareLight.woff2) format('woff2'),
          url(fonts/NanumSquare/NanumSquareLight.woff) format('woff'),
          url(fonts/NanumSquare/NanumSquareLight.ttf) format('truetype');
+    unicode-range: U+AC00-D7FF;
 }
 @font-face {
     font-family: 'NanumSquare';
@@ -59,31 +52,13 @@
     unicode-range: U+AC00-D7FF;
 }
 @font-face {
-    font-family: 'NanumSquare Bold';
-    src: url(fonts/NanumSquare/NanumSquareBold.eot);
-    src: url(fonts/NanumSquare/NanumSquareBold.eot) format('embedded-opentype'),
-         url(fonts/NanumSquare/NanumSquareBold.woff2) format('woff2'),
-         url(fonts/NanumSquare/NanumSquareBold.woff) format('woff'),
-         url(fonts/NanumSquare/NanumSquareBold.ttf) format('truetype');
-    unicode-range: U+AC00-D7FF;
-}
-@font-face {
-    font-family: 'NanumSquare Extra Bold';
-    src: url(fonts/NanumSquare/NanumSquareExtraBold.eot);
-    src: url(fonts/NanumSquare/NanumSquareExtraBold.eot) format('embedded-opentype'),
-         url(fonts/NanumSquare/NanumSquareExtraBold.woff2) format('woff2'),
-         url(fonts/NanumSquare/NanumSquareExtraBold.woff) format('woff'),
-         url(fonts/NanumSquare/NanumSquareExtraBold.ttf) format('truetype');
-    unicode-range: U+AC00-D7FF;
-}
-@font-face {
     font-family: 'Flop Design Font';
     src: url(fonts/FlopDesignFont/FlopDesignFont.eot);
     src: url(fonts/FlopDesignFont/FlopDesignFont.eot) format('embedded-opentype'),
          url(fonts/FlopDesignFont/FlopDesignFont.woff2) format('woff2'),
          url(fonts/FlopDesignFont/FlopDesignFont.woff) format('woff'),
          url(fonts/FlopDesignFont/FlopDesignFont.ttf) format('truetype');
-    unicode-range: U+3041-3096, U+30A0–U+30FF, U+3400-4DB5, U+4E00-9FCB, U+F900-FA6A, U+2E80-2FD5, U+FF5F-FF9F, U+3000-303F, U+31F0-31FF, U+3220-3243, U+3280-337F, U+FF01-FF5E;
+    unicode-range: U+3041-3096, U+30A0-30FF, U+3400-4DB5, U+4E00-9FCB, U+F900-FA6A, U+2E80-2FD5, U+FF5F-FF9F, U+3000-303F, U+31F0-31FF, U+3220-3243, U+3280-337F, U+FF01-FF5E;
 }
 @font-face {
     font-family: 'Droid Sans';
@@ -92,5 +67,5 @@
          url(fonts/DroidSansFallback/DroidSansFallback.woff2) format('woff2'),
          url(fonts/DroidSansFallback/DroidSansFallback.woff) format('woff'),
          url(fonts/DroidSansFallback/DroidSansFallback.ttf) format('truetype');
-    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700–U+2B73F, U+2B740–U+2B81F, U+2B820–U+2CEAF, U+F900-FAFF, U+2F800-2FA1F;
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700–2B73F, U+2B740–2B81F, U+2B820–2CEAF, U+F900-FAFF, U+2F800-2FA1F;
 }

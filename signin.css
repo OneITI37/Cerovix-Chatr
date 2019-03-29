@@ -35,7 +35,7 @@ table, tr, td {
 [id^="main-title-"] {
     text-align: center;
     font-size: 5vw;
-    font-family: 'Droid Sans', 'Renner Light', 'NanumSquare Light';
+    font-family: 'NanumSquare Light', 'Droid Sans', 'Renner Light';
 }
 [name="login_form"] {
     font-family: 'Droid Sans', 'NanumSquare', 'Renner';
@@ -55,10 +55,10 @@ table, tr, td {
 }
 [id^="identifier-"]::placeholder, [id^="password-"]::placeholder {
     color: rgb(73, 122, 150);
-    font-family: 'NanumSquare Light', 'Renner Light';
+    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner Light';
 }
 [id^="login-button-"] {
-    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner';
+    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner Light';
     width: 50%;
     height: 4vw;
     font-size: 2vw;
