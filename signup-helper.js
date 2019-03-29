@@ -1,7 +1,7 @@
     var lang = "en";
-    var supported_languages_name = new Array("한국어", "English", "日本語");
-    var supported_languages_eng_name = new Array("Korean", "English", "Japanese");
-    var supported_languages_code = new Array("ko", "en", "jp");
+    var supported_languages_name = new Array("한국어", "English", "日本語", "中文");
+    var supported_languages_eng_name = new Array("Korean", "English", "Japanese", "Chinese");
+    var supported_languages_code = new Array("ko", "en", "jp", "zh");
     var register_button_active = false;
     var license_agreement = false;
     initialRoutine();
@@ -19,6 +19,8 @@ function initialRoutine() {
             document.title = "가입 - Chatr";
         if (lang == "jp")
             document.title = "会員登録 - Chatr";
+        if (lang == "zh")
+            document.title = "報名 - Chatr";
     }
     document.getElementById("lang-options").opacity = "0.00";
     document.getElementById("lang-options").innerHTML = "";
@@ -83,7 +85,7 @@ function initialRoutine() {
     });
     fadeAnimation(document.getElementById("register-button"+"-"+lang), 0.00, 0.10, 1);
     formConfigure();
-    fadeAnimation(document.getElementById("copyright-statement-common"), 0.00, 1, 1);
+    fadeAnimation(document.getElementById("copyright-statement-common"), 0.00, 1.00, 1);
     //colorPickerAreaConfigure();
     return;
 }
@@ -106,13 +108,13 @@ function formVerify() {
         validity = false;
         console.log("Nickname : Insufficient length of characters");
     }
-    document.getElementById("email-local-part"+"-"+lang).value = document.getElementById("email-local-part"+"-"+lang).value;
-    if (document.getElementById("englishname"+"-"+lang).value.length <= 0) {
+    document.getElementById("emaillocalpart"+"-"+lang).value = document.getElementById("email-local-part-text"+"-"+lang).value;
+    if (document.getElementById("email-local-part-text"+"-"+lang).value.length <= 0) {
         validity = false;
         console.log("Email Local Part : Insufficient length of characters");
     }
-    document.getElementById("email-domain"+"-"+lang).value = document.getElementById("email-domain"+"-"+lang).value;
-    if (document.getElementById("email-domain"+"-"+lang).value.length < 4) {
+    document.getElementById("emaildomain"+"-"+lang).value = document.getElementById("email-domain-text"+"-"+lang).value;
+    if (document.getElementById("email-domain-text"+"-"+lang).value.length < 4) {
         validity = false;
         console.log("Email Domain : Insufficient length of characters");
     }

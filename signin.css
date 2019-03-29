@@ -28,6 +28,7 @@ table, tr, td {
 }
 #lang-options {
     text-align: center;
+    width: 50%;
 }
 [id^="language-select-"] {
     cursor: pointer;
