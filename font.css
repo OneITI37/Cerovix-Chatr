@@ -1,30 +1,6 @@
 /* font.css */
 
 @font-face {
-    font-family: 'Renner';
-    src: url(fonts/Renner/renner-medium.eot);
-    src: url(fonts/Renner/renner-medium.eot) format('embedded-opentype'),
-         url(fonts/Renner/renner-medium.woff2) format('woff2'),
-         url(fonts/Renner/renner-medium.woff) format('woff'),
-         url(fonts/Renner/renner-medium.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Renner Light';
-    src: url(fonts/Renner/renner-light.eot);
-    src: url(fonts/Renner/renner-light.eot) format('embedded-opentype'),
-         url(fonts/Renner/renner-light.woff2) format('woff2'),
-         url(fonts/Renner/renner-light.woff) format('woff'),
-         url(fonts/Renner/renner-light.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Renner Bold';
-    src: url(fonts/Renner/renner-bold.eot);
-    src: url(fonts/Renner/renner-bold.eot) format('embedded-opentype'),
-         url(fonts/Renner/renner-bold.woff2) format('woff2'),
-         url(fonts/Renner/renner-bold.woff) format('woff'),
-         url(fonts/Renner/renner-bold.ttf) format('truetype');
-}
-@font-face {
     font-family: 'NanumSquare Light';
     src: url(fonts/NanumSquare/NanumSquareLight.eot);
     src: url(fonts/NanumSquare/NanumSquareLight.eot) format('embedded-opentype'),
@@ -50,6 +26,30 @@
          url(fonts/NanumSquare/NanumSquareBold.woff) format('woff'),
          url(fonts/NanumSquare/NanumSquareBold.ttf) format('truetype');
     unicode-range: U+AC00-D7FF;
+}
+@font-face {
+    font-family: 'Renner';
+    src: url(fonts/Renner/renner-medium.eot);
+    src: url(fonts/Renner/renner-medium.eot) format('embedded-opentype'),
+         url(fonts/Renner/renner-medium.woff2) format('woff2'),
+         url(fonts/Renner/renner-medium.woff) format('woff'),
+         url(fonts/Renner/renner-medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Renner Light';
+    src: url(fonts/Renner/renner-light.eot);
+    src: url(fonts/Renner/renner-light.eot) format('embedded-opentype'),
+         url(fonts/Renner/renner-light.woff2) format('woff2'),
+         url(fonts/Renner/renner-light.woff) format('woff'),
+         url(fonts/Renner/renner-light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Renner Bold';
+    src: url(fonts/Renner/renner-bold.eot);
+    src: url(fonts/Renner/renner-bold.eot) format('embedded-opentype'),
+         url(fonts/Renner/renner-bold.woff2) format('woff2'),
+         url(fonts/Renner/renner-bold.woff) format('woff'),
+         url(fonts/Renner/renner-bold.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Flop Design Font';
