@@ -89,6 +89,9 @@ function initialSequences() {
     document.getElementById("ad-button"+"-"+lang).addEventListener("mouseout", function(){
         backgroundColorTransitionAnimation(this, 0, 162, 254, 0, 132, 224, 0.3);
     });
+    document.getElementById("ad-button"+"-"+lang).addEventListener("click", function(){
+        window.location.replace("ad.html"+"#"+lang);
+    });
     fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("login-button"+"-"+lang), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("other-account-actions-section"+"-"+lang), 0.00, 1, 1);
