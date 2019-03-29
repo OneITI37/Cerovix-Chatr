@@ -6,16 +6,20 @@
     var license_agreement = false;
     initialRoutine();
 function initialRoutine() {
-    if (location.hash == "")
-        lang = "en";
-    else
-        lang = location.hash.substring(1, 3);
-    if (lang == "en")
-        document.title = "Sign up - Chatr";
-    if (lang == "ko")
-        document.title = "가입 - Chatr";
-    if (lang == "jp")
-        document.title = "会員登録 - Chatr";
+    if (parseCookie("lang") != "")
+        lang = parseCookie("lang");
+    else {
+        if (location.hash == "")
+            lang = "en";
+        else
+            lang = location.hash.substring(1, 3);
+        if (lang == "en")
+            document.title = "Sign up - Chatr";
+        if (lang == "ko")
+            document.title = "가입 - Chatr";
+        if (lang == "jp")
+            document.title = "会員登録 - Chatr";
+    }
     document.getElementById("lang-options").opacity = "0.00";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";
@@ -54,6 +58,18 @@ function initialRoutine() {
         textColorTransitionAnimation(this, 40, 160, 255, 0, 120, 215, 0.3);
     });
     fadeAnimation(document.getElementById("signup-form"+"-"+lang), 0.00, 1, 1);
+    document.getElementById("signin-link"+"-"+lang).addEventListener("mouseover", function(){
+        textColorTransitionAnimation(this, 0, 120, 215, 40, 160, 255, 0.3);
+    });
+    document.getElementById("signin-link"+"-"+lang).addEventListener("mouseout", function(){
+        textColorTransitionAnimation(this, 40, 160, 255, 0, 120, 215, 0.3);
+    });
+    document.getElementById("recover-account"+"-"+lang).addEventListener("mouseover", function(){
+        textColorTransitionAnimation(this, 0, 120, 215, 40, 160, 255, 0.3);
+    });
+    document.getElementById("recover-account"+"-"+lang).addEventListener("mouseout", function(){
+        textColorTransitionAnimation(this, 40, 160, 255, 0, 120, 215, 0.3);
+    });
     document.getElementById("register-button"+"-"+lang).addEventListener("click", function(){
         document.register_form_ko.submit();
     });
@@ -140,7 +156,7 @@ function formConfigure() {
     document.getElementById("password-textbox2"+"-"+lang).addEventListener("keyup", formVerify);
 
     document.getElementById("license-agreement"+"-"+lang).addEventListener("click", function(){
-        if (this.checked = true)
+        if (this.checked == true)
             license_agreement = true;
         else
             license_agreement = false;
@@ -213,6 +229,7 @@ function showAllLanguageOptions() {
         });
         document.getElementsByClassName("language-select")[i].addEventListener("click", function(){
             location.hash = this.id.substring(16, 18);
+            setCookie(lang, this.id.substring(16, 18), 7);
             location.reload();
         });
         document.getElementsByClassName("language-select")[i].addEventListener("mouseover", function(){
@@ -262,4 +279,24 @@ function textColorTransitionAnimation(target_element, start_color_red, start_col
             clearInterval(animation_interval);
     }, 10);
     return;
+}
+function setCookie(cookie_name, cookie_value, expiration_days) {
+    var expiration_date = new Date();
+    expiration_date.setTime(expiration_date.getTime() + (expiration_days*24*60*60*1000));
+    var expiration_string = "expires="+ expiration_date.toUTCString();
+    document.cookie = cookie_name + "=" + cookie_value + ";" + expiration_date + ";path=/";
+}
+function parseCookie(value_label) {
+    var name_string = value_label + "=";
+    var decoded_cookie = decodeURIComponent(document.cookie);
+    var cookie_segment = decoded_cookie.split(';');
+    var i;
+    for (i = 0; i < cookie_segment.length; i++) {
+        var temp_cookie_segment = cookie_segment[i];
+        while (temp_cookie_segment.charAt(0) == ' ')
+            temp_cookie_segment = temp_cookie_segment.substring(1);
+        if (temp_cookie_segment.indexOf(name) == 0)
+            return temp_cookie_segment.substring(name_string.length, temp_cookie_segment.length);
+    }
+    return "";
 }

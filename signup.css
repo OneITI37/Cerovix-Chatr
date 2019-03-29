@@ -23,6 +23,9 @@ table, tr, td {
     border-collapse: collapse;
     font-family: 'NanumSquare', 'Renner';
 }
+a {
+    color: rgb(0, 120, 215);
+}
 a:link {
     color: rgb(0, 120, 215);
 }

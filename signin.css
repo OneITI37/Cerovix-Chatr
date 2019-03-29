@@ -35,7 +35,7 @@ table, tr, td {
 #main-title-ko, #main-title-en {
     text-align: center;
     font-size: 5vw;
-    font-family: 'NanumSquare Light', 'Renner Light';
+    font-family: 'Renner Light', 'NanumSquare Light';
 }
 [name="login_form"] {
     font-family: 'NanumSquare', 'Renner';
@@ -44,7 +44,7 @@ table, tr, td {
     font-family: 'NanumSquare Bold', 'Renner Bold';
 }
 #identifier-ko, #password-ko, #identifier-en, #password-en {
-    font-family: 'Renner Light';
+    font-family: 'Renner Light', 'NanumSquare Light';
     font-size: 1.5vw;
     color: rgb(0, 51, 81);
     width: 100%;

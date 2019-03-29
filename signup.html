@@ -41,6 +41,23 @@
       가입
     </h1>
     <form method="post" name="register_form_ko">
+      <table border="0" id="other-account-actions-section-ko">
+        <tr>
+          <td id="signup-link-section-ko">
+            <a href="signin.html#ko" target="_self" id="signin-link-ko">
+              로그인
+            </a>
+          </td>
+          <td>
+            &nbsp;|&nbsp;
+          </td>
+          <td id="recover-account-section-ko">
+            <a href="recover-account.html#ko" target="_self" id="recover-account-ko">
+              계정 찾기
+            </a>
+          </td>
+        </tr>
+      </table>
       <!--
       <input type="hidden" id="profile-color-red-ko" value="0" />
       <input type="hidden" id="profile-color-green-ko" value="120" />
@@ -76,11 +93,11 @@
           <td contenteditable="false" id="email-field-ko">
               <table border="0" style="width: 100%;">
                 <tr>
-                  <td>
+                  <td id="email-local-part-container-ko">
                     <input type="text" id="email-local-part-ko" class="small-textbox-ko" />
                   </td>
                   <td style="text-align: center;">&#64;</td>
-                  <td>
+                  <td id="email-domain-container-ko">
                     <input type="text" id="email-domain-ko" class="small-textbox-ko" />
                   </td>
                 </tr>
@@ -197,7 +214,7 @@
         </tr>
       </table>
         -->
-      <input type="checkbox" id="license-agreement-ko" /> <a href="eula.html#ko" id="eula-link-ko" target="_blank">약관</a>에 동의합니다
+      <input type="checkbox" id="license-agreement-ko" /> <a href="eula.html#ko" id="eula-link-ko" target="_blank">약관</a>에 동의합니다.
       <p>
         <button id="register-button-ko" onfocus="this.blur();" disabled="true">
           가입
@@ -220,6 +237,23 @@
       Sign up
     </h1>
     <form method="post" name="register_form_en">
+        <table border="0" id="other-account-actions-section-en">
+          <tr>
+            <td id="signup-link-section-en">
+              <a href="signin.html#en" target="_self" id="signin-link-en">
+                Sign in
+              </a>
+            </td>
+            <td>
+              &nbsp;|&nbsp;
+            </td>
+            <td id="recover-account-section-en">
+              <a href="recover-account.html#en" target="_self" id="recover-account-en">
+                Find My Account
+              </a>
+            </td>
+          </tr>
+        </table>
       <!--
       <input type="hidden" id="profile-color-red-ko" value="0" />
       <input type="hidden" id="profile-color-green-ko" value="120" />
@@ -248,11 +282,11 @@
           <td contenteditable="false" id="email-field-en">
               <table border="0" style="width: 100%;">
                 <tr>
-                  <td>
+                  <td id="email-local-part-container-en">
                     <input type="text" id="email-local-part-en" class="small-textbox-en" />
                   </td>
                   <td style="text-align: center;">&#64;</td>
-                  <td>
+                  <td id="email-domain-container-jp">
                     <input type="text" id="email-domain-en" class="small-textbox-en" />
                   </td>
                 </tr>
@@ -276,7 +310,7 @@
           </td>
         </tr>
       </table>
-      <input type="checkbox" id="license-agreement-en" /> I Agree to <a href="eula.html#en" id="eula-link-en" target="_blank">Terms and Conditions</a>
+      <input type="checkbox" id="license-agreement-en" /> I Agree to <a href="eula.html#en" id="eula-link-en" target="_blank">Terms and Conditions</a>.
       <p>
         <button id="register-button-en" onfocus="this.blur();" disabled="true">
           Sign up
@@ -297,7 +331,7 @@
     <input type="hidden" id="birthday-ko" name="birthday" value="" />
     -->
     <h1 id="main-title-jp">
-      Sign up
+      登録
     </h1>
     <form method="post" name="register_form_jp">
       <!--
@@ -318,7 +352,7 @@
           <td class="signup-field-label-jp">
             英語のお名前
           </td>
-          <td contenteditable="true" id="english-name-field-en">
+          <td contenteditable="true" id="english-name-field-jp">
           </td>
         </tr>
         <tr>
@@ -335,11 +369,11 @@
           <td contenteditable="false" id="email-field-jp">
               <table border="0" style="width: 100%;">
                 <tr>
-                  <td>
-                    <input type="text" id="email-local-part-en" class="small-textbox-jp" />
+                  <td id="email-local-part-container-jp">
+                    <input type="text" id="email-local-part-jp" class="small-textbox-jp" />
                   </td>
                   <td style="text-align: center;">&#64;</td>
-                  <td>
+                  <td id="email-domain-container-jp">
                     <input type="text" id="email-domain-jp" class="small-textbox-jp" />
                   </td>
                 </tr>

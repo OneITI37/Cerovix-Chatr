@@ -45,29 +45,17 @@ function initialSequences() {
     document.getElementById("language-select"+"-"+lang).addEventListener("click", function(){
         showAllLanguageOptions();
     });
-    document.getElementById("recover-account"+"-"+"ko").addEventListener("mouseover", function(){
-        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"ko"), 0, 51, 81, 70, 121, 151, 0.3);
+    document.getElementById("signup-link"+"-"+lang).addEventListener("mouseover", function(){
+        textColorTransitionAnimation(this, 0, 51, 81, 70, 121, 151, 0.3);
     });
-    document.getElementById("recover-account"+"-"+"ko").addEventListener("mouseout", function(){
-        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"ko"), 70, 121, 151, 0, 51, 81, 0.3);
+    document.getElementById("signup-link"+"-"+lang).addEventListener("mouseout", function(){
+        textColorTransitionAnimation(this, 70, 121, 151, 0, 51, 81, 0.3);
     });
-    document.getElementById("signup-link"+"-"+"ko").addEventListener("mouseover", function(){
-        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"ko"), 0, 51, 81, 70, 121, 151, 0.3);
+    document.getElementById("recover-account"+"-"+lang).addEventListener("mouseover", function(){
+        textColorTransitionAnimation(this, 0, 51, 81, 70, 121, 151, 0.3);
     });
-    document.getElementById("signup-link"+"-"+"ko").addEventListener("mouseout", function(){
-        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"ko"), 70, 121, 151, 0, 51, 81, 0.3);
-    });
-    document.getElementById("recover-account"+"-"+"en").addEventListener("mouseover", function(){
-        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"en"), 0, 51, 81, 70, 121, 151, 0.3);
-    });
-    document.getElementById("recover-account"+"-"+"en").addEventListener("mouseout", function(){
-        textColorTransitionAnimation(document.getElementById("recover-account"+"-"+"en"), 70, 121, 151, 0, 51, 81, 0.3);
-    });
-    document.getElementById("signup-link"+"-"+"en").addEventListener("mouseover", function(){
-        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"en"), 0, 51, 81, 70, 121, 151, 0.3);
-    });
-    document.getElementById("signup-link"+"-"+"en").addEventListener("mouseout", function(){
-        textColorTransitionAnimation(document.getElementById("signup-link"+"-"+"en"), 70, 121, 151, 0, 51, 81, 0.3);
+    document.getElementById("recover-account"+"-"+lang).addEventListener("mouseout", function(){
+        textColorTransitionAnimation(this, 70, 121, 151, 0, 51, 81, 0.3);
     });
     document.getElementById("signin-form"+"-"+lang).style.display = "block";
     document.getElementById("identifier-section"+"-"+lang).style.opacity = "0.00";
