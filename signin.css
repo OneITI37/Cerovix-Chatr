@@ -38,13 +38,10 @@ table, tr, td {
     font-family: 'NanumSquare Light', 'Droid Sans', 'Renner Light';
 }
 [name="login_form"] {
-    font-family: 'Droid Sans', 'NanumSquare', 'Renner';
+    font-family: 'NanumSquare', 'Renner', 'Droid Sans', 'Flop Design Font';
 }
-[id^="identifier-label-"], [id^="password-label-ko"] {
-    font-family: 'NanumSquare Bold', 'Renner Bold';
-}
-[id^="identifier-"], [id^="password-"] {
-    font-family: 'Renner Light', 'NanumSquare Light';
+[id^="identifier"], [id^="password"] {
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
     font-size: 1.5vw;
     color: rgb(0, 51, 81);
     width: 100%;
@@ -53,12 +50,15 @@ table, tr, td {
     border-width: 1px;
     border-color: rgb(0, 0, 0);
 }
+[id^="identifier-label"], [id^="password-label"] {
+    font-family: 'Renner Bold', 'NanumSquare Bold', 'Droid Sans', 'Flop Design Font';
+}
 [id^="identifier-"]::placeholder, [id^="password-"]::placeholder {
     color: rgb(73, 122, 150);
-    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner Light';
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
 }
 [id^="login-button-"] {
-    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner Light';
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
     width: 50%;
     height: 4vw;
     font-size: 2vw;
@@ -73,7 +73,7 @@ table, tr, td {
     color: rgb(0, 51, 81);
     cursor: pointer;
 }
-[id^="recover-account-section"], [id=^="signup-link-section"] {
+[id^="recover-account-section"], [id^="signup-link-section"] {
     text-align: center;
 }
 [id^="ad-button"] {
@@ -86,7 +86,7 @@ table, tr, td {
     border-radius: 1vw;
     border-width: 0.05vw;
     border-color: rgb(0, 100, 195);
-    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner Light';
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
 }
 #copyright-statement-common {
     width: 100vw;
