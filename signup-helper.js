@@ -71,7 +71,7 @@ function initialRoutine() {
         textColorTransitionAnimation(this, 40, 160, 255, 0, 120, 215, 0.3);
     });
     document.getElementById("register-button"+"-"+lang).addEventListener("click", function(){
-        document.register_form_ko.submit();
+        document.register_form_+lang.submit();
     });
     document.getElementById("register-button"+"-"+lang).style.opacity = "0.00";
     document.getElementById("register-button"+"-"+lang).style.cursor = "not-allowed";

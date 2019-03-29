@@ -83,5 +83,14 @@
          url(fonts/FlopDesignFont/FlopDesignFont.woff2) format('woff2'),
          url(fonts/FlopDesignFont/FlopDesignFont.woff) format('woff'),
          url(fonts/FlopDesignFont/FlopDesignFont.ttf) format('truetype');
-    unicode-range: U+3041-3096, U+30A0–30FF, U+3400-4DB5, U+4E00-9FCB, U+F900-FA6A, U+2E80-2FD5, U+FF5F-FF9F, U+3000-303F, U+31F0-31FF, U+3220-3243, U+3280-337F, U+FF01-FF5E;
+    unicode-range: U+3041-3096, U+30A0–U+30FF, U+3400-4DB5, U+4E00-9FCB, U+F900-FA6A, U+2E80-2FD5, U+FF5F-FF9F, U+3000-303F, U+31F0-31FF, U+3220-3243, U+3280-337F, U+FF01-FF5E;
+}
+@font-face {
+    font-family: 'Droid Sans';
+    src: url(fonts/DroidSansFallback/DroidSansFallback.eot);
+    src: url(fonts/DroidSansFallback/DroidSansFallback.eot) format('embedded-opentype'),
+         url(fonts/DroidSansFallback/DroidSansFallback.woff2) format('woff2'),
+         url(fonts/DroidSansFallback/DroidSansFallback.woff) format('woff'),
+         url(fonts/DroidSansFallback/DroidSansFallback.ttf) format('truetype');
+    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700–U+2B73F, U+2B740–U+2B81F, U+2B820–U+2CEAF, U+F900-FAFF, U+2F800-2FA1F;
 }

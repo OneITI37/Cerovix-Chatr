@@ -41,7 +41,7 @@
         </tr>
       </table>
       <p>
-        <button id="login-button-ko" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true">
+        <button id="login-button-ko" onclick="document.login_form_ko.submit();" onfocus="this.blur();" disabled="true">
           로그인
         </button>
       </p>
@@ -89,7 +89,7 @@
         </tr>
       </table>
       <p>
-        <button id="login-button-en" onclick="document.login_form.submit();" onfocus="this.blur();" disabled="true">
+        <button id="login-button-en" onclick="document.login_form_en.submit();" onfocus="this.blur();" disabled="true">
           Sign in
         </button>
       </p>
@@ -112,6 +112,102 @@
       </table>
       <button id="ad-button-en" onclick="" onfocus="this.blur();" style="width: 50%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 1vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 1.00;">
         Promote Your Ad Today
+      </button>
+    </form>
+  </div>
+  <div align="center" id="signin-form-jp">
+    <h1 id="main-title-jp">ログイン</h1>
+    <form method="post" name="login_form_jp">
+      <table border="0" style="width: 50%; font-size: 2vw;">
+        <tr id="identifier-section-jp" style="opacity: 0.00;">
+          <td style="text-align: center; width: 4vw;">
+            <label for="identifier-jp" id="identifier-label-jp">ID</label>
+          </td>
+          <td>
+            <input type="text" name="identifier-jp" id="identifier-jp" readonly="true" placeholder="E-MAIL" maxlength="64" />
+          </td>
+        </tr>
+        <tr id="password-section-jp" style="opacity: 0.00;">
+          <td style="text-align: center; width: 4vw;">
+            <label for="password-jp" id="password-label-jp">PW</label>
+          </td>
+          <td>
+            <input type="password" name="password-jp" id="password-jp" readonly="true" placeholder="パスワード" maxlength="64" />
+          </td>
+        </tr>
+      </table>
+      <p>
+        <button id="login-button-jp" onclick="document.login_form_jp.submit();" onfocus="this.blur();" disabled="true">
+          ログイン
+        </button>
+      </p>
+      <table border="0" id="other-account-actions-section-jp">
+        <tr>
+          <td id="recover-account-section-jp">
+            <a href="recover-account.html#jp" target="_self" id="recover-account-jp">
+              私のアカウントを探す
+            </a>
+          </td>
+          <td>
+            &nbsp;|&nbsp;
+          </td>
+          <td id="signup-link-section-jp">
+            <a href="signup.html#jp" target="_self" id="signup-link-jp">
+              会員登録
+            </a>
+          </td>
+        </tr>
+      </table>
+      <button id="ad-button-jp" onclick="" onfocus="this.blur();" style="width: 50%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 1vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 1.00;">
+        今日のあなたの広告を促進します。
+      </button>
+    </form>
+  </div>
+  <div align="center" id="signin-form-zh">
+    <h1 id="main-title-zh">登錄</h1>
+    <form method="post" name="login_form_zh">
+      <table border="0" style="width: 50%; font-size: 2vw;">
+        <tr id="identifier-section-zh" style="opacity: 0.00;">
+          <td style="text-align: center; width: 4vw;">
+            <label for="identifier-zh" id="identifier-label-zh">ID</label>
+          </td>
+          <td>
+            <input type="text" name="identifier-zh" id="identifier-zh" readonly="true" placeholder="電郵地址" maxlength="64" />
+          </td>
+        </tr>
+        <tr id="password-section-zh" style="opacity: 0.00;">
+          <td style="text-align: center; width: 4vw;">
+            <label for="password-zh" id="password-label-zh">PW</label>
+          </td>
+          <td>
+            <input type="password" name="password-zh" id="password-zh" readonly="true" placeholder="密碼" maxlength="64" />
+          </td>
+        </tr>
+      </table>
+      <p>
+        <button id="login-button-zh" onclick="document.login_form_en.submit();" onfocus="this.blur();" disabled="true">
+          登錄
+        </button>
+      </p>
+      <table border="0" id="other-account-actions-section-zh">
+        <tr>
+          <td id="recover-account-section-zh">
+            <a href="recover-account.html#zh" target="_self" id="recover-account-zh">
+              找到我的帳戶
+            </a>
+          </td>
+          <td>
+            &nbsp;|&nbsp;
+          </td>
+          <td id="signup-link-section-zh">
+            <a href="signup.html#zh" target="_self" id="signup-link-zh">
+              報名
+            </a>
+          </td>
+        </tr>
+      </table>
+      <button id="ad-button-zh" onclick="" onfocus="this.blur();" style="width: 50%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 1vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 1.00;">
+        今天宣傳你的廣告
       </button>
     </form>
   </div>

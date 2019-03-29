@@ -2,20 +2,31 @@
 
     var lang;
     var isIdentifierActive = false, isPasswordActive = false, isLoginButtonActive = false;
-    var supported_languages_name = new Array("한국어", "English");
-    var supported_languages_eng_name = new Array("Korean", "English");
-    var supported_languages_code = new Array("ko", "en");
+    var supported_languages_name = new Array("한국어", "English", "日本語", "中文");
+    var supported_languages_eng_name = new Array("Korean", "English", "Japanese", "Chinese");
+    var supported_languages_code = new Array("ko", "en", "jp", "zh");
+    var supported_languages_page_title = new Array();
     initialSequences();
 
 function initialSequences() {
-    if (location.hash == "")
+    if (location.hash == "" || location.hash == "#en")
         lang = "en";
+    else if (location.hash == "#ko")
+        lang = "ko";
+    else if (location.hash == "#jp")
+        lang = "jp";
+    else if (location.hash == "#zh")
+        lang = "zh";
     else
-        lang = location.hash.substring(1, 3);
+        lang = "en";
     if (lang == "en")
         document.title = "Sign in - Chatr";
-    if (lang == "ko")
+    else if (lang == "ko")
         document.title = "로그인 - Chatr";
+    else if (lang == "jp")
+        document.title = "ログイン - Chatr";
+    else if (lang == "zh")
+        document.title = "登錄 - Chatr";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";
     document.getElementById("lang-options").innerHTML += "</tr>";

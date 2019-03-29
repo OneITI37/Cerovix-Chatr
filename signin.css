@@ -13,14 +13,14 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(40, 160, 255); 
 }
-#signin-form-ko, #signin-form-en {
+#signin-form-ko, #signin-form-en, #signin-form-jp, #signin-form-zh {
     display: none;
     width: 100%;
 }
 body {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 51, 81);
-    font-family: 'NanumSquare', 'Renner';
+    font-family: 'NanumSquare', 'Renner', 'Droid Sans';
     font-size: 1vw;
 }
 table, tr, td {
@@ -29,21 +29,21 @@ table, tr, td {
 #lang-options {
     text-align: center;
 }
-#language-select-ko, #language-select-en {
+[id^="language-select-"] {
     cursor: pointer;
 }
-#main-title-ko, #main-title-en {
+[id^="main-title-"] {
     text-align: center;
     font-size: 5vw;
-    font-family: 'Renner Light', 'NanumSquare Light';
+    font-family: 'Droid Sans', 'Renner Light', 'NanumSquare Light';
 }
 [name="login_form"] {
-    font-family: 'NanumSquare', 'Renner';
+    font-family: 'Droid Sans', 'NanumSquare', 'Renner';
 }
-#identifier-label-ko, #password-label-ko, #identifier-label-en, #password-label-en {
+[id^="identifier-label-"], [id^="password-label-ko"] {
     font-family: 'NanumSquare Bold', 'Renner Bold';
 }
-#identifier-ko, #password-ko, #identifier-en, #password-en {
+[id^="identifier-"], [id^="password-"] {
     font-family: 'Renner Light', 'NanumSquare Light';
     font-size: 1.5vw;
     color: rgb(0, 51, 81);
@@ -53,12 +53,12 @@ table, tr, td {
     border-width: 1px;
     border-color: rgb(0, 0, 0);
 }
-#identifier-ko::placeholder, #password-ko::placeholder, #identifier-en::placeholder, #password-en::placeholder {
+[id^="identifier-"]::placeholder, [id^="password-"]::placeholder {
     color: rgb(73, 122, 150);
     font-family: 'NanumSquare Light', 'Renner Light';
 }
-#login-button-ko, #login-button-en {
-    font-family: 'NanumSquare Light', 'Renner';
+[id^="login-button-"] {
+    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner';
     width: 50%;
     height: 4vw;
     font-size: 2vw;
@@ -68,15 +68,15 @@ table, tr, td {
     border-width: 0.05vw;
     border-color: rgb(0, 100, 195);
 }
-#recover-account-ko, #signup-link-ko, #recover-account-en, #signup-link-en {
+[id^="recover-account"], [id^="signup-link"] {
     text-decoration: none;
     color: rgb(0, 51, 81);
     cursor: pointer;
 }
-#recover-account-section-ko, #signup-link-section-ko, #recover-account-section-en, #signup-link-section-en {
+[id^="recover-account-section"], [id=^="signup-link-section"] {
     text-align: center;
 }
-#ad-button-ko, #ad-button-en {
+[id^="ad-button"] {
     width: 50%;
     height: 4vw;
     font-size: 2vw;
@@ -86,7 +86,7 @@ table, tr, td {
     border-radius: 1vw;
     border-width: 0.05vw;
     border-color: rgb(0, 100, 195);
-    font-family: 'NanumSquare Light', 'Renner Light';
+    font-family: 'Droid Sans', 'NanumSquare Light', 'Renner Light';
 }
 #copyright-statement-common {
     width: 100vw;
