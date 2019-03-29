@@ -28,7 +28,7 @@ table, tr, td {
 }
 #lang-options {
     text-align: center;
-    width: 50%;
+    width: 70%;
 }
 [id^="language-select-"] {
     cursor: pointer;
@@ -60,7 +60,7 @@ table, tr, td {
 }
 [id^="login-button-"] {
     font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
-    width: 50%;
+    width: 70%;
     height: 4vw;
     font-size: 2vw;
     background-color: rgb(0, 120, 215);
@@ -78,7 +78,7 @@ table, tr, td {
     text-align: center;
 }
 [id^="ad-button"] {
-    width: 50%;
+    width: 70%;
     height: 4vw;
     font-size: 2vw;
     background-color: rgb(0, 120, 215);
