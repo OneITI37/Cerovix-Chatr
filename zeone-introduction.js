@@ -1,4 +1,4 @@
-// cerovix-introduction.js
+// zeone-introduction.js
     initialRoutine();
 function initialRoutine() {
     fadeAnimation(document.getElementById("main-title"), 0.00, 1.00, 1);
