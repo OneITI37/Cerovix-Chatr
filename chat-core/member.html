@@ -19,33 +19,63 @@
 <body leftmargin="0" topmargin="0">
     <div align="center" id="member-form-container-ko">
         <h1 id="main-title-ko">사용자</h1>
-            <form method="post" name="member_form_ko">
-                <table border="0" style="width: 70%; font-size: 2vw;">
-                    <tr id="identifier-section-ko" style="opacity: 0.00;">
-                        <td style="text-align: center; width: 4vw;">
-                            <label for="identifier-ko" id="identifier-label-ko">ID</label>
-                        </td>
-                        <td>
-                            <input type="text" name="identifier-ko" id="identifier-ko" readonly="true" placeholder="사용자 코드" maxlength="64" />
-                        </td>
-                    </tr>
-                </table>
-                <p>
-                    <button id="add-friend-button-ko" onfocus="this.blur();" disabled="true">
-                        친구 추가
-                    </button>
-                </p>
-                <p>
-                    <button id="chat-start-button-ko" onfocus="this.blur();" disabled="true">
-                        채팅 시작
-                    </button>
-                </p>
-                <p>
-                    <button id="ad-button-ko" type="button" onfocus="this.blur();">
+        <form method="post" name="member_form_ko">
+            <table border="0" style="width: 70%; font-size: 2vw;">
+                <tr id="identifier-section-ko" style="opacity: 0.00;">
+                    <td style="text-align: center; width: 4vw;">
+                        <label for="identifier-ko" id="identifier-label-ko">ID</label>
+                    </td>
+                    <td>
+                        <input type="text" name="identifier-ko" id="identifier-ko" readonly="true" placeholder="사용자 코드" maxlength="64" />
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <button id="add-friend-button-ko" onfocus="this.blur();" disabled="true">
+                    친구 추가
+                </button>
+            </p>
+            <p>
+                <button id="chat-start-button-ko" onfocus="this.blur();" disabled="true">
+                    채팅 시작
+                </button>
+            </p>
+            <p>
+                <button id="ad-button-ko" type="button" onfocus="this.blur();">
                     오늘 광고를 시작하세요
-                    </button>
-                </p>
-            </form>
+                </button>
+            </p>
+        </form>
+    </div>
+    <div align="center" id="member-form-container-en">
+        <h1 id="main-title-en">Users</h1>
+        <form method="post" name="member_form_en">
+            <table border="0" style="width: 70%; font-size: 2vw;">
+                <tr id="identifier-section-en" style="opacity: 0.00;">
+                    <td style="text-align: center; width: 4vw;">
+                        <label for="identifier-en" id="identifier-label-ko">ID</label>
+                    </td>
+                    <td>
+                        <input type="text" name="identifier-en" id="identifier-en" readonly="true" placeholder="User Code" maxlength="64" />
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <button id="add-friend-button-en" onfocus="this.blur();" disabled="true">
+                    Add as Friend
+                </button>
+            </p>
+            <p>
+                <button id="chat-start-button-en" onfocus="this.blur();" disabled="true">
+                    Start Chatting 
+                </button>
+            </p>
+            <p>
+                <button id="ad-button-en" type="button" onfocus="this.blur();">
+                    Promote Your Ad Today
+                </button>
+            </p>
+        </form>
     </div>
 
     <script type="text/javascript" src="member.js"></script>

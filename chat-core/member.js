@@ -62,7 +62,7 @@ function initialSequences() {
     fadeAnimation(document.getElementById("chat-start-button"+"-"+lang), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("ad-button"+"-"+lang), 0.00, 1, 1);
     document.getElementById("identifier"+"-"+lang).addEventListener("keyup", function(){
-        if (this.value.length >= 6) {
+        if (this.value.length >= 4) {
             if (!areBothButtonsActive) {
                 document.getElementById("add-friend-button"+"-"+lang).addEventListener("click", function(){
                     document.login_form.submit();
