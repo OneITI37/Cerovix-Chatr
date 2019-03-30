@@ -1,0 +1,33 @@
+/* chat.css */
+
+#properties-aligner {
+    width: 100vw;
+    height: 90vh;
+}
+#member-property {
+    width: 30%;
+    height: 100%;
+}
+#member-frame {
+    width: 100%;
+    height: 100%;
+}
+#chatroom-property {
+    width: 30%;
+    height: 100%;
+}
+#chatroom-frame {
+    width: 100%;
+    height: 100%;
+}
+#chat-area-property {
+    width: 40%;
+    height: 100%;
+}
+#chat-area-frame {
+    width: 100%;
+    height: 100%;
+}
+#member-frame, #chatroom-frame, #chat-area-frame {
+    border: 0;
+}
