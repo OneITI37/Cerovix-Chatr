@@ -15,18 +15,26 @@
 </head>
 
 <body leftmargin="0" topmargin="0">
-    <table border="0" id="properties-aligner">
-        <tr>
-            <td id="member-property">
-                <iframe src="member.html" id="member-frame"></iframe>
-            </td>
-            <td id="chatroom-property">
-                <iframe src="chatroom.html" id="chatroom-frame"></iframe>
-            </td>
-            <td id="chat-area-property">
-                <iframe src="chat-area.html" id="chat-area-frame"></iframe>
-            </td>
-        </tr>
-    </table>
+    <div align="center">
+        <table border="1" id="lang-options">
+        </table>
+    </div>
+    <p>
+        <table border="0" id="properties-aligner">
+            <tr>
+                <td id="member-property">
+                    <iframe src="member.html#no-language" id="member-frame" class="display-frame"></iframe>
+                </td>
+                <td id="chatroom-property">
+                    <iframe src="chatroom.html#no-language" id="chatroom-frame" class="display-frame"></iframe>
+                </td>
+                <td id="chat-area-property">
+                    <iframe src="chat-area.html#no-language" id="chat-area-frame" class="display-frame"></iframe>
+                </td>
+            </tr>
+        </table>
+    </p>
+
+    <script type="text/javascript" src="chat.js"></script>
 </body>
 </html>

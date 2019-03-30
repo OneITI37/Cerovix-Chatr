@@ -1,5 +1,40 @@
 /* chat.css */
 
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); 
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 120, 215); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 160, 255); 
+}
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 51, 81);
+    font-family: 'NanumSquare', 'Renner';
+    font-size: 1vw;
+}
+table, tr, td {
+    border-collapse: collapse;
+    font-family: 'NanumSquare', 'Renner';
+}
+#lang-options {
+    text-align: center;
+    width: 100%;
+}
+[id^="language-select"] {
+    cursor: pointer;
+}
+#navigation-button-close, #navigation-button-prev {
+    width: 2vw;
+    height: 2vw;
+    display: inline-block;
+}
 #properties-aligner {
     width: 100vw;
     height: 90vh;
