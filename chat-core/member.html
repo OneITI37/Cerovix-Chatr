@@ -77,6 +77,36 @@
             </p>
         </form>
     </div>
+    <div align="center" id="member-form-container-jp">
+            <h1 id="main-title-jp">ユーザー</h1>
+            <form method="post" name="member_form_jp">
+                <table border="0" style="width: 70%; font-size: 2vw;">
+                    <tr id="identifier-section-jp" style="opacity: 0.00;">
+                        <td style="text-align: center; width: 4vw;">
+                            <label for="identifier-jp" id="identifier-label-jp">ID</label>
+                        </td>
+                        <td>
+                            <input type="text" name="identifier-jp" id="identifier-jp" readonly="true" placeholder="ユーザーコード" maxlength="64" />
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <button id="add-friend-button-jp" onfocus="this.blur();" disabled="true">
+                        友達に追加
+                    </button>
+                </p>
+                <p>
+                    <button id="chat-start-button-jp" onfocus="this.blur();" disabled="true">
+                        チャットの開始
+                    </button>
+                </p>
+                <p>
+                    <button id="ad-button-jp" type="button" onfocus="this.blur();">
+                        Chatrに広告申込み
+                    </button>
+                </p>
+            </form>
+        </div>
 
     <script type="text/javascript" src="member.js"></script>
 </body>
