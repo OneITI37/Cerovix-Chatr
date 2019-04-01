@@ -127,7 +127,7 @@ function showNotificationRingtoneTypeOptions() {
 }
 function selectNotificationRingtoneTypeOptions(choice) {
     document.getElementById("notification-ringtone-type-options-container"+"-"+lang).opacity = "0.00";
-    var instrument_list = new Array("accordion", "accoustic-guitar", "b-flat-clarinet", "classic-guitar", "electric-guitar", "flute", "harmonica", "piano", "violin");
+    var instrument_list = new Array("accordion", "accoustic-guitar", "b-flat-clarinet", "classic-guitar", "electric-guitar", "flute", "harmonica", "piano", "original", "violin");
     var i;
     for (i = 0; i < instrument_list.length; i++)
         if (choice == instrument_list[i]) {

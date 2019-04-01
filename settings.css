@@ -49,6 +49,15 @@ table, tr, td {
     height: 2vw;
     border-width: 0px;
 }
+[id^="notification-browser-options-container"] {
+    cursor: pointer;
+}
+[id^="notification-ringtone-options-container"] {
+    cursor: pointer;
+}
+[id^="notification-ringtone-type-options-container"] {
+    cursor: pointer;
+}
 [id^="setting-button-"] {
     font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
     width: 100%;
