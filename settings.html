@@ -16,8 +16,54 @@
     <link rel="icon" type="image/png" href="icon2048x2048.png" />
 </head>
 
-<body style="color: rgb(0, 51, 81);">
-    
+<body leftmargin="0" topmargin="0">
+    <div align="center">
+        <table border="1" id="lang-options">
+        </table>
+    </div>
+    <div align="center" id="setting-form-container-ko">
+      <h1 id="main-title-ko">설정</h1>
+      <form method="post" name="setting_form_ko">
+        <table border="0" style="width: 70%; font-size: 2vw;">
+          <tr id="notification-section-ko" style="opacity: 0.00;">
+            <td style="text-align: center; width: 4vw;">
+              <label for="notification-options-ko" id="notification-label-ko">알림</label>
+            </td>
+            <td>
+                <div align="center">
+                    <table border="1" id="notification-options-container-ko">
+                        <div align="center">
+                            <table border="1" id="notification-options-ko">
+                            </table>
+                            <table border="1" id="hidden-notification-options-ko">
+                                <tr>
+                                    <td id="notification-select-sound-ko" class="notification-select"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </table>
+                </div>
+            </td>
+          </tr>
+          <tr id="password-section-ko" style="opacity: 0.00;">
+            <td style="text-align: center; width: 4vw;">
+              <label for="password-ko" id="password-label-ko">PW</label>
+            </td>
+            <td>
+              <input type="password" name="password-ko" id="password-ko" readonly="true" placeholder="비밀번호" maxlength="64" />
+            </td>
+          </tr>
+        </table>
+        <p>
+          <button id="setting-button-ko" onclick="document.setting_form_ko.submit();" onfocus="this.blur();" disabled="true">
+            적용
+          </button>
+        </p>
+        <button id="ad-button-ko" type="button" onfocus="this.blur();" style="width: 70%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 1vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 1.00;">
+          오늘 광고를 시작하세요
+        </button>
+      </form>
+    </div>
 
     <p id="copyright-statement-common">
         &copy; 2019 Zeone
