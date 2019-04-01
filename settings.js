@@ -6,6 +6,10 @@
     var supported_languages_eng_name = new Array("Korean", "English", "Japanese", "Chinese");
     var supported_languages_code = new Array("ko", "en", "jp", "zh");
     var supported_languages_page_title = new Array();
+
+    var isNotificationBrowserOptionExpanded = false;
+    var isNotificationRingtoneOptionExpanded = false;
+    var isNotificationRingtoneTypeOptionExpanded = false;
     initialSequences();
 
 function initialSequences() {
@@ -20,13 +24,13 @@ function initialSequences() {
     else
         lang = "en";
     if (lang == "en")
-        document.title = "Sign in - Chatr";
+        document.title = "Settings - Chatr";
     else if (lang == "ko")
-        document.title = "로그인 - Chatr";
+        document.title = "설정 - Chatr";
     else if (lang == "jp")
-        document.title = "ログイン - Chatr";
+        document.title = "設定 - Chatr";
     else if (lang == "zh")
-        document.title = "登錄 - Chatr";
+        document.title = "設置 - Chatr";
     document.getElementById("lang-options").innerHTML = "";
     document.getElementById("lang-options").innerHTML += "<tr>";
     document.getElementById("lang-options").innerHTML += "</tr>";
@@ -57,121 +61,88 @@ function initialSequences() {
         showAllLanguageOptions();
     });
     document.getElementById("setting-form-container"+"-"+lang).style.display = "block";
-    document.getElementById("identifier-section"+"-"+lang).style.opacity = "0.00";
-    document.getElementById("password-section"+"-"+lang).style.opacity = "0.00";
+    document.getElementById("setting-form-container"+"-"+lang).style.opacity = "0.00";
     document.getElementById("setting-button"+"-"+lang).style.opacity = "0.00";
     document.getElementById("setting-button"+"-"+lang).style.cursor = "not-allowed";
     fadeAnimation(document.getElementById("main-title"+"-"+lang), 0.00, 1, 1);
-    fadeAnimation(document.getElementById("identifier-section"+"-"+lang), 0.00, 1, 1);
-    document.getElementById("identifier"+"-"+lang).readOnly = false;
-    isIdentifierActive = true;
+    fadeAnimation(document.getElementById("setting-form-container"+"-"+lang), 0.00, 1, 1);
     document.getElementById("setting-button"+"-"+lang).addEventListener("mouseover", function(){
         backgroundColorTransitionAnimation(this, 0, 132, 224, 0, 162, 254, 0.3);
     });
     document.getElementById("setting-button"+"-"+lang).addEventListener("mouseout", function(){
         backgroundColorTransitionAnimation(this, 0, 162, 254, 0, 132, 224, 0.3);
     });
-    document.getElementById("ad-button"+"-"+lang).addEventListener("mouseover", function(){
-        backgroundColorTransitionAnimation(this, 0, 132, 224, 0, 162, 254, 0.3);
-    });
-    document.getElementById("ad-button"+"-"+lang).addEventListener("mouseout", function(){
-        backgroundColorTransitionAnimation(this, 0, 162, 254, 0, 132, 224, 0.3);
-    });
-    document.getElementById("ad-button"+"-"+lang).addEventListener("click", function(){
-        window.location.replace("ad.html"+"#"+lang);
-    });
-    fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.00, 0.10, 1);
     fadeAnimation(document.getElementById("setting-button"+"-"+lang), 0.00, 0.10, 1);
-    fadeAnimation(document.getElementById("ad-button"+"-"+lang), 0.00, 1, 1);
     fadeAnimation(document.getElementById("copyright-statement-common"), 0.00, 1, 1);
-    document.getElementById("identifier"+"-"+lang).addEventListener("keyup", function(){
-        if (document.getElementById("identifier"+"-"+lang).value.length >= 6) {
-            if (!isPasswordActive) {
-                fadeAnimation(document.getElementById("password-section"+"-"+lang), 0.10, 1.00, 1);
-                document.getElementById("password"+"-"+lang).readOnly = false;
-                document.getElementById("password"+"-"+lang).style.cursor = "text";
-                isPasswordActive = true;
-                document.getElementById("password"+"-"+lang).addEventListener("keyup", function(){
-                    if (document.getElementById("password"+"-"+lang).value.length >= 8) {
-                        if (!issettingButtonActive && document.getElementById("identifier"+"-"+lang).value.length >= 6) {
-                            document.getElementById("setting-button"+"-"+lang).addEventListener("click", function(){
-                                document.setting_form.submit();
-                            })
-                            fadeAnimation(document.getElementById("setting-button"+"-"+lang), 0.10, 1.00, 1);
-                            document.getElementById("setting-button"+"-"+lang).disabled = false;
-                            document.getElementById("setting-button"+"-"+lang).style.cursor = "pointer";
-                            issettingButtonActive = true;
-                        }
-                    }
-                    else {
-                        if (issettingButtonActive) {
-                            document.getElementById("setting-button"+"-"+lang).disabled = true;
-                            document.getElementById("setting-button"+"-"+lang).addEventListener("click", function(){
-                                return;
-                            });
-                            document.getElementById("setting-button"+"-"+lang).style.cursor = "not-allowed";
-                            issettingButtonActive = false;
-                            fadeAnimation(document.getElementById("setting-button"+"-"+lang), 1.00, 0.10, 1);
-                        }
-                    }
-                });
-            }
-            else {
-                if (document.getElementById("identifier"+"-"+lang).value.length >= 6 && document.getElementById("password"+"-"+lang).value.length >= 8) {
-                    if (!issettingButtonActive) {
-                        document.getElementById("setting-button"+"-"+lang).addEventListener("click", function(){
-                            document.setting_form.submit();
-                        })
-                        fadeAnimation(document.getElementById("setting-button"+"-"+lang), 0.10, 1.00, 1);
-                        document.getElementById("setting-button"+"-"+lang).disabled = false;
-                        issettingButtonActive = true;
-                        document.getElementById("setting-button"+"-"+lang).style.cursor = "pointer";
-                    }
-                }
-            }
-        }
-        else {
-            if (issettingButtonActive) {
-                document.getElementById("setting-button"+"-"+lang).disabled = true;
-                issettingButtonActive = false;
-                document.getElementById("setting-button"+"-"+lang).addEventListener("click", function(){
-                    return;
-                });
-                fadeAnimation(document.getElementById("setting-button"+"-"+lang), 1.00, 0.10, 1);
-                document.getElementById("setting-button"+"-"+lang).style.cursor = "not-allowed";
-            }
-        }
-    });
     return;
 }
-function showNotificationOptions() {
-    var i;
-    document.getElementById("notification-options-container").opacity = "0.00";
-    document.getElementById("notification-options").innerHTML = "";
-    document.getElementById("notification-options").innerHTML += "<tr>";
-    for (i = 0; i < supported_languages_name.length; i++)
-        document.getElementById("notification-options").innerHTML += "<td id=\"notification-select-"+supported_languages_code[i]+"\" class=\"notification-select\">"+supported_languages_name[i]+"</td>";
-    document.getElementById("notification-options").innerHTML += "</tr>";
-    for (i = 0; i < document.getElementsByClassName("notification-select").length; i++) {
-        document.getElementById("notification-select"+"-"+supported_languages_code[i]).languagecode = i;
-        document.getElementsByClassName("notification-select")[i].addEventListener("mouseover", function(){
-            textColorTransitionAnimation(this, 0, 51, 81, 70, 121, 151, 0.3);
-        });
-        document.getElementsByClassName("notification-select")[i].addEventListener("mouseout", function(){
-            textColorTransitionAnimation(this, 70, 121, 151, 0, 51, 81, 0.3);
-        });
-        document.getElementsByClassName("notification-select")[i].addEventListener("click", function(){
-            location.hash = this.id.substring(16, 18);
-            location.reload();
-        });
-        document.getElementsByClassName("notification-select")[i].addEventListener("mouseover", function(){
-            this.innerHTML = supported_languages_eng_name[Number(this.languagecode)];
-        });
-        document.getElementsByClassName("notification-select")[i].addEventListener("mouseout", function(){
-            this.innerHTML = supported_languages_name[Number(this.languagecode)];
-        });
+function showNotificationBrowserOptions() {
+    document.getElementById("notification-browser-options-container"+"-"+lang).opacity = "0.00";
+    document.getElementById("notification-browser-options-container"+"-"+lang).innerHTML = document.getElementById("notification-browser-options-container-expanded"+"-"+lang).innerHTML;
+    fadeAnimation(document.getElementById("notification-browser-options-container"+"-"+lang), 0.00, 1.00, 1);
+    isNotificationBrowserOptionExpanded = true;
+    return;
+}
+function selectNotificationBrowserOptions(choice) {
+    if (choice == "enabled") {
+        document.getElementById("notification-browser-options-container"+"-"+lang).opacity = "0.00";
+        document.getElementById("notification-browser-options-container"+"-"+lang).innerHTML = document.getElementById("notification-browser-options-container-enabled"+"-"+lang).innerHTML;
+        fadeAnimation(document.getElementById("notification-browser-options-container"+"-"+lang), 0.00, 1.00, 1);
     }
-    fadeAnimation(document.getElementById("notification-options-container"), 0.00, 1.00, 1);
+    else if (choice == "disabled") {
+        document.getElementById("notification-browser-options-container"+"-"+lang).opacity = "0.00";
+        document.getElementById("notification-browser-options-container"+"-"+lang).innerHTML = document.getElementById("notification-browser-options-container-disabled"+"-"+lang).innerHTML;
+        fadeAnimation(document.getElementById("notification-browser-options-container"+"-"+lang), 0.00, 1.00, 1);
+    }
+    isNotificationBrowserOptionExpanded = false;
+    return;
+}
+function showNotificationRingtoneOptions() {
+    document.getElementById("notification-ringtone-options-container"+"-"+lang).opacity = "0.00";
+    document.getElementById("notification-ringtone-options-container"+"-"+lang).innerHTML = document.getElementById("notification-ringtone-options-container-expanded"+"-"+lang).innerHTML;3
+    fadeAnimation(document.getElementById("notification-ringtone-options-container"+"-"+lang), 0.00, 1.00, 1);
+    isNotificationRingtoneOptionExpanded = true;
+    return;
+}
+function selectNotificationRingtoneOptions(choice) {
+    if (choice == "enabled") {
+        document.getElementById("notification-ringtone-options-container"+"-"+lang).opacity = "0.00";
+        document.getElementById("notification-ringtone-options-container"+"-"+lang).innerHTML = document.getElementById("notification-ringtone-options-container-enabled"+"-"+lang).innerHTML;
+        fadeAnimation(document.getElementById("notification-ringtone-options-container"+"-"+lang), 0.00, 1.00, 1);
+    }
+    else if (choice == "disabled") {
+        document.getElementById("notification-ringtone-options-container"+"-"+lang).opacity = "0.00";
+        document.getElementById("notification-ringtone-options-container"+"-"+lang).innerHTML = document.getElementById("notification-ringtone-options-container-disabled"+"-"+lang).innerHTML;
+        fadeAnimation(document.getElementById("notification-ringtone-options-container"+"-"+lang), 0.00, 1.00, 1);
+    }
+    isNotificationRingtoneOptionExpanded = false;
+    return;
+}
+function showNotificationRingtoneTypeOptions() {
+    document.getElementById("notification-ringtone-type-options-container"+"-"+lang).opacity = "0.00";
+    document.getElementById("notification-ringtone-type-options-container"+"-"+lang).innerHTML = document.getElementById("notification-ringtone-type-options-container-expanded"+"-"+lang).innerHTML;3
+    fadeAnimation(document.getElementById("notification-ringtone-type-options-container"+"-"+lang), 0.00, 1.00, 1);
+    isNotificationRingtoneOptionExpanded = true;
+    return;
+}
+function selectNotificationRingtoneTypeOptions(choice) {
+    document.getElementById("notification-ringtone-type-options-container"+"-"+lang).opacity = "0.00";
+    var instrument_list = new Array("accordion", "accoustic-guitar", "b-flat-clarinet", "classic-guitar", "electric-guitar", "flute", "harmonica", "piano", "violin");
+    var i;
+    for (i = 0; i < instrument_list.length; i++)
+        if (choice == instrument_list[i]) {
+            document.getElementById("notification-ringtone-type-options-container"+"-"+lang).innerHTML = "<tr id=\"notification-ringtone-type-option-inner-container"+"-"+lang+"\"></tr>";
+            document.getElementById("notification-ringtone-type-option-inner-container"+"-"+lang).innerHTML = document.getElementById("notification-ringtone-type-option"+"-"+instrument_list[i]+"-"+"container"+"-"+lang).innerHTML;
+            var current_instrument = instrument_list[i];
+            break;
+        }
+
+    document.getElementById("notification-ringtone-type-option-inner-container"+"-"+lang).addEventListener("click", function() {
+        showNotificationRingtoneTypeOptions();
+    });
+    document.getElementById("ringtone-type"+"-"+current_instrument+"-"+"test").play();
+    fadeAnimation(document.getElementById("notification-ringtone-type-options-container"+"-"+lang), 0.00, 1.00, 1);
+    isNotificationRingtoneTypeOptionExpanded = false;
     return;
 }
 function showAllLanguageOptions() {

@@ -41,22 +41,13 @@ table, tr, td {
 [name="setting_form"] {
     font-family: 'NanumSquare', 'Renner', 'Droid Sans', 'Flop Design Font';
 }
-[id^="identifier"], [id^="password"] {
+#notification-ringtone-volume {
     font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
-    font-size: 1.5vw;
+    font-size: 2vw;
     color: rgb(0, 51, 81);
     width: 100%;
     height: 2vw;
-    border-radius: 0.5vw;
-    border-width: 1px;
-    border-color: rgb(0, 0, 0);
-}
-[id^="identifier-label"], [id^="password-label"] {
-    font-family: 'Renner Bold', 'NanumSquare Bold', 'Droid Sans', 'Flop Design Font';
-}
-[id^="identifier-"]::placeholder, [id^="password-"]::placeholder {
-    color: rgb(73, 122, 150);
-    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
+    border-width: 0px;
 }
 [id^="setting-button-"] {
     font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';

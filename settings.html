@@ -25,32 +25,171 @@
       <h1 id="main-title-ko">설정</h1>
       <form method="post" name="setting_form_ko">
         <table border="0" style="width: 70%; font-size: 2vw;">
-          <tr id="notification-section-ko" style="opacity: 0.00;">
-            <td style="text-align: center; width: 4vw;">
-              <label for="notification-options-ko" id="notification-label-ko">알림</label>
+          <tr id="notification-browser-section-ko">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-browser-options-ko" id="notification-browser-label-ko">브라우저 알림 표시</label>
             </td>
             <td>
-                <div align="center">
-                    <table border="1" id="notification-options-container-ko">
-                        <div align="center">
-                            <table border="1" id="notification-options-ko">
-                            </table>
-                            <table border="1" id="hidden-notification-options-ko">
-                                <tr>
-                                    <td id="notification-select-sound-ko" class="notification-select"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </table>
-                </div>
+              <div align="center">
+                <table border="1" id="notification-browser-options-container-ko">
+                  <tr>
+                    <td id="notification-browser-option-disabled-ko" onclick="showNotificationBrowserOptions();">비활성화</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-expanded-ko" onclick="if (isNotificationBrowserOptionExpanded == false) showNotificationBrowserOptions();" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-ko" onclick="selectNotificationBrowserOptions('disabled');">비활성화</td>
+                    <td id="notification-browser-option-enabled-ko" onclick="selectNotificationBrowserOptions('enabled');">활성화</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-enabled-ko" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-ko" onclick="showNotificationBrowserOptions();">활성화</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-disabled-ko" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-ko" onclick="showNotificationBrowserOptions();">비활성화</td>
+                  </tr>
+                </table>
+              </div>
             </td>
           </tr>
-          <tr id="password-section-ko" style="opacity: 0.00;">
-            <td style="text-align: center; width: 4vw;">
-              <label for="password-ko" id="password-label-ko">PW</label>
+          <tr id="notification-ringtone-section-ko">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-ringtone-options-ko" id="notification-ringtone-label-ko">알림음 재생</label>
             </td>
             <td>
-              <input type="password" name="password-ko" id="password-ko" readonly="true" placeholder="비밀번호" maxlength="64" />
+              <div align="center">
+                <table border="1" id="notification-ringtone-options-container-ko">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-ko" onclick="showNotificationRingtoneOptions();">비활성화</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-expanded-ko" onclick="if (isNotificationringtoneOptionExpanded == false) showNotificationRingtoneOptions();" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-ko" onclick="selectNotificationRingtoneOptions('disabled');">비활성화</td>
+                    <td id="notification-ringtone-option-enabled-ko" onclick="selectNotificationRingtoneOptions('enabled');">활성화</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-enabled-ko" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-enabled-ko" onclick="showNotificationRingtoneOptions();">활성화</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-disabled-ko" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-ko" onclick="showNotificationRingtoneOptions();">비활성화</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-type-section-ko">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-ringtone-type-options-ko" id="notification-ringtone-type-label-ko">알림음 선택</label>
+            </td>
+            <td>
+              <div align="center">
+                <audio id="ringtone-type-piano-test">
+                  <source src="ringtone/chatr-ringtone-piano.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-piano.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-piano.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-accordion-test">
+                  <source src="ringtone/chatr-ringtone-accordion.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-accordion.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-accordion.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-accoustic-guitar-test">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-b-flat-clarinet-test">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-classic-guitar-test">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-electric-guitar-test">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-flute-test">
+                  <source src="ringtone/chatr-ringtone-flute.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-flute.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-flute.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-harmonica-test">
+                  <source src="ringtone/chatr-ringtone-harmonica.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-harmonica.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-harmonica.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-violin-test">
+                  <source src="ringtone/chatr-ringtone-violin.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-violin.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-violin.wav" type="audio/wav">
+                </audio>
+                <table border="1" id="notification-ringtone-type-options-container-ko">
+                  <tr id="notification-ringtone-type-option-inner-container-ko">
+                    <td id="notification-ringtone-type-options-piano-ko" onclick="showNotificationRingtoneTypeOptions();">피아노(기본)</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-type-options-container-expanded-ko" onclick="if (isNotificationringtone-typeOptionExpanded == false) showNotificationRingtoneTypeOptions();" style="display: none;">
+                  <tr id="notification-ringtone-type-option-piano-container-ko">
+                    <td id="notification-ringtone-type-option-piano-ko" onclick="selectNotificationRingtoneTypeOptions('piano');">피아노(기본)</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-accordion-container-ko">
+                    <td id="notification-ringtone-type-option-accordion-ko" onclick="selectNotificationRingtoneTypeOptions('accordion');">아코디언</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-accoustic-guitar-container-ko">
+                    <td id="notification-ringtone-type-option-accoustic-guitar-ko" onclick="selectNotificationRingtoneTypeOptions('accoustic-guitar');">어쿠스틱 기타</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-b-flat-clarinet-container-ko">
+                    <td id="notification-ringtone-type-option-b-flat-clarinet-ko" onclick="selectNotificationRingtoneTypeOptions('b-flat-clarinet');">B♭ 클라리넷</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-classic-guitar-container-ko">
+                    <td id="notification-ringtone-type-option-classic-guitar-ko" onclick="selectNotificationRingtoneTypeOptions('classic-guitar');">클래식 기타</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-electric-guitar-container-ko">
+                    <td id="notification-ringtone-type-option-electric-guitar-ko" onclick="selectNotificationRingtoneTypeOptions('electric-guitar');">전기 기타</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-flute-container-ko">
+                    <td id="notification-ringtone-type-option-flute-ko" onclick="selectNotificationRingtoneTypeOptions('flute');">플룻</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-harmonica-container-ko">
+                    <td id="notification-ringtone-type-option-harmonica-ko" onclick="selectNotificationRingtoneTypeOptions('harmonica');">하모니카</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-violin-container-ko">
+                    <td id="notification-ringtone-type-option-violin-ko" onclick="selectNotificationRingtoneTypeOptions('violin');">바이올린</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-volume-section-ko">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-ringtone-volume-options-ko" id="notification-ringtone-volume-label-ko">알림음 음량</label>
+            </td>
+            <td>
+              <div align="center">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <input type="number" value="100" min="0" max="100" id="notification-ringtone-volume" />
+                    </td>
+                    <td>
+                      %
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </td>
           </tr>
         </table>
@@ -59,9 +198,185 @@
             적용
           </button>
         </p>
-        <button id="ad-button-ko" type="button" onfocus="this.blur();" style="width: 70%; height: 4vw; font-size: 2vw; background-color: rgb(0, 120, 215); color: #FFFFFF; border-radius: 1vw; border-width: 0.05vw; border-color: rgb(0, 100, 195); opacity: 1.00;">
-          오늘 광고를 시작하세요
-        </button>
+      </form>
+    </div>
+    <div align="center" id="setting-form-container-en">
+      <h1 id="main-title-en">Settings</h1>
+      <form method="post" name="setting_form_en">
+        <table border="0" style="width: 70%; font-size: 2vw;">
+          <tr id="notification-browser-section-en">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-browser-options-en" id="notification-browser-label-en">Show Browser Notifications</label>
+            </td>
+            <td>
+              <div align="center">
+                <table border="1" id="notification-browser-options-container-en">
+                  <tr>
+                    <td id="notification-browser-option-disabled-en" onclick="showNotificationBrowserOptions();">Disabled</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-expanded-en" onclick="if (isNotificationBrowserOptionExpanded == false) showNotificationBrowserOptions();" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-en" onclick="selectNotificationBrowserOptions('disabled');">Disabled</td>
+                    <td id="notification-browser-option-enabled-en" onclick="selectNotificationBrowserOptions('enabled');">Enabled</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-enabled-en" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-enabled-en" onclick="showNotificationBrowserOptions();">Enabled</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-disabled-en" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-en" onclick="showNotificationBrowserOptions();">Disabled</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-section-en">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-ringtone-options-en" id="notification-ringtone-label-en">Play Ringtone</label>
+            </td>
+            <td>
+              <div align="center">
+                <table border="1" id="notification-ringtone-options-container-en">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-en" onclick="showNotificationRingtoneOptions();">Disabled</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-expanded-en" onclick="if (isNotificationringtoneOptionExpanded == false) showNotificationRingtoneOptions();" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-en" onclick="selectNotificationRingtoneOptions('disabled');">Disabled</td>
+                    <td id="notification-ringtone-option-enabled-en" onclick="selectNotificationRingtoneOptions('enabled');">Enabled</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-enabled-en" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-enabled-en" onclick="showNotificationRingtoneOptions();">Enabled</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-disabled-en" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-en" onclick="showNotificationRingtoneOptions();">Disabled</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-type-section-en">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-ringtone-type-options-en" id="notification-ringtone-type-label-en">Select Ringtone</label>
+            </td>
+            <td>
+              <div align="center">
+                <audio id="ringtone-type-piano-test">
+                  <source src="ringtone/chatr-ringtone-piano.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-piano.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-piano.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-accordion-test">
+                  <source src="ringtone/chatr-ringtone-accordion.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-accordion.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-accordion.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-accoustic-guitar-test">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-b-flat-clarinet-test">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-classic-guitar-test">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-electric-guitar-test">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-flute-test">
+                  <source src="ringtone/chatr-ringtone-flute.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-flute.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-flute.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-harmonica-test">
+                  <source src="ringtone/chatr-ringtone-harmonica.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-harmonica.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-harmonica.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-violin-test">
+                  <source src="ringtone/chatr-ringtone-violin.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-violin.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-violin.wav" type="audio/wav">
+                </audio>
+                <table border="1" id="notification-ringtone-type-options-container-en">
+                  <tr id="notification-ringtone-type-option-inner-container-en">
+                    <td id="notification-ringtone-type-options-piano-en" onclick="showNotificationRingtoneTypeOptions();">Piano(Default)</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-type-options-container-expanded-en" onclick="if (isNotificationringtone-typeOptionExpanded == false) showNotificationRingtoneTypeOptions();" style="display: none;">
+                  <tr id="notification-ringtone-type-option-piano-container-en">
+                    <td id="notification-ringtone-type-option-piano-en" onclick="selectNotificationRingtoneTypeOptions('piano');">Piano(Default)</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-accordion-container-en">
+                    <td id="notification-ringtone-type-option-accordion-en" onclick="selectNotificationRingtoneTypeOptions('accordion');">Accordion</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-accoustic-guitar-container-en">
+                    <td id="notification-ringtone-type-option-accoustic-guitar-en" onclick="selectNotificationRingtoneTypeOptions('accoustic-guitar');">Accoustic Guitar</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-b-flat-clarinet-container-en">
+                    <td id="notification-ringtone-type-option-b-flat-clarinet-en" onclick="selectNotificationRingtoneTypeOptions('b-flat-clarinet');">B♭ Clarinet</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-classic-guitar-container-en">
+                    <td id="notification-ringtone-type-option-classic-guitar-en" onclick="selectNotificationRingtoneTypeOptions('classic-guitar');">Classic Guitar</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-electric-guitar-container-en">
+                    <td id="notification-ringtone-type-option-electric-guitar-en" onclick="selectNotificationRingtoneTypeOptions('electric-guitar');">Electric Guitar</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-flute-container-en">
+                    <td id="notification-ringtone-type-option-flute-en" onclick="selectNotificationRingtoneTypeOptions('flute');">Flute</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-harmonica-container-en">
+                    <td id="notification-ringtone-type-option-harmonica-en" onclick="selectNotificationRingtoneTypeOptions('harmonica');">Harmonica</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-violin-container-en">
+                    <td id="notification-ringtone-type-option-violin-en" onclick="selectNotificationRingtoneTypeOptions('violin');">Violin</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-volume-section-en">
+            <td style="text-align: center; width: 35vw;">
+              <label for="notification-ringtone-volume-options-en" id="notification-ringtone-volume-label-ko">Ringtone Volume</label>
+            </td>
+            <td>
+              <div align="center">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <input type="number" value="100" min="0" max="100" id="notification-ringtone-volume" />
+                    </td>
+                    <td>
+                      %
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <button id="setting-button-en" onclick="document.setting_form_en.submit();" onfocus="this.blur();" disabled="true">
+            Apply
+          </button>
+        </p>
       </form>
     </div>
 
