@@ -152,7 +152,7 @@ function formConfigure() {
         document.getElementById("korean-name-field"+"-"+lang).addEventListener("keyup", formVerify);
     document.getElementById("english-name-field"+"-"+lang).addEventListener("keyup", formVerify);
     document.getElementById("nickname-field"+"-"+lang).addEventListener("keyup", formVerify);
-    document.getElementById("email-local-part"+"-"+lang).addEventListener("keyup", formVerify);
+    document.getElementById("email-local-part-text"+"-"+lang).addEventListener("keyup", formVerify);
     document.getElementById("email-domain"+"-"+lang).addEventListener("keyup", formVerify);
     document.getElementById("password-textbox1"+"-"+lang).addEventListener("keyup", formVerify);
     document.getElementById("password-textbox2"+"-"+lang).addEventListener("keyup", formVerify);
