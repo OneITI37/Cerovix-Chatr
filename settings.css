@@ -60,6 +60,14 @@ table, tr, td {
     width: 50%;
     text-align: center;
 }
+[id^="notification-ringtone-options-container"] {
+    width: 100%;
+    text-align: center;
+}
+[id^="notification-ringtone-option-disabled"], [id^="notification-ringtone-option-enabled"] {
+    width: 50%;
+    text-align: center;
+}
 [id^="notification-browser-options-container"] {
     cursor: pointer;
 }

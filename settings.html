@@ -395,6 +395,193 @@
         </p>
       </form>
     </div>
+    <div align="center" id="setting-form-container-jp">
+      <h1 id="main-title-jp">設定</h1>
+      <form method="post" name="setting_form_jp">
+        <table border="0" style="width: 70%; font-size: 2vw;" id="setting-form-table-jp">
+          <tr id="notification-browser-section-jp">
+            <td style="text-align: left; width: 35vw;">
+              <label for="notification-browser-options-jp" id="notification-browser-label-jp">ブラウザの通知を表示</label>
+            </td>
+            <td>
+              <div align="center">
+                <table border="1" id="notification-browser-options-container-jp">
+                  <tr>
+                    <td id="notification-browser-option-disabled-jp" onclick="showNotificationBrowserOptions();">無効</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-expanded-jp" onclick="if (isNotificationBrowserOptionExpanded == false) showNotificationBrowserOptions();" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-jp" onclick="selectNotificationBrowserOptions('disabled');">無効</td>
+                    <td id="notification-browser-option-enabled-jp" onclick="selectNotificationBrowserOptions('enabled');">有効</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-enabled-jp" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-jp" onclick="showNotificationBrowserOptions();">有効</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-browser-options-container-disabled-jp" style="display: none;">
+                  <tr>
+                    <td id="notification-browser-option-disabled-jp" onclick="showNotificationBrowserOptions();">無効</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-section-jp">
+            <td style="text-align: left; width: 35vw;">
+              <label for="notification-ringtone-options-jp" id="notification-ringtone-label-jp">お知らせ再生</label>
+            </td>
+            <td>
+              <div align="center">
+                <table border="1" id="notification-ringtone-options-container-jp">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-jp" onclick="showNotificationRingtoneOptions();">無効</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-expanded-jp" onclick="if (isNotificationringtoneOptionExpanded == false) showNotificationRingtoneOptions();" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-jp" onclick="selectNotificationRingtoneOptions('disabled');">無効</td>
+                    <td id="notification-ringtone-option-enabled-jp" onclick="selectNotificationRingtoneOptions('enabled');">有効</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-enabled-jp" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-enabled-jp" onclick="showNotificationRingtoneOptions();">有効</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-options-container-disabled-jp" style="display: none;">
+                  <tr>
+                    <td id="notification-ringtone-option-disabled-jp" onclick="showNotificationRingtoneOptions();">無効</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-type-section-jp">
+            <td style="text-align: left; width: 35vw;">
+              <label for="notification-ringtone-type-options-jp" id="notification-ringtone-type-label-jp">お知らせ選択</label>
+            </td>
+            <td>
+              <div align="center">
+                <audio id="ringtone-type-piano-test">
+                  <source src="ringtone/chatr-ringtone-piano.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-piano.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-piano.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-accordion-test">
+                  <source src="ringtone/chatr-ringtone-accordion.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-accordion.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-accordion.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-accoustic-guitar-test">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-accoustic-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-b-flat-clarinet-test">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-b-flat-clarinet.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-classic-guitar-test">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-classic-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-electric-guitar-test">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-electric-guitar.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-flute-test">
+                  <source src="ringtone/chatr-ringtone-flute.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-flute.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-flute.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-harmonica-test">
+                  <source src="ringtone/chatr-ringtone-harmonica.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-harmonica.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-harmonica.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-original-test">
+                  <source src="ringtone/chatr-ringtone-original.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-original.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-original.wav" type="audio/wav">
+                </audio>
+                <audio id="ringtone-type-violin-test">
+                  <source src="ringtone/chatr-ringtone-violin.ogg" type="audio/ogg">
+                  <source src="ringtone/chatr-ringtone-violin.mp3" type="audio/mpeg">
+                  <source src="ringtone/chatr-ringtone-violin.wav" type="audio/wav">
+                </audio>
+                <table border="1" id="notification-ringtone-type-options-container-jp">
+                  <tr id="notification-ringtone-type-option-inner-container-jp">
+                    <td id="notification-ringtone-type-options-piano-jp" onclick="showNotificationRingtoneTypeOptions();">ピアノ(基本)</td>
+                  </tr>
+                </table>
+                <table border="1" id="notification-ringtone-type-options-container-expanded-jp" onclick="if (isNotificationringtone-typeOptionExpanded == false) showNotificationRingtoneTypeOptions();" style="display: none;">
+                  <tr id="notification-ringtone-type-option-piano-container-jp">
+                    <td id="notification-ringtone-type-option-piano-jp" onclick="selectNotificationRingtoneTypeOptions('piano');">ピアノ(基本)</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-accordion-container-jp">
+                    <td id="notification-ringtone-type-option-accordion-jp" onclick="selectNotificationRingtoneTypeOptions('accordion');">アコーディオン</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-accoustic-guitar-container-jp">
+                    <td id="notification-ringtone-type-option-accoustic-guitar-jp" onclick="selectNotificationRingtoneTypeOptions('accoustic-guitar');">アコースティック·ギター</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-b-flat-clarinet-container-jp">
+                    <td id="notification-ringtone-type-option-b-flat-clarinet-jp" onclick="selectNotificationRingtoneTypeOptions('b-flat-clarinet');">B♭ クラリネット</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-classic-guitar-container-jp">
+                    <td id="notification-ringtone-type-option-classic-guitar-jp" onclick="selectNotificationRingtoneTypeOptions('classic-guitar');">クラシックギター</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-electric-guitar-container-jp">
+                    <td id="notification-ringtone-type-option-electric-guitar-jp" onclick="selectNotificationRingtoneTypeOptions('electric-guitar');">電気ギター</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-flute-container-jp">
+                    <td id="notification-ringtone-type-option-flute-jp" onclick="selectNotificationRingtoneTypeOptions('flute');">フルート</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-harmonica-container-jp">
+                    <td id="notification-ringtone-type-option-harmonica-jp" onclick="selectNotificationRingtoneTypeOptions('harmonica');">ハーモニカ</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-original-container-jp">
+                    <td id="notification-ringtone-type-option-original-jp" onclick="selectNotificationRingtoneTypeOptions('original');">Original</td>
+                  </tr>
+                  <tr id="notification-ringtone-type-option-violin-container-jp">
+                    <td id="notification-ringtone-type-option-violin-jp" onclick="selectNotificationRingtoneTypeOptions('violin');">バイオリン</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr id="notification-ringtone-volume-section-jp">
+            <td style="text-align: left; width: 35vw;">
+              <label for="notification-ringtone-volume-options-jp" id="notification-ringtone-volume-label-jp">音響音量</label>
+            </td>
+            <td>
+              <div align="center">
+                <table border="0">
+                  <tr>
+                    <td>
+                      <input type="number" value="100" min="0" max="100" id="notification-ringtone-volume" />
+                    </td>
+                    <td>
+                      %
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <button id="setting-button-jp" onclick="document.setting_form_jp.submit();" onfocus="this.blur();" disabled="true">
+            適用
+          </button>
+        </p>
+      </form>
+    </div>
 
     <p id="copyright-statement-common">
         &copy; 2019 Zeone
