@@ -1,0 +1,110 @@
+#main-title {
+    text-align: center;
+}
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); 
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 120, 215); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 160, 255); 
+}
+.index-container {
+    display: none;
+    width: 100%;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 51, 81);
+    font-family: 'NanumSquare', 'Renner', 'Droid Sans';
+    font-size: 1vw;
+}
+table, tr, td {
+    border-collapse: collapse;
+}
+#lang-options {
+    text-align: center;
+    width: 70%;
+}
+[id^="language-select-"] {
+    cursor: pointer;
+}
+[id^="main-title-"] {
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'NanumSquare Light', 'Droid Sans', 'Renner Light';
+}
+[name="login_form"] {
+    font-family: 'NanumSquare', 'Renner', 'Droid Sans', 'Flop Design Font';
+}
+[id^="account-action-container"] {
+    width: 70%;
+}
+[id^="signin-button-container"], [id^="signup-button-container"] {
+    width: 35vw;
+}
+[id^="identifier-label"], [id^="password-label"] {
+    font-family: 'Renner Bold', 'NanumSquare Bold', 'Droid Sans', 'Flop Design Font';
+}
+[id^="identifier-"]::placeholder, [id^="password-"]::placeholder {
+    color: rgb(73, 122, 150);
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
+}
+[id^="signin-button-"] {
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
+    width: 70vw;
+    height: 4vw;
+    font-size: 2vw;
+    background-color: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+    border-radius: 4vw;
+    border-width: 0.05vw;
+    border-color: rgb(0, 100, 195);
+    text-align: center;
+    cursor: pointer;
+}
+[id^="signup-button-"] {
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
+    width: 70vw;
+    height: 4vw;
+    font-size: 2vw;
+    background-color: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+    border-radius: 4vw;
+    border-width: 0.05vw;
+    border-color: rgb(0, 100, 195);
+    text-align: center;
+    cursor: pointer;
+}
+[id^="recover-account"], [id^="signup-link"] {
+    text-decoration: none;
+    color: rgb(0, 51, 81);
+    cursor: pointer;
+}
+#terms-and-conditions-common {
+    color: rgb(0, 120, 215);
+    text-align: center;
+    cursor: pointer;
+    width: 100vw;
+}
+[id^="ad-button"] {
+    width: 70%;
+    height: 4vw;
+    font-size: 2vw;
+    background-color: rgb(0, 120, 215);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    border-radius: 1vw;
+    border-width: 0.05vw;
+    border-color: rgb(0, 100, 195);
+    font-family: 'Renner Light', 'NanumSquare Light', 'Droid Sans', 'Flop Design Font';
+}
+#copyright-statement-common {
+    width: 100vw;
+    text-align: center;
+}
