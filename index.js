@@ -30,6 +30,7 @@ function initialSequences() {
     else if (lang == "zh")
         document.title = "登錄 - Chatr";
     document.getElementsByClassName("index-container")[0].style.display = "block";
+    fadeAnimation(document.getElementsByClassName("index-container")[0], 0.10, 1.00, 1);
     for (i = 0; i < document.getElementsByClassName("signin-button").length; i++) {
         document.getElementsByClassName("signin-button")[i].addEventListener("mouseover", function(){
             backgroundColorTransitionAnimation(this, 0, 132, 224, 0, 162, 254, 0.3);
@@ -58,6 +59,11 @@ function initialSequences() {
     document.getElementById("terms-and-conditions-common").addEventListener("mouseout", function(){
         textColorTransitionAnimation(this, 40, 160, 255, 0, 120, 215, 0.3);
     });
+    document.getElementById("terms-and-conditions-common").addEventListener("click", function(){
+        window.location.href = "eula.html";
+    });
+    fadeAnimation(document.getElementById("copyright-statement-common"), 0.10, 1.00, 1);
+    fadeAnimation(document.getElementById("terms-and-conditions-common"), 0.10, 1.00, 1);
     return;
 }
 function switchLanguageDisplay() {

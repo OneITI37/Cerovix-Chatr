@@ -86,12 +86,6 @@ table, tr, td {
     color: rgb(0, 51, 81);
     cursor: pointer;
 }
-#terms-and-conditions-common {
-    color: rgb(0, 120, 215);
-    text-align: center;
-    cursor: pointer;
-    width: 100vw;
-}
 [id^="ad-button"] {
     width: 70%;
     height: 4vw;
@@ -107,4 +101,10 @@ table, tr, td {
 #copyright-statement-common {
     width: 100vw;
     text-align: center;
+}
+#terms-and-conditions-common {
+    color: rgb(0, 120, 215);
+    text-align: center;
+    cursor: pointer;
+    width: 100vw;
 }

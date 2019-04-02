@@ -86,6 +86,15 @@ function initialRoutine() {
     fadeAnimation(document.getElementById("register-button"+"-"+lang), 0.00, 0.10, 1);
     formConfigure();
     fadeAnimation(document.getElementById("copyright-statement-common"), 0.00, 1.00, 1);
+    document.getElementById("terms-and-conditions-common").addEventListener("mouseover", function(){
+        textColorTransitionAnimation(this, 0, 120, 215, 40, 160, 255, 0.3);
+    });
+    document.getElementById("terms-and-conditions-common").addEventListener("mouseout", function(){
+        textColorTransitionAnimation(this, 40, 160, 255, 0, 120, 215, 0.3);
+    });
+    document.getElementById("terms-and-conditions-common").addEventListener("click", function(){
+        window.location.href = "eula.html";
+    });
     //colorPickerAreaConfigure();
     return;
 }
