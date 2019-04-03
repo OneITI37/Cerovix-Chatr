@@ -277,6 +277,7 @@ $(function() {
 
   socket.on('reconnect_error', () => {
     log('attempt to reconnect has failed');
+    socket.connect();
   });
 
 });
