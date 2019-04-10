@@ -114,6 +114,7 @@ function initialSequences() {
                 document.getElementById("password"+"-"+lang).style.cursor = "text";
                 isPasswordActive = true;
                 document.getElementById("password"+"-"+lang).addEventListener("keyup", function(){
+                    document.getElementById("password-transmission"+"-"+lang).value = sha3_512(this.value);
                     if (document.getElementById("password"+"-"+lang).value.length >= 8) {
                         if (!isLoginButtonActive && document.getElementById("identifier"+"-"+lang).value.length >= 6) {
                             document.getElementById("login-button"+"-"+lang).addEventListener("click", function(){

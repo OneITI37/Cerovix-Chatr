@@ -1,5 +1,13 @@
 /* font.css */
 
+::selection {
+    background-color: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+}
+::-moz-selection {
+    background-color: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+}
 @font-face {
     font-family: 'NanumSquare Light';
     src: url(fonts/NanumSquare/NanumSquareLight.eot);

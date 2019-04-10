@@ -108,3 +108,11 @@ table, tr, td {
     cursor: pointer;
     width: 100vw;
 }
+::selection {
+    background: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+}
+::-moz-selection {
+    background: rgb(0, 120, 215);
+    color: rgb(255, 255, 255);
+}
