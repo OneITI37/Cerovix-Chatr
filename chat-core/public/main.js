@@ -270,9 +270,9 @@ $(function() {
     document.title = "Connection Lost - Nameless Chatroom";
   });
 
-  socket.on('reconnect', () => {
+  socket.on('reconnect', (data) => {
     log('Connection Recovered');
-    document.title = "Nameless Chatroom("+ data.numUsers +")";
+    document.title = "Nameless Chatroom ("+ data.numUsers +")";
     if (username) {
       socket.emit('add user', username);
     }
