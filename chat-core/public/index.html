@@ -6,51 +6,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <ul class="pages-ko">
-    <li class="chat-page-ko">
-      <div class="chat-area-ko">
-        <ul class="messages-ko"></ul>
+  <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
       </div>
-      <input class="input-message-ko" placeholder="메시지 입력..."/>
+      <input class="inputMessage" placeholder="Your Message..."/>
     </li>
-    <li class="login-page-ko">
-      <div class="chat-form-ko">
-        <h3 class="title-ko">닉네임</h3>
-        <input class="nickname-input-ko" type="text" maxlength="14" />
-      </div>
-    </li>
-  </ul>
-  <ul class="pages-en">
-    <li class="chat-page-en">
-      <div class="chat-area-en">
-        <ul class="messages-en"></ul>
-      </div>
-      <input class="input-message-en" placeholder="Message Here..."/>
-    </li>
-    <li class="login-page-en">
-      <div class="chat-form-en">
-        <h3 class="title-en">Your Nickname</h3>
-        <input class="nickname-input-en" type="text" maxlength="14" />
-      </div>
-    </li>
-  </ul>
-  <ul class="pages-jp">
-    <li class="chat-page-jp">
-      <div class="chat-area-jp">
-        <ul class="messages-jp"></ul>
-      </div>
-      <input class="input-message-jp" placeholder="ここにメッセージを入力し..."/>
-    </li>
-    <li class="login-page-jp">
-      <div class="chat-form-jp">
-        <h3 class="title-jp">ニックネーム</h3>
-        <input class="nickname-input-jp" type="text" maxlength="14" />
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">Nickname</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
       </div>
     </li>
   </ul>
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="../socket.io.js"></script>
-  <script src="main.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>
