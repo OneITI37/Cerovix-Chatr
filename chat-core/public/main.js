@@ -32,7 +32,7 @@ $(function() {
     } else {
       message += data.numUsers + " Participants Online";
     }
-    document.title = "Nameless Chatroom("+ data.numUsers +")";
+    document.title = "Nameless Chatroom ("+ data.numUsers +")";
     log(message);
   }
 
