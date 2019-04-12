@@ -272,10 +272,10 @@ $(function() {
 
   socket.on('reconnect', () => {
     log('Connection Recovered');
+    document.title = "Nameless Chatroom("+ data.numUsers +")";
     if (username) {
       socket.emit('add user', username);
     }
-    document.title = "Nameless Chatroom("+ data.numUsers +")";
   });
 
   socket.on('reconnect_error', () => {
