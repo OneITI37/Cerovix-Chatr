@@ -32,6 +32,7 @@ $(function() {
     } else {
       message += data.numUsers + " Participants Online";
     }
+    document.title = "Nameless Chatroom("+ data.numUsers +")";
     log(message);
   }
 
@@ -266,6 +267,7 @@ $(function() {
 
   socket.on('disconnect', () => {
     log('Connection Lost');
+    document.title = "Connection Lost - Nameless Chatroom";
   });
 
   socket.on('reconnect', () => {
@@ -273,10 +275,12 @@ $(function() {
     if (username) {
       socket.emit('add user', username);
     }
+    document.title = "Nameless Chatroom("+ data.numUsers +")";
   });
 
   socket.on('reconnect_error', () => {
     log('Connection Attempt Failed');
+    document.title = "Connection Attempt Failed - Nameless Chatroom";
   });
 
 });
