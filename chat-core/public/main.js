@@ -9,12 +9,33 @@ $(function() {
 
   // Initialize variables
   var $window = $(window);
-  var $usernameInput = $('.usernameInput'); // Input for username
-  var $messages = $('.messages'); // Messages area
-  var $inputMessage = $('.inputMessage'); // Input message input box
 
-  var $loginPage = $('.login.page'); // The login page
-  var $chatPage = $('.chat.page'); // The chatroom page
+  var lang;
+  if (location.hash == "" || location.hash == "#en")
+    lang = "en";
+  else if (location.hash == "#ko")
+    lang = "ko";
+  else if (location.hash == "#jp")
+    lang = "jp";
+  else if (location.hash == "#zh")
+    lang = "zh";
+  else
+    lang = "en";
+  if (lang == "en")
+    document.title = "Nameless Chatroom - Chatr";
+  else if (lang == "ko")
+    document.title = "익명 채팅방 - Chatr";
+  else if (lang == "jp")
+    document.title = "匿名チャットルーム - Chatr";
+  else if (lang == "zh")
+    document.title = "匿名室 - Chatr";
+
+  var $usernameInput = $('#username-input'+'-'+lang); // Input for username
+  var $messages = $('#messages'+'-'+lang); // Messages area
+  var $inputMessage = $('#input-message'+'-'+lang); // Input message input box
+
+  var $loginPage = $('#login-page'+'-'+lang); // The login page
+  var $chatPage = $('#chat-page'+'-'+lang); // The chatroom page
 
   // Prompt for setting a username
   var username;
