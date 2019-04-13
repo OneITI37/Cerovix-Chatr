@@ -230,7 +230,7 @@ $(function() {
   socket.on('login', (data) => {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to the Nameless Chat – ";
+    var message = "Welcome to the Nameless Chat";
     log(message, {
       prepend: true
     });
