@@ -25,6 +25,7 @@ $(function() {
 
   var socket = io();
 
+  document.getElementsByClassName("inputMessage")[0].style.borderColor = rgb(0, 120, 215);
   const addParticipantsMessage = (data) => {
     var message = '';
     if (data.numUsers === 1) {
@@ -268,6 +269,7 @@ $(function() {
   socket.on('disconnect', () => {
     log('Connection Lost');
     document.title = "Connection Lost - Nameless Chatroom";
+    document.getElementsByClassName("inputMessage")[0].style.borderColor = rgb(255, 0, 0);
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
   });
@@ -275,6 +277,7 @@ $(function() {
   socket.on('reconnect', (data) => {
     log('Connection Recovered');
     document.title = "Nameless Chatroom ("+ data.numUsers +")";
+    document.getElementsByClassName("inputMessage")[0].style.borderColor = rgb(0, 120, 215);
     document.getElementsByClassName("inputMessage")[0].disabled = false;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Your Message...";
     if (username) {
@@ -285,6 +288,7 @@ $(function() {
   socket.on('reconnect_error', () => {
     log('Connection Attempt Failed');
     document.title = "Connection Attempt Failed - Nameless Chatroom";
+    document.getElementsByClassName("inputMessage")[0].style.borderColor = rgb(255, 0, 0);
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
   });
