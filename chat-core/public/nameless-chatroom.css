@@ -55,7 +55,7 @@ ul {
   letter-spacing: 3px;
 }
 .login.page .title, .login.page .usernameInput {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-weight: 100;
 }
 .chat.page {
@@ -143,6 +143,10 @@ table, tr, td {
   border-color: rgb(0, 0, 0);
 }
 [class^="usernameInput"] {
+  border-bottom: 2px solid #fff;
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
   background-size: cover;
   font-family: 'Renner', 'NanumSquare', 'Droid Sans', 'Flop Design Font';
   color: rgb(0, 51, 81);
