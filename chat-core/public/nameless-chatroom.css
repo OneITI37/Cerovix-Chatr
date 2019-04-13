@@ -134,7 +134,7 @@ table, tr, td {
 [class^="inputMessage"] {
   background-size: cover;
   font-family: 'Renner', 'NanumSquare', 'Droid Sans', 'Flop Design Font';
-  color: rgb(0, 51, 81);
+  color: rgb(0, 30, 125);
   width: 100%;
   height: 10vh;
   border-radius: 5vh;
@@ -148,7 +148,6 @@ table, tr, td {
   text-align: center;
   background-size: cover;
   font-family: 'Renner', 'NanumSquare', 'Droid Sans', 'Flop Design Font';
-  color: rgb(0, 51, 81);
   width: 100%;
   height: 4vw;
   border-radius: 2vw;
