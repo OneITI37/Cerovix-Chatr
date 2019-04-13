@@ -140,7 +140,6 @@ table, tr, td {
   border-radius: 5vh;
   border-width: 1px;
   font-size: 7vh;
-  border-color: rgb(0, 0, 0);
 }
 [class^="usernameInput"] {
   border-bottom: 2px solid #fff;
