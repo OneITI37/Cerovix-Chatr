@@ -24,6 +24,11 @@ body {
     font-family: 'NanumSquare', 'Renner', 'Droid Sans';
     font-size: 1vw;
 }
+#preview-frame {
+    width: 100vw;
+    height: 50vh;
+    border: 0;
+}
 table, tr, td {
     border-collapse: collapse;
 }
