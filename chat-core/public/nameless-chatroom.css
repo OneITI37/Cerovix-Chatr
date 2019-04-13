@@ -93,7 +93,7 @@ ul {
   text-align: right;
 }
 .inputMessage {
-  border: 10px solid #000;
+  border: 10px solid rgb(0, 120, 215);
   bottom: 0;
   height: 60px;
   left: 0;

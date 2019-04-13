@@ -25,7 +25,6 @@ $(function() {
 
   var socket = io();
 
-  document.getElementsByClassName("inputMessage")[0].style.borderColor = rgb(0, 120, 215);
   const addParticipantsMessage = (data) => {
     var message = '';
     if (data.numUsers === 1) {
