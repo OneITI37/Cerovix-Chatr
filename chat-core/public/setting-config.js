@@ -10,7 +10,7 @@
                 if (permission === "granted")
                     document.getElementById("notification-browser-setting").value = "true";
                 else {
-                    this.selectedIndex = 1;
+                    this.selectedIndex = 0;
                     document.getElementById("notification-browser-setting").value = "false";
                 }
             });
