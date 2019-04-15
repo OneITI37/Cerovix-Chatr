@@ -277,7 +277,7 @@ $(function() {
   socket.on('disconnect', () => {
     log('Connection Lost');
     document.title = "Connection Lost - Nameless Chatroom";
-    document.getElementById("participant-number").innerHTML = (data.numUsers == 1)?"1 Participant":(data.numUsers+" Participants");
+    document.getElementById("participant-number").innerHTML = "Connection Lost";
     document.getElementsByClassName("inputMessage")[0].style.borderColor = "rgb(255, 0, 0)";
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
@@ -298,7 +298,7 @@ $(function() {
   socket.on('reconnect_error', () => {
     log('Connection Attempt Failed');
     document.title = "Connection Attempt Failed - Nameless Chatroom";
-    document.getElementById("participant-number").innerHTML = (data.numUsers == 1)?"1 Participant":(data.numUsers+" Participants");
+    document.getElementById("participant-number").innerHTML = "Connection Lost";
     document.getElementsByClassName("inputMessage")[0].style.borderColor = "rgb(255, 0, 0)";
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
