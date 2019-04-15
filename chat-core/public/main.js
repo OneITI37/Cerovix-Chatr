@@ -253,7 +253,7 @@ $(function() {
     if (document.getElementById("notification-browser-setting").value == "true") {
       var notificationElement = new Notification("New Message", {
         icon: "icon1000x1000.png",
-        body: latestUser+" says \""+latestMessage+"\"",
+        body: latestUser+" says \""+latestMessage+"\""
       });
     }
   });
