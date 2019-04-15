@@ -255,9 +255,6 @@ $(function() {
         icon: "icon1000x1000.png",
         body: latestUser+" says \""+latestMessage+"\"",
       });
-      notificationElement.addEventListener("show", function () { 
-        setTimeout(this.close, 5000); 
-      });
     }
   });
 
