@@ -249,6 +249,7 @@ $(function() {
         setTimeout(this.close, 5000); 
       });
     }
+  });
 
   // Whenever the server emits 'user joined', log it in the chat body
   socket.on('user joined', (data) => {
@@ -302,5 +303,4 @@ $(function() {
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
   });
-
-});
+})
