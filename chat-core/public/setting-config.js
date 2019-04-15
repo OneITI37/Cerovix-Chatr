@@ -4,6 +4,16 @@
         else
             document.getElementById("notification-sound-setting").value = "false";
     });
+    Notification.requestPermission(function (permission) {
+        if (permission === "granted") {
+            document.getElementById("notification-browser-option").selectedIndex = 1;
+            document.getElementById("notification-browser-setting").value = "true";
+        }
+        else {
+            document.getElementById("notification-browser-option").selectedIndex = 0;
+            document.getElementById("notification-browser-setting").value = "false";
+        }
+    });
     document.getElementById("notification-browser-option").addEventListener("change", function(){
         if (this.value == "on") {
             Notification.requestPermission(function (permission) {
