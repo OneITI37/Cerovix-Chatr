@@ -245,8 +245,8 @@ $(function() {
       document.getElementById("ringtone-player").play();
     if (document.getElementById("notification-browser-setting").value == "true")
       var notificationElement = new Notification("New Message");
-      notificationElement.onshow = function () { 
-        setTimeout(notificationElement.close, 5000); 
+      notificationElement.addEventListener("show", function () { 
+        setTimeout(this.close, 5000); 
       }
   });
 
