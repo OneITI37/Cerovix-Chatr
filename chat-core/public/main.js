@@ -25,6 +25,9 @@ $(function() {
 
   var socket = io();
 
+  var latestUser = "";
+  var latestMessage = "";
+
   const addParticipantsMessage = (data) => {
     var message = '';
     if (data.numUsers === 1) {
@@ -91,6 +94,8 @@ $(function() {
       .css('color', getUsernameColor(data.username));
     var $messageBodyDiv = $('<span class="messageBody">')
       .text(data.message);
+    latestUser = data.username;
+    latestMessage = data.message;
 
     var typingClass = data.typing ? 'typing' : '';
     var $messageDiv = $('<li class="message"/>')
@@ -246,7 +251,10 @@ $(function() {
       document.getElementById("ringtone"+"-"+ringtone_type+"-"+"player").play();
     }
     if (document.getElementById("notification-browser-setting").value == "true") {
-      var notificationElement = new Notification("New Message");
+      var notificationElement = new Notification("New Message", {
+        icon: "icon1000x1000.png",
+        body: latestUser+" says \""+latestMessage+"\"",
+      });
       notificationElement.addEventListener("show", function () { 
         setTimeout(this.close, 5000); 
       });
