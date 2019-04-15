@@ -15,20 +15,65 @@
 </head>
 
 <body>
-  <audio id="ringtone-player">
+  <audio id="ringtone-piano-player">
     <source src="ringtone/chatr-ringtone-piano.ogg" type="audio/ogg">
     <source src="ringtone/chatr-ringtone-piano.mp3" type="audio/mpeg">
     <source src="ringtone/chatr-ringtone-piano.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-accordion-player">
+    <source src="ringtone/chatr-ringtone-accordion.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-accordion.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-accordion.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-accoustic-guitar-player">
+    <source src="ringtone/chatr-ringtone-accoustic-guitar.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-accoustic-guitar.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-accoustic-guitar.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-b-flat-clarinet-player">
+    <source src="ringtone/chatr-ringtone-b-flat-clarinet.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-b-flat-clarinet.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-b-flat-clarinet.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-classic-guitar-player">
+    <source src="ringtone/chatr-ringtone-classic-guitar.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-classic-guitar.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-classic-guitar.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-electric-guitar-player">
+    <source src="ringtone/chatr-ringtone-electric-guitar.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-electric-guitar.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-electric-guitar.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-flute-player">
+    <source src="ringtone/chatr-ringtone-flute.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-flute.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-flute.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-harmonica-player">
+    <source src="ringtone/chatr-ringtone-harmonica.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-harmonica.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-harmonica.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-original-player">
+    <source src="ringtone/chatr-ringtone-original.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-original.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-original.wav" type="audio/wav">
+  </audio>
+  <audio id="ringtone-violin-player">
+    <source src="ringtone/chatr-ringtone-violin.ogg" type="audio/ogg">
+    <source src="ringtone/chatr-ringtone-violin.mp3" type="audio/mpeg">
+    <source src="ringtone/chatr-ringtone-violin.wav" type="audio/wav">
   </audio>
   <ul class="pages">
     <li class="chat page">
       <div class="chatArea">
         <table border="0" style="width: 100%;">
           <tr>
-            <td>
+            <td class="setting-area-individual">
               <div id="participant-number">0 Participants</div>
             </td>
-            <td>
+            <td class="setting-area-individual">
               Ringtone
               <select id="notification-sound-option">
                 <option value="off">OFF</option>
@@ -36,7 +81,23 @@
               </select>
               <input type="hidden" id="notification-sound-setting" value="true" />
             </td>
-            <td>
+            <td class="setting-area-individual">
+              Ringtone Type
+              <select id="ringtone-option">
+                <option value="accordion">Accordion</option>
+                <option value="accoustic-guitar">Accoustic Guitar</option>
+                <option value="b-flat-clarinet">B♭ Clarinet</option>
+                <option value="classic-guitar">Classic Guitar</option>
+                <option value="electric-guitar">Electric Guitar</option>
+                <option value="flute">Flute</option>
+                <option value="harmonica">Harmonica</option>
+                <option value="original">Original</option>
+                <option value="piano" selected="selected">Piano(Default)</option>
+                <option value="violin">Violin</option>
+              </select>
+              <input type="hidden" id="notification-browser-setting" value="false" />
+            </td>
+            <td class="setting-area-individual">
               Notification
               <select id="notification-browser-option">
                 <option value="off" selected="selected">OFF</option>

@@ -241,8 +241,10 @@ $(function() {
   // Whenever the server emits 'new message', update the chat body
   socket.on('new message', (data) => {
     addChatMessage(data);
-    if (document.getElementById("notification-sound-setting").value == "true")
-      document.getElementById("ringtone-player").play();
+    if (document.getElementById("notification-sound-setting").value == "true") {
+      var ringtone_type = document.getElementById("ringtone-option").value;
+      document.getElementById("ringtone"+"-"+ringtone_type+"-"+"player").play();
+    }
     if (document.getElementById("notification-browser-setting").value == "true") {
       var notificationElement = new Notification("New Message");
       notificationElement.addEventListener("show", function () { 
