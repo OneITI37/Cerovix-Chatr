@@ -243,12 +243,12 @@ $(function() {
     addChatMessage(data);
     if (document.getElementById("notification-sound-setting").value == "true")
       document.getElementById("ringtone-player").play();
-    if (document.getElementById("notification-browser-setting").value == "true")
+    if (document.getElementById("notification-browser-setting").value == "true") {
       var notificationElement = new Notification("New Message");
       notificationElement.addEventListener("show", function () { 
         setTimeout(this.close, 5000); 
-      }
-  });
+      });
+    }
 
   // Whenever the server emits 'user joined', log it in the chat body
   socket.on('user joined', (data) => {
