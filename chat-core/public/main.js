@@ -261,12 +261,24 @@ $(function() {
   // Whenever the server emits 'user joined', log it in the chat body
   socket.on('user joined', (data) => {
     log(data.username + ' joined');
+    if (document.getElementById("notification-browser-setting").value == "true") {
+      var notificationElement = new Notification("New User", {
+        icon: "icon1000x1000.png",
+        body: data.username+" joined the nameless chatroom"
+      });
+    }
     addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
   socket.on('user left', (data) => {
     log(data.username + ' left');
+    if (document.getElementById("notification-browser-setting").value == "true") {
+      var notificationElement = new Notification(data.username+" left", {
+        icon: "icon1000x1000.png",
+        body: data.username+" left the nameless chatroom"
+      });
+    }
     addParticipantsMessage(data);
     removeChatTyping(data);
   });
