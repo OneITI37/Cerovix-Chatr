@@ -327,8 +327,6 @@ $(function() {
     document.getElementsByClassName("inputMessage")[0].style.borderColor = "rgb(255, 0, 0)";
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
-    document.getElementById("userlist-display").style.color = "rgb(255, 0, 0)";
-    document.getElementById("userlist-display").innerHTML = "Connection Lost";
   });
 
   socket.on('reconnect', (data) => {
@@ -341,7 +339,6 @@ $(function() {
     if (username) {
       socket.emit('add user', username);
     }
-    document.getElementById("userlist-display").style.color = "rgb(40, 160, 255)";
   });
 
   socket.on('reconnect_error', () => {
@@ -351,7 +348,5 @@ $(function() {
     document.getElementsByClassName("inputMessage")[0].style.borderColor = "rgb(255, 0, 0)";
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
-    document.getElementById("userlist-display").style.color = "rgb(255, 0, 0)";
-    document.getElementById("userlist-display").innerHTML = "Connection Lost";
   });
 })
