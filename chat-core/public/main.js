@@ -243,6 +243,15 @@ $(function() {
     addParticipantsMessage(data);
   });
 
+  socket.on('user list', (data) => {
+    document.getElementById("userlist-table").innerHTML = "";
+    document.getElementById("userlist-table").innerHTML += "<tr>";
+    var userlist_array = data.userlist.split(", ");
+    for (i = 0; i < userlist_array.length; i++)
+      document.getElementById("userlist-table").innerHTML += "<td>"+userlist_array[i]+"</td>";
+    document.getElementById("userlist-table").innerHTML += "</tr>";
+  });
+
   // Whenever the server emits 'new message', update the chat body
   socket.on('new message', (data) => {
     addChatMessage(data);

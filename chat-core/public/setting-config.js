@@ -28,3 +28,11 @@
         else
             document.getElementById("notification-browser-setting").value = "false";
     });
+    /*
+    document.getElementsByClassName("messages")[0].addEventListener("mouseover", function(){
+        this.style.overflow = "visible";
+    });
+    document.getElementsByClassName("messages")[0].addEventListener("mouseout", function(){
+        this.style.overflow = "hidden";
+    });
+    */
