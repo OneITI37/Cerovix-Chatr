@@ -103,8 +103,14 @@ ul {
   right: 0;
   width: 100%;
 }
-#userlist-table {
+#userlist-display {
+  width: 100vw;
   height: 5vh;
+  font-size: 3vh;
+  color: rgb(40, 160, 255);
+  cursor: default;
+  vertical-align: middle;
+  text-align: center;
 }
 
 ::-webkit-scrollbar {

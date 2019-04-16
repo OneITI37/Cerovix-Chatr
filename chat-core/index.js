@@ -20,9 +20,7 @@ var numUsers = 0;
 
 io.on('connection', (socket) => {
   var addedUser = false;
-  socket.broadcast.emit('user list', {
-    userlist: all_user
-  });
+  
 
   // when the client emits 'new message', this listens and executes
   socket.on('new message', (data) => {
@@ -42,14 +40,15 @@ io.on('connection', (socket) => {
     all_user.push(username);
     var all_user_string = "";
     for (i = 0; i < all_user.length; i++)
-      all_user_string += all_user[i]+", "
+      all_user_string += all_user[i]+", ";
     socket.broadcast.emit('user list', {
       userlist: all_user_string
     });
     ++numUsers;
     addedUser = true;
     socket.emit('login', {
-      numUsers: numUsers
+      numUsers: numUsers,
+      userlist: all_user_string
     });
     // echo globally (all clients) that a person has connected
     socket.broadcast.emit('user joined', {
@@ -82,12 +81,12 @@ io.on('connection', (socket) => {
           all_user.splice(i, 1);
           break;
         }
-      var all_user_string = "";
-      for (i = 0; i < all_user.length; i++)
-        all_user_string += all_user[i]+", "
-      socket.broadcast.emit('user list', {
-        userlist: all_user_string
-      });
+        var all_user_string = "";
+        for (i = 0; i < all_user.length; i++)
+          all_user_string += all_user[i]+", ";
+        socket.broadcast.emit('user list', {
+          userlist: all_user_string
+        });
       // echo globally that this client has left
       socket.broadcast.emit('user left', {
         username: socket.username,

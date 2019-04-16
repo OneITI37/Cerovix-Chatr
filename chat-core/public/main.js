@@ -240,16 +240,34 @@ $(function() {
     log(message, {
       prepend: true
     });
+    document.getElementById("userlist-display").innerHTML = "";
+    var userlist_array = data.userlist.split(", ");
+    for (i = userlist_array.length-1; i >= 0; i--)
+      if (userlist_array[i].trim() == '')
+        userlist_array.splice(i, 1);
+      else
+        break;
+    for (i = 0; i < userlist_array.length; i++) {
+      document.getElementById("userlist-display").innerHTML += userlist_array[i];
+      if (i < userlist_array.length-1)
+        document.getElementById("userlist-display").innerHTML += ", ";
+    }
     addParticipantsMessage(data);
   });
 
   socket.on('user list', (data) => {
-    document.getElementById("userlist-table").innerHTML = "";
-    document.getElementById("userlist-table").innerHTML += "<tr>";
+    document.getElementById("userlist-display").innerHTML = "";
     var userlist_array = data.userlist.split(", ");
-    for (i = 0; i < userlist_array.length; i++)
-      document.getElementById("userlist-table").innerHTML += "<td>"+userlist_array[i]+"</td>";
-    document.getElementById("userlist-table").innerHTML += "</tr>";
+    for (i = userlist_array.length-1; i >= 0; i--)
+      if (userlist_array[i].trim() == '')
+        userlist_array.splice(i, 1);
+      else
+        break;
+    for (i = 0; i < userlist_array.length; i++) {
+      document.getElementById("userlist-display").innerHTML += userlist_array[i];
+      if (i < userlist_array.length-1)
+        document.getElementById("userlist-display").innerHTML += ", ";
+    }
   });
 
   // Whenever the server emits 'new message', update the chat body
