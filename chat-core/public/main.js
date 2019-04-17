@@ -240,34 +240,38 @@ $(function() {
     log(message, {
       prepend: true
     });
-    document.getElementById("userlist-display").innerHTML = "";
+    document.getElementById("userlist-content").innerHTML = "";
     var userlist_array = data.userlist.split(", ");
     for (i = userlist_array.length-1; i >= 0; i--)
       if (userlist_array[i].trim() == '')
         userlist_array.splice(i, 1);
       else
         break;
+    document.getElementById("userlist-content").innerHTML += "<ul type=\"disc\">";
     for (i = 0; i < userlist_array.length; i++) {
-      document.getElementById("userlist-display").innerHTML += userlist_array[i];
+      document.getElementById("userlist-content").innerHTML += "<li>"+userlist_array[i]+"</li>";
       if (i < userlist_array.length-1)
-        document.getElementById("userlist-display").innerHTML += ", ";
+        document.getElementById("userlist-content").innerHTML += ", ";
     }
+    document.getElementById("userlist-content").innerHTML += "</ul>";
     addParticipantsMessage(data);
   });
 
   socket.on('user list', (data) => {
-    document.getElementById("userlist-display").innerHTML = "";
+    document.getElementById("userlist-content").innerHTML = "";
     var userlist_array = data.userlist.split(", ");
     for (i = userlist_array.length-1; i >= 0; i--)
       if (userlist_array[i].trim() == '')
         userlist_array.splice(i, 1);
       else
         break;
-    for (i = 0; i < userlist_array.length; i++) {
-      document.getElementById("userlist-display").innerHTML += userlist_array[i];
-      if (i < userlist_array.length-1)
-        document.getElementById("userlist-display").innerHTML += ", ";
-    }
+        document.getElementById("userlist-content").innerHTML += "<ul type=\"disc\">";
+      for (i = 0; i < userlist_array.length; i++) {
+        document.getElementById("userlist-content").innerHTML += "<li>"+userlist_array[i]+"</li>";
+        if (i < userlist_array.length-1)
+          document.getElementById("userlist-content").innerHTML += ", ";
+      }
+      document.getElementById("userlist-content").innerHTML += "</ul>";
   });
 
   // Whenever the server emits 'new message', update the chat body

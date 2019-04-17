@@ -36,3 +36,17 @@
         this.style.overflow = "hidden";
     });
     */
+
+    var userlist_message = document.getElementById('userlist-message');
+    var userlist_message_button = document.getElementById("participant-number");
+    var span = document.getElementsByClassName("close")[0];
+        userlist_message_button.addEventListener("click", function() {
+        userlist_message.style.display = "block";
+    });
+    span.addEventListener("click", function() {
+        userlist_message.style.display = "none";
+    });
+    window.addEventListener("click", function(event) {
+        if (event.target == modal)
+            userlist_message.style.display = "none";
+    });
