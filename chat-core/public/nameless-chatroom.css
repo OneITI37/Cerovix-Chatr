@@ -47,7 +47,7 @@ ul {
   text-align: center;
   width: 400px;
 }
-#participant-number {
+.setting-area-individual {
   cursor: pointer;
 }
 .login.page .title {
