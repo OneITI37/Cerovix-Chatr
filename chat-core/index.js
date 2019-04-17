@@ -71,6 +71,13 @@ io.on('connection', (socket) => {
     });
   });
 
+  socket.on('expulsion', (username) => {
+    console.log("Expulsion Received");
+    socket.broadcast.emit('expulsion', {
+      banished_user: socket.username
+    });
+  });
+
   // when the user disconnects.. perform this
   socket.on('disconnect', () => {
     if (addedUser) {

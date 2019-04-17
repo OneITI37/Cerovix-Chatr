@@ -12,6 +12,7 @@ $(function() {
   var $usernameInput = $('.usernameInput'); // Input for username
   var $messages = $('.messages'); // Messages area
   var $inputMessage = $('.inputMessage'); // Input message input box
+  var $banishButton = $('.banish-button');
 
   var $loginPage = $('.login.page'); // The login page
   var $chatPage = $('.chat.page'); // The chatroom page
@@ -195,6 +196,10 @@ $(function() {
     return COLORS[index];
   }
 
+  const banishUser = (username) => {
+    socket.emit("expulsion", username);
+  }
+
   // Keyboard events
 
   $window.keydown(event => {
@@ -230,6 +235,7 @@ $(function() {
     $inputMessage.focus();
   });
 
+
   // Socket events
 
   // Whenever the server emits 'login', log the login message
@@ -248,11 +254,11 @@ $(function() {
       else
         break;
     document.getElementById("userlist-content").innerHTML += "<ul type=\"disc\">";
-    for (i = 0; i < userlist_array.length; i++) {
+    for (i = 0; i < userlist_array.length; i++)
       document.getElementById("userlist-content").innerHTML += "<li>"+userlist_array[i]+"</li>";
-      if (i < userlist_array.length-1)
-        document.getElementById("userlist-content").innerHTML += ", ";
-    }
+    $banishButton.click(() => {
+      banishUser(this.correspondinguser);
+    });
     document.getElementById("userlist-content").innerHTML += "</ul>";
     addParticipantsMessage(data);
   });
@@ -266,11 +272,11 @@ $(function() {
       else
         break;
         document.getElementById("userlist-content").innerHTML += "<ul type=\"disc\">";
-      for (i = 0; i < userlist_array.length; i++) {
+      for (i = 0; i < userlist_array.length; i++)
         document.getElementById("userlist-content").innerHTML += "<li>"+userlist_array[i]+"</li>";
-        if (i < userlist_array.length-1)
-          document.getElementById("userlist-content").innerHTML += ", ";
-      }
+      $banishButton.click(() => {
+        banishUser(this.correspondinguser);
+      });
       document.getElementById("userlist-content").innerHTML += "</ul>";
   });
 
@@ -353,4 +359,25 @@ $(function() {
     document.getElementsByClassName("inputMessage")[0].disabled = true;
     document.getElementsByClassName("inputMessage")[0].placeholder = "Connection Lost";
   });
-})
+
+  socket.on('expulsion', (data) => {
+    if (data.banished_user == username) {
+      log('Banished');
+      document.title = "Banished - Nameless Chatroom";
+      var alert_message = document.getElementById('alert-message');
+      var span2 = document.getElementsByClassName("close")[0];
+      var alert_content = document.getElementById("alert-content");
+      var alert_title = document.getElementById("alert-title");
+      alert_title.innerHTML = "Expulsion";
+      alert_content.innerHTML = "You have been banished.";
+      alert_message.style.display = "block";
+      span2.addEventListener("click", function() {
+          window.close();
+      });
+      window.addEventListener("click", function(event) {
+          if (event.target == alert_message)
+              window.close();
+      });
+    }
+  });
+});
