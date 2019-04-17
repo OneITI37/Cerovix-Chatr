@@ -47,6 +47,9 @@ ul {
   text-align: center;
   width: 400px;
 }
+#participant-number {
+  cursor: pointer;
+}
 .login.page .title {
   font-size: 200%;
 }
