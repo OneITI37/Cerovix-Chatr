@@ -47,9 +47,6 @@ ul {
   text-align: center;
   width: 400px;
 }
-.setting-area-individual {
-  cursor: pointer;
-}
 .login.page .title {
   font-size: 200%;
 }
@@ -215,5 +212,8 @@ table, tr, td {
 .close:focus {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
+}
+#participant-number {
   cursor: pointer;
 }
