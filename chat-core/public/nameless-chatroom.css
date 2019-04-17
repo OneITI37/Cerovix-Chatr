@@ -113,6 +113,7 @@ ul {
   overflow-x: scroll;
 }
 
+/*
 ::-webkit-scrollbar {
   width: 1vw;
   height: 1vw;
@@ -127,6 +128,7 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(40, 160, 255); 
 }
+*/
 body {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 51, 81);
