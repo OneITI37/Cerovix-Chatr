@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C366077A22671EB100C9AE0C /* depricated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C366077922671EB100C9AE0C /* depricated.swift */; };
 		C3748909224A08C2000A05D7 /* LibraryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3748908224A08C2000A05D7 /* LibraryBuilder.swift */; };
 		C3AD4BF82247A7D800D05678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD4BF72247A7D800D05678 /* AppDelegate.swift */; };
 		C3AD4BFA2247A7D800D05678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD4BF92247A7D800D05678 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C366077922671EB100C9AE0C /* depricated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = depricated.swift; sourceTree = "<group>"; };
 		C3748908224A08C2000A05D7 /* LibraryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBuilder.swift; sourceTree = "<group>"; };
 		C3AD4BF42247A7D800D05678 /* Chatr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AD4BF72247A7D800D05678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				C3AD4C002247A7D900D05678 /* Info.plist */,
 				C3AD4C012247A7D900D05678 /* Chatr.entitlements */,
 				C3748908224A08C2000A05D7 /* LibraryBuilder.swift */,
+				C366077922671EB100C9AE0C /* depricated.swift */,
 			);
 			path = Chatr;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C366077A22671EB100C9AE0C /* depricated.swift in Sources */,
 				C3AD4BFA2247A7D800D05678 /* ViewController.swift in Sources */,
 				C3AD4BF82247A7D800D05678 /* AppDelegate.swift in Sources */,
 				C3748909224A08C2000A05D7 /* LibraryBuilder.swift in Sources */,
