@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         statusItem.title = "Chatr"
-        statusItem.menu = statusMenu
+        //statusItem.menu = statusMenu
     }
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application

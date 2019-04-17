@@ -97,13 +97,13 @@
                                     </segments>
                                 </segmentedCell>
                                 <connections>
-                                    <action selector="SelectionDetector:" target="XfG-lQ-9wD" id="d4z-fd-72x"/>
+                                    <action selector="SelectionDetector:" target="XfG-lQ-9wD" id="DAB-Qr-Gc3"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="ServerIndicator" destination="UTp-Df-wd6" id="XDz-jl-lxU"/>
+                        <outlet property="ServerIndicator" destination="UTp-Df-wd6" id="dSe-zA-bbQ"/>
                         <outlet property="webView" destination="UPy-qo-Mpa" id="gbs-OH-3NP"/>
                     </connections>
                 </viewController>
