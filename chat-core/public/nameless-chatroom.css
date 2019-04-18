@@ -171,7 +171,7 @@ table, tr, td {
   text-align: center;
 }
 .setting-area-individual {
-  width: 25%;
+  width: 20%;
   text-align: center;
 }
 
@@ -257,4 +257,8 @@ table, tr, td {
 }
 #participant-number {
   cursor: pointer;
+}
+#current-username {
+  text-align: center;
+  font-family: 'Renner Bold', 'NanumSquare Bold', 'Droid Sans', 'Flop Design Font';
 }
