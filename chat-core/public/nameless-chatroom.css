@@ -261,4 +261,5 @@ table, tr, td {
 #current-username {
   text-align: center;
   font-family: 'Renner Bold', 'NanumSquare Bold', 'Droid Sans', 'Flop Design Font';
+  cursor: default;
 }
