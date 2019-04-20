@@ -1,0 +1,16 @@
+#!/bin/bash
+if [[ -z $1 ]]; then
+	echo "Net Installer - Mpkg Depends Version"
+	echo "Usage: net [mp file link] [net arg] [mpkg arg1] [mpkg arg2]"
+	echo "net arg: --show-curl: Show curl informations"
+	exit
+else
+	if [[ $2 == "--show-curl" ]]; then
+		sudo curl -L $1 > ~/net.mp
+	else
+		sudo curl -sL $1 > ~/net.mp
+	fi
+	sudo mpkg -i ~/net.mp $3 $4
+	sudo rm ~/net.mp
+	echo "Done."
+fi

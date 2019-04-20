@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Macintosh Packager"
+echo "Usage: mpkg [-i,r,h,l,v,p] [argument]"
+echo ""
+echo "-i: Install a package. Requires root privilage. Requires package path for argument."
+echo "-r: Removes a package. Requires root privilage. Requires package ID for argument."
+echo "-h: Shows help. Does not require any argument."
+echo "-l: Shows installed package list (ID only). Does not require any argument."
+echo "-v: Shows SPK version. Does not require any argument"
+echo "-p: Shows package information. Requires package ID for argument."
+exit

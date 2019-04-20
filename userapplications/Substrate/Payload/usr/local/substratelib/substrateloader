@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /usr/local/substratelib/loaded
+for f in *.sh; do
+	sudo bash "$f" -H
+done

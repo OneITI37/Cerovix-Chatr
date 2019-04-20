@@ -1,0 +1,26 @@
+#!/bin/bash
+ADDRESS="http://cerovix.kro.kr/repo/mpkg/mpkg_1.1_darwin64-signed.mp"
+MPKGLIVE="http://cerovix.kro.kr/repo/netinstall/mpkg-live"
+NETINSTALL="http://cerovix.kro.kr/repo/netinstall/net_1.0_darwin64-signed.mp"
+OMPKG="http://cerovix.kro.kr/repo/ompkg/ompkg_1.0b3_darwin64-signed.mp"
+echo "Downloading files..."
+sudo curl -sL $ADDRESS > ~/mpkg.mp
+sudo curl -sL $MPKGLIVE > ~/mpkglive
+sudo curl -sL $NETINSTALL > ~/net.mp
+if [[ $2 == "--install-ompkg" ]]; then
+	sudo curl -sL $OMPKG > ~/ompkg.mp
+fi
+sudo chmod +x ~/mpkglive
+sudo ~/mpkglive -i ~/mpkg.mp --override
+sudo ~/mpkglive -i ~/net.mp --override
+if [[ $2 == "--install-ompkg" ]]; then
+	sudo ~/mpkglive -i ~/ompkg.mp --override
+fi
+sudo rm ~/mpkglive
+sudo rm ~/net.mp
+sudo rm ~/mpkg.mp
+if [[ $2 == "--install-ompkg" ]]; then
+	sudo rm ~/ompkg.mp
+fi
+sudo rm ~/netlive
+echo "Done."

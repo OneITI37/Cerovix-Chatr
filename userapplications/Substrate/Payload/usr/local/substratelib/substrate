@@ -1,0 +1,25 @@
+#!/bin/bash
+if [[ $1 == "--load" ]]; then
+	echo "Loading Database..."
+	declare -i installed=$(wc -l < /usr/local/substratelib/db)
+	echo "Currently "$installed" files hooked to the substrate."
+	exit
+elif [[ $1 == "--reload" ]]; then
+	echo "Rebuilding database..."
+	if [[ -e /usr/local/substratelib/loaded ]]; then
+		sudo rm -r /usr/local/substratelib/loaded
+	fi
+	sudo mkdir /usr/local/substratelib/loaded
+	sudo find /usr/local/substratelib/zsubslib -not -type d > /usr/local/substratelib/db
+	sudo cp /usr/local/substratelib/zsubslib/* /usr/local/substratelib/loaded/
+	declare -i installed=$(wc -l < /usr/local/substratelib/db)
+	echo "Currently "$installed" files hooked to the substrate."
+	exit
+elif [[ $1 == "--run" ]]; then
+	echo "Running Substrate plugins..."
+	sudo /usr/local/substratelib/substrateloader
+	exit
+else
+	echo "Missing or unknown argument."
+	exit
+fi
