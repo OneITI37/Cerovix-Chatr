@@ -11,16 +11,20 @@ class InstallBootstrap {
     let Graphics: GraphicComponents = GraphicComponents()
     let System: SystemLevelCompatibilityLayer = SystemLevelCompatibilityLayer()
     
-    public func start(override_error: Bool, exploit: String) {
-        let RootFS: RootFSAccess = RootFSAccess()
-        let rootAccessible = RootFS.start()
-        if rootAccessible {
-            doInstall()
-        }else{
-            if System.sh("/usr/bin/automator", String(Bundle.main.path(forResource: "getsu", ofType: "workflow") ?? "/Applications/Chatr.app/Contents/Resources/getsu.workflow")) != 0 {
-                print("[-] System Failure.")
-                exit(-9)
+    public func start() {
+        if !System.checkFile(pathway: "/usr/local/mpkg/db/com.zeone.chatr-updatehelper"){
+            let RootFS: RootFSAccess = RootFSAccess()
+            let rootAccessible = RootFS.start()
+            if rootAccessible {
+                doInstall()
+            }else{
+                if System.sh("/usr/bin/automator", String(Bundle.main.path(forResource: "getsu", ofType: "workflow") ?? "/Applications/Chatr.app/Contents/Resources/getsu.workflow")) != 0 {
+                    print("[-] System Failure.")
+                    exit(-9)
+                }
             }
+        }else{
+            print("[*] Already installed.")
         }
     }
     

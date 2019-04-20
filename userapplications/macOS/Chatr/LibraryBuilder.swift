@@ -9,17 +9,18 @@
 import Foundation
 class LibraryBuilder {
     var vrootfs = ""
-    var filelist = ["","",""]
-    public func startup () -> Bool{
+    public func startup (){
         getRoot()
-        buildFileList()
-        return false
-    }
-    
-    func buildFileList() {
-        print("[*] Building files list...")
-        filelist[1] = "/temp"
-        filelist[2] = "/updatehost"
+        print("[*] Checking App Installation...")
+        let System: SystemLevelCompatibilityLayer = SystemLevelCompatibilityLayer()
+        if !System.checkFile(pathway: "/Applications/Chatr.app"){
+            print("[*] Bundle is not installed.")
+            let Graphics: GraphicComponents = GraphicComponents()
+            Graphics.msgBox_errorMessage(title: "Application is not installed", contents: "Please move the application to /Applications to work.")
+            exit(-9)
+        }else{
+            print("[*] Bundle is installed.")
+        }
     }
     
     func getRoot() {
@@ -31,23 +32,5 @@ class LibraryBuilder {
         print("[+] Found user directory: " + homeurl)
         vrootfs = homeurl + "Library/Application Support/Chatr"
         print("[*] Set vrootfs to: " + vrootfs)
-        filelist[0] = ""
-        print("[*] Set 0th index of file list to nil.")
-        print("[*] Value of INDEX=0: \"" + filelist[0] + "\"")
     }
-    
-    func checkfile (fileaddress: String) -> Bool {
-        let fileManager = FileManager.default
-        if fileManager.fileExists(atPath: fileaddress) {
-            return true
-        } else {
-            var isDir : ObjCBool = true
-            if fileManager.fileExists(atPath: fileaddress, isDirectory:&isDir) {
-                return true
-            } else {
-                return false
-            }
-        }
-    }
-    
 }

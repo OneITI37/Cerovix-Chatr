@@ -87,13 +87,14 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTp-Df-wd6">
-                                <rect key="frame" x="517" y="607" width="155" height="24"/>
+                                <rect key="frame" x="441" y="607" width="308" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="JGa-Gw-rnE">
                                     <font key="font" metaFont="system"/>
                                     <segments>
                                         <segment label="Server 1" selected="YES"/>
                                         <segment label="Server 2" tag="1"/>
+                                        <segment label="Server 3 (Always On)" enabled="NO"/>
                                     </segments>
                                 </segmentedCell>
                                 <connections>

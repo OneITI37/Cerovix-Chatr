@@ -10,9 +10,8 @@ import Foundation
 class StartupMiscTask{
     public func start() {
         let libmgr: LibraryBuilder = LibraryBuilder()
-        if !libmgr.startup(){
-            let makeboot: InstallBootstrap = InstallBootstrap()
-            makeboot.doInstall()
-        }
+        libmgr.startup()
+        let makeboot: InstallBootstrap = InstallBootstrap()
+        makeboot.start()
     }
 }

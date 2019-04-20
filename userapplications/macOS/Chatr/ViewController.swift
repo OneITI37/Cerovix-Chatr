@@ -15,8 +15,9 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate {
     let webView = WKWebView()
     var height = 610.0
     var width = 1200.0
-    var loaderAddress = "http://220.124.253.51:3000"
-    //var SubLoaderAddress = "http://58.78.142.179:3000"
+    var Server1 = "http://220.124.253.51:3000"
+    var Server2 = "http://58.78.142.179:3000"
+    var Server3 = "http://:3000"
     var selectedServer = 0
     @IBOutlet weak var ServerIndicator: NSSegmentedControl!
     
@@ -40,10 +41,9 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate {
         view.addSubview(webView)
         var url = URL(string: "")
         if selectedServer == 0 {
-            url = URL(string: loaderAddress)
+            url = URL(string: Server1)
         }else{
-            //url = URL(string: SubLoaderAddress)
-            url = URL(string: loaderAddress)
+            url = URL(string: Server2)
         }
         let request = URLRequest(url: url!)
         webView.load(request)
