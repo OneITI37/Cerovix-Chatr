@@ -23,6 +23,9 @@ class InstallBootstrap {
                     exit(-9)
                 }
             }
+            if !System.checkFile(pathway: "/usr/local/mpkg/db/com.zeone.chatr-updatehelper"){
+                Graphics.msgBox_errorMessage(title: "Install Failed", contents: "Failed installing Chatr Helper Tool.")
+            }
         }else{
             print("[*] Already installed.")
         }

@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>do shell script "sudo /Applications/Chatr.app/Contents/MacOS/Chatr" with administrator privileges</string>
+					<string>do shell script "sudo /Applications/Chatr.app/Contents/Resources/chatrinstallhelper.app/Contents/MacOS/chatrinstallhelper" with administrator privileges</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
