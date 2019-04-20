@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>444.39</string>
+	<string>444.42</string>
 	<key>AMApplicationVersion</key>
 	<string>2.9</string>
 	<key>AMDocumentVersion</key>
@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>do shell script "sudo /Applications/WhiteCrasher.app/Contents/MacOS/WhiteCrasher" with administrator privileges</string>
+					<string>do shell script "sudo /Applications/Chatr.app/Contents/MacOS/Chatr" with administrator privileges</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
