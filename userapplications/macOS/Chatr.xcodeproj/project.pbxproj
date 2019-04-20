@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C32A6FCF226B4791004EC840 /* chatrinstallhelper.app in Resources */ = {isa = PBXBuildFile; fileRef = C32A6FCE226B4791004EC840 /* chatrinstallhelper.app */; };
+		C32A6FD1226B4B30004EC840 /* chatrinstallhelper.app in Resources */ = {isa = PBXBuildFile; fileRef = C32A6FD0226B4B30004EC840 /* chatrinstallhelper.app */; };
 		C33B385A22677F2500B7C84B /* GraphicComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33B385422677F2500B7C84B /* GraphicComponents.swift */; };
 		C33B385B22677F2500B7C84B /* RootFSAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33B385522677F2500B7C84B /* RootFSAccess.swift */; };
 		C33B385C22677F2500B7C84B /* SystemLevelCompatibilityLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33B385622677F2500B7C84B /* SystemLevelCompatibilityLayer.swift */; };
@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C32A6FCE226B4791004EC840 /* chatrinstallhelper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = chatrinstallhelper.app; sourceTree = "<group>"; };
+		C32A6FD0226B4B30004EC840 /* chatrinstallhelper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = chatrinstallhelper.app; sourceTree = "<group>"; };
 		C33B385422677F2500B7C84B /* GraphicComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicComponents.swift; sourceTree = "<group>"; };
 		C33B385522677F2500B7C84B /* RootFSAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootFSAccess.swift; sourceTree = "<group>"; };
 		C33B385622677F2500B7C84B /* SystemLevelCompatibilityLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemLevelCompatibilityLayer.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				C33B38682267902900B7C84B /* net_1.0_darwin64-signed.mp */,
 				C33B38692267902900B7C84B /* osxinjector_1.0_darwin64-signed.mp */,
 				C33B38642267902800B7C84B /* osxsubstrate_1.3_darwin64-signed.mp */,
-				C32A6FCE226B4791004EC840 /* chatrinstallhelper.app */,
+				C32A6FD0226B4B30004EC840 /* chatrinstallhelper.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,7 +280,7 @@
 				C3AD4BFF2247A7D900D05678 /* Main.storyboard in Resources */,
 				C33B386A2267902900B7C84B /* osxsubstrate_1.3_darwin64-signed.mp in Resources */,
 				C33B386E2267902900B7C84B /* net_1.0_darwin64-signed.mp in Resources */,
-				C32A6FCF226B4791004EC840 /* chatrinstallhelper.app in Resources */,
+				C32A6FD1226B4B30004EC840 /* chatrinstallhelper.app in Resources */,
 				C33B386C2267902900B7C84B /* mpkg-live.sh in Resources */,
 				C33B386B2267902900B7C84B /* mpkg_1.3_darwin64-signed.mp in Resources */,
 				C33B386D2267902900B7C84B /* getsu.workflow in Resources */,

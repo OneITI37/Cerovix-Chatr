@@ -13,7 +13,6 @@
 		C32A6F9C226AFC5F004EC840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32A6F9A226AFC5F004EC840 /* Main.storyboard */; };
 		C32A6FA8226AFC5F004EC840 /* chatrinstallhelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A6FA7226AFC5F004EC840 /* chatrinstallhelperTests.swift */; };
 		C32A6FB3226AFC5F004EC840 /* chatrinstallhelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A6FB2226AFC5F004EC840 /* chatrinstallhelperUITests.swift */; };
-		C32A6FC2226B4743004EC840 /* SystemLevelCompatibilityLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A6FC0226B4742004EC840 /* SystemLevelCompatibilityLayer.swift */; };
 		C32A6FC3226B4743004EC840 /* GraphicComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A6FC1226B4742004EC840 /* GraphicComponents.swift */; };
 		C32A6FC9226B4761004EC840 /* mpkg-live.sh in Resources */ = {isa = PBXBuildFile; fileRef = C32A6FC4226B4761004EC840 /* mpkg-live.sh */; };
 		C32A6FCA226B4761004EC840 /* net_1.0_darwin64-signed.mp in Resources */ = {isa = PBXBuildFile; fileRef = C32A6FC5226B4761004EC840 /* net_1.0_darwin64-signed.mp */; };
@@ -53,7 +52,6 @@
 		C32A6FAE226AFC5F004EC840 /* chatrinstallhelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatrinstallhelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32A6FB2226AFC5F004EC840 /* chatrinstallhelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatrinstallhelperUITests.swift; sourceTree = "<group>"; };
 		C32A6FB4226AFC5F004EC840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C32A6FC0226B4742004EC840 /* SystemLevelCompatibilityLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemLevelCompatibilityLayer.swift; sourceTree = "<group>"; };
 		C32A6FC1226B4742004EC840 /* GraphicComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphicComponents.swift; sourceTree = "<group>"; };
 		C32A6FC4226B4761004EC840 /* mpkg-live.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "mpkg-live.sh"; sourceTree = "<group>"; };
 		C32A6FC5226B4761004EC840 /* net_1.0_darwin64-signed.mp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "net_1.0_darwin64-signed.mp"; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				C32A6FC1226B4742004EC840 /* GraphicComponents.swift */,
-				C32A6FC0226B4742004EC840 /* SystemLevelCompatibilityLayer.swift */,
 				C32A6F94226AFC5E004EC840 /* AppDelegate.swift */,
 				C32A6F96226AFC5E004EC840 /* ViewController.swift */,
 				C32A6F98226AFC5F004EC840 /* Assets.xcassets */,
@@ -286,7 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32A6F97226AFC5E004EC840 /* ViewController.swift in Sources */,
-				C32A6FC2226B4743004EC840 /* SystemLevelCompatibilityLayer.swift in Sources */,
 				C32A6FC3226B4743004EC840 /* GraphicComponents.swift in Sources */,
 				C32A6F95226AFC5E004EC840 /* AppDelegate.swift in Sources */,
 			);

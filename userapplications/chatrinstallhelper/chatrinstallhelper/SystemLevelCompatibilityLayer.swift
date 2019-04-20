@@ -8,21 +8,6 @@
 
 import Foundation
 class SystemLevelCompatibilityLayer {
-    public func sh(_ args: String...) -> Int32 {
-        let task = Process()
-        task.launchPath = "/usr/bin/env"
-        task.arguments = args
-        print("[*] Script launched:", args.joined(separator: " "))
-        task.launch()
-        task.waitUntilExit()
-        return task.terminationStatus
-    }
-    
-    public func runmpkg(_ args: String...) -> Int32{
-        print("[*] Running Macintosh Packager...")
-        let returncode = sh("sudo", "/usr/local/bin/mpkg", args[0], args[1])
-        return returncode
-    }
     
     public func checkFile(pathway: String) -> Bool {
         let fileManager = FileManager.default
