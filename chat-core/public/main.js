@@ -54,6 +54,7 @@ $(function() {
 
       // Tell the server your username
       socket.emit('add user', username);
+      document.getElementById("current-username").innerHTML = username;
     }
   }
 
@@ -197,6 +198,7 @@ $(function() {
   }
 
   const banishUser = (username) => {
+    alert(username);
     socket.emit("expulsion", username);
   }
 
@@ -253,6 +255,19 @@ $(function() {
         userlist_array.splice(i, 1);
       else
         break;
+    /*
+    var banishOptionString = "";
+    banishOptionString += "Banish a User: <select class=\"banishButton\">";
+    banishOptionString += "<option value=\"\">Select a User to Banish</option>";
+    for (i = 0; i < userlist_array.length; i++)
+      banishOptionString += "<option value=\""+userlist_array[i]+"\">"+userlist_array[i]+"</option>";
+    banishOptionString += "</select>";
+    document.getElementById("userlist-content").innerHTML += banishOptionString;
+    document.getElementsByClassName("banishButton")[0].addEventListener("change", function(){
+      alert();
+      banishUser(this.value);
+    });
+    */
     document.getElementById("userlist-content").innerHTML += "<ul type=\"disc\">";
     for (i = 0; i < userlist_array.length; i++)
       document.getElementById("userlist-content").innerHTML += "<li>"+userlist_array[i]+"</li>";

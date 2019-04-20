@@ -71,43 +71,78 @@
         <table border="0" style="width: 100%; height: 5vh;">
           <tr>
             <td class="setting-area-individual">
-              <div id="participant-number">0 Participants</div>
+              <div id="participant-number">
+                0 Participants
+              </div>
             </td>
             <td class="setting-area-individual">
               Ringtone
               <select id="notification-sound-option">
-                <option value="off">OFF</option>
-                <option value="on" selected="selected">ON</option>
+                <option value="off">
+                  OFF
+                </option>
+                <option value="on" selected="selected">
+                  ON
+                </option>
               </select>
               <input type="hidden" id="notification-sound-setting" value="true" />
             </td>
             <td class="setting-area-individual">
+              <div id="current-username">
+              </div>
+            </td>
+            <td class="setting-area-individual">
               Ringtone Type
               <select id="ringtone-option">
-                <option value="accordion">Accordion</option>
-                <option value="accoustic-guitar">Accoustic Guitar</option>
-                <option value="b-flat-clarinet">B♭ Clarinet</option>
-                <option value="classic-guitar">Classic Guitar</option>
-                <option value="electric-guitar">Electric Guitar</option>
-                <option value="flute">Flute</option>
-                <option value="harmonica">Harmonica</option>
-                <option value="original">Original</option>
-                <option value="piano" selected="selected">Piano(Default)</option>
-                <option value="violin">Violin</option>
+                <option value="accordion">
+                  Accordion
+                </option>
+                <option value="accoustic-guitar">
+                  Accoustic Guitar
+                </option>
+                <option value="b-flat-clarinet">
+                  B♭ Clarinet
+                </option>
+                <option value="classic-guitar">
+                  Classic Guitar
+                </option>
+                <option value="electric-guitar">
+                  Electric Guitar
+                </option>
+                <option value="flute">
+                  Flute
+                </option>
+                <option value="harmonica">
+                  Harmonica
+                </option>
+                <option value="original">
+                  Original
+                </option>
+                <option value="piano" selected="selected">
+                  Piano(Default)
+                </option>
+                <option value="violin">
+                  Violin
+                </option>
               </select>
               <input type="hidden" id="notification-browser-setting" value="false" />
             </td>
             <td class="setting-area-individual">
               Notification
               <select id="notification-browser-option">
-                <option value="off" selected="selected">OFF</option>
-                <option value="on">ON</option>
+                <option value="off" selected="selected">
+                  OFF
+                </option>
+                <option value="on">
+                  ON
+                </option>
               </select>
               <input type="hidden" id="notification-browser-setting" value="false" />
             </td>
           </tr>
         </table>
-        <ul class="messages"></ul>
+        <ul class="messages">
+        </ul>
       </div>
       <div>
         <!--
@@ -121,7 +156,9 @@
     </li>
     <li class="login page">
       <div class="form">
-        <h3 class="title">Your Nickname</h3>
+        <h3 class="title">
+          Your Nickname
+        </h3>
         <input class="usernameInput" type="text" maxlength="14" />
       </div>
     </li>
@@ -129,17 +166,27 @@
 
   <div id="userlist-message" class="modal-element">
     <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 style="text-align: center;">Concurrent Users</h2>
-      <p id="userlist-content"></p>
+      <span class="close">
+        &times;
+      </span>
+      <h2 style="text-align: center;">
+        Concurrent Users
+      </h2>
+      <p id="userlist-content">
+      </p>
     </div>
   </div>
 
   <div id="alert-message" class="modal-element">
     <div class="alert-content">
-      <span class="close">&times;</span>
-      <h2 style="text-align: center;" id="alert-title">Alert</h2>
-      <p id="alert-content"></p>
+      <span class="close">
+        &times;
+      </span>
+      <h2 style="text-align: center;" id="alert-title">
+        Alert
+      </h2>
+      <p id="alert-content">
+      </p>
     </div>
   </div>
 
