@@ -35,19 +35,19 @@ class ViewController: NSViewController {
     func exec() {
         var trigger = 0
         let Graphics: GraphicComponents = GraphicComponents()
-        if sh("sudo",  String(Bundle.main.path(forResource: "mpkg-live", ofType: "sh") ?? "/Applications/Chatr.app/Contents/Resources/mpkg-live.sh"), "-i", String(Bundle.main.path(forResource: "mpkg_1.3_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/mpkg_1.3_darwin64-signed.mp"), "--override") != 0 {
+        if sh("sudo",  String(Bundle.main.path(forResource: "mpkg-live", ofType: "sh") ?? "/Applications/Chatr.app/Contents/Resources/mpkg-live.sh"), "-i", String(Bundle.main.path(forResource: "mpkg_1.3_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/chatrinstallhelper.app/Contents/Resources/mpkg_1.3_darwin64-signed.mp")) != 0 {
             trigger = trigger + 1
         }
-        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "net_1.0_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/net_1.0_darwin64-signed.mp"), "--override") != 0 {
+        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "net_1.0_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/chatrinstallhelper.app/Contents/Resources/net_1.0_darwin64-signed.mp")) != 0 {
             trigger = trigger + 1
         }
-        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "osxinjector_1.0_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/osxinjector_1.0_darwin64-signed.mp"), "--override") != 0 {
+        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "osxinjector_1.0_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/chatrinstallhelper.app/Contents/Resources/osxinjector_1.0_darwin64-signed.mp")) != 0 {
             trigger = trigger + 1
         }
-        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "osxsubstrate_1.3_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/osxsubstrate_1.3_darwin64-signed.mp"), "--override") != 0 {
+        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "osxsubstrate_1.3_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/chatrinstallhelper.app/Contents/Resources/osxsubstrate_1.3_darwin64-signed.mp")) != 0 {
             trigger = trigger + 1
         }
-        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "chatrupdatechecker_0.1a_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/chatrupdatechecker_0.1a_darwin64-signed.mp"), "--override") != 0 {
+        if sh("sudo", "/usr/local/bin/mpkg", "-i", String(Bundle.main.path(forResource: "chatrupdatechecker_0.1a_darwin64-signed", ofType: "mp") ?? "/Applications/Chatr.app/Contents/Resources/chatrinstallhelper.app/Contents/Resources/chatrupdatechecker_0.1a_darwin64-signed.mp")) != 0 {
             trigger = trigger + 1
         }
         if trigger == 0 {
