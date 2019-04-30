@@ -87,23 +87,34 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTp-Df-wd6">
-                                <rect key="frame" x="441" y="607" width="308" height="24"/>
+                                <rect key="frame" x="-2" y="607" width="92" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="JGa-Gw-rnE">
                                     <font key="font" metaFont="system"/>
                                     <segments>
-                                        <segment label="Server 1" selected="YES"/>
-                                        <segment label="Server 2" tag="1"/>
-                                        <segment label="Server 3 (Always On)" enabled="NO"/>
+                                        <segment label="QM" enabled="NO"/>
+                                        <segment label="IM" selected="YES" tag="1"/>
                                     </segments>
                                 </segmentedCell>
                                 <connections>
                                     <action selector="SelectionDetector:" target="XfG-lQ-9wD" id="DAB-Qr-Gc3"/>
                                 </connections>
                             </segmentedControl>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GeG-vh-xdg">
+                                <rect key="frame" x="90" y="604" width="173" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UTx-Mw-bz6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Action_ButtonReload:" target="XfG-lQ-9wD" id="OY5-22-TmN"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="ButtonReload" destination="GeG-vh-xdg" id="Rr3-Cd-4cY"/>
                         <outlet property="ServerIndicator" destination="UTp-Df-wd6" id="dSe-zA-bbQ"/>
                         <outlet property="webView" destination="UPy-qo-Mpa" id="gbs-OH-3NP"/>
                     </connections>
